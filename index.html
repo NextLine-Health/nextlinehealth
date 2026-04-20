@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="PejJXgFPxCPPhZZsV98CMyaqrxGgqkMzJcb46YQjuBo" />
+<meta charset="utf-8"/>
+<title>Frontline Solutions | Behavioral Health Support for Veterans, First Responders & Organizations</title>
+<meta name="description" content="Frontline Solutions provides structured engagement, navigation, and behavioral health support for veterans, law enforcement, EMS, and the communities they serve."/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0d1f3c;--navy-deep:#07111f;--red:#B22234;--red-dark:#8a1a27;--white:#fff;--off-white:#f5f4f0;--text:#1a1a2e;--text-muted:#4a4a5a;--border:#e0ddd6}
+html{
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+  max-width:100%;
+}
+
+body{
+  font-family:'Lato',sans-serif;
+  color:var(--text);
+  background:#fff;
+  overflow-x:hidden;
+  max-width:100%;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.location-map{
+  width:100%;
+  max-width:520px;
+  border-radius:18px;
+  overflow:hidden;
+  background:#eaeaea;
+}
+
+.location-map img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+}
+.credibility-image{
+  margin-top:30px;
+  max-width:560px;
+  width:100%;
+  border-radius:10px;
+  overflow:hidden;
+  background:#d9d9d9;
+}
+
+.credibility-image img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  display:block;
+  filter:brightness(0.96) saturate(0.9) contrast(1.03);
+}
+.nav{
+  background:var(--navy);
+  padding:18px 48px 14px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  border-top:4px solid rgba(255,255,255,0.08);
+}
+
+.nav-left{
+  display:flex;
+  align-items:flex-end;
+  gap:34px;
+}
+
+.nav-logo{
+  display:flex;
+  align-items:flex-end;
+  gap:14px;
+}
+
+.nav-logo img{
+  height:86px;
+  width:auto;
+  display:block;
+}
+
+.nav-logo-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  line-height:1;
+  padding-bottom:6px;
+}
+
+.nav-logo-top{
+  font-size:13px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.72);
+  font-weight:700;
+}
+
+.nav-logo-bottom{
+  font-size:28px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:#fff;
+  font-weight:900;
+  margin-top:4px;
+}
+
+.nav-links{
+  display:flex;
+  gap:32px;
+  align-items:center;
+  padding-bottom:10px;
+}
+.nav-links a{font-size:13px;color:rgba(255,255,255,0.75);letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--red);color:#fff;border:none;padding:10px 22px;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;font-family:inherit;transition:background 0.2s}
+.nav-cta:hover{background:var(--red-dark)}
+.hero{background: url("hero.png") center/cover no-repeat;padding: 56px 48px 80px;border-bottom: 4px solid var(--red);}
+.hero-inner{max-width:760px}
+.hero-eyebrow{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);margin-bottom:20px;font-weight:700}
+.hero h1{font-size:54px;font-weight:900;color:#fff;line-height:1.1;margin-bottom:24px}
+.hero h1 em{color:var(--red);font-style:normal}
+.hero-sub{font-size:18px;color:rgba(255,255,255,0.7);line-height:1.75;max-width:620px;margin-bottom:40px;font-weight:300}
+.hero-btns{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:48px}
+.btn-red{background:var(--red);color:#fff;border:none;padding:15px 34px;font-size:14px;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;font-family:inherit;font-weight:700;transition:background 0.2s;display:inline-flex;align-items:center;gap:10px}
+.btn-red:hover{background:var(--red-dark)}
+.btn-ghost{background:transparent;color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.28);padding:15px 34px;font-size:14px;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;font-family:inherit;transition:all 0.2s}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.6);color:#fff}
+.hero-stats{display:flex;gap:48px;padding-top:36px;border-top:1px solid rgba(255,255,255,0.12);flex-wrap:wrap;max-width:680px;}
+.hero-stat .num{font-size:38px;font-weight:900;color:#fff;line-height:1}
+.hero-stat .lbl{font-size:12px;color:rgba(255,255,255,0.5);margin-top:6px;line-height:1.4;max-width:120px}
+.pop-bar{background:var(--off-white);border-bottom:1px solid var(--border);padding:16px 48px;display:flex;align-items:center;flex-wrap:wrap}
+.pop-label{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#888;margin-right:24px;white-space:nowrap;font-weight:700}
+.pop-item{font-size:13px;color:var(--text);padding:6px 20px;border-left:1px solid #ccc}
+section{padding:80px 48px}
+.section-alt{background:var(--off-white)}
+.section-dark{background:var(--navy)}
+.rule{width:40px;height:4px;background:var(--red);margin-bottom:18px}
+.eyebrow{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--red);margin-bottom:14px;font-weight:700}
+.eyebrow-light{color:rgba(255,200,200,0.85)}
+.section-h2{font-size:36px;font-weight:900;line-height:1.2;margin-bottom:16px}
+.section-h2-light{color:#fff}
+.section-p{font-size:15px;color:var(--text-muted);line-height:1.8;max-width:560px}
+.section-p-light{color:rgba(255,255,255,0.6)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.mission-block p{font-size:15px;color:var(--text-muted);line-height:1.85;margin-bottom:16px}
+.mission-stats{display:flex;gap:36px;margin-top:36px;padding-top:28px;border-top:1px solid var(--border);flex-wrap:wrap}
+.mission-stat .num{font-size:38px;font-weight:900;color:var(--navy)}
+.mission-stat .lbl{font-size:12px;color:#888;margin-top:4px;line-height:1.5;max-width:110px}
+.serve-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:28px}
+.serve-card{background:#fff;padding:28px 24px;border-top:4px solid var(--red)}
+.serve-card h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.serve-card p{font-size:14px;color:var(--text-muted);line-height:1.65}
+.svc-row{display:grid;grid-template-columns:180px 1fr;border-top:1px solid var(--border)}
+.svc-row:last-child{border-bottom:1px solid var(--border)}
+.svc-num{display:flex;align-items:center;justify-content:center;padding:28px 0;font-size:48px;color:var(--red);font-weight:900;letter-spacing:0.02em;line-height:1;}
+.svc-body{padding:28px 0;border-left:1px solid var(--border);padding-left:32px}
+.svc-body h3{font-size:20px;font-weight:700;margin-bottom:8px}
+.svc-body p{font-size:14px;color:var(--text-muted);line-height:1.75}
+.svc-tag{display:inline-block;margin-top:12px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);font-weight:700}
+.story-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.story-text p{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.85;margin-bottom:16px}
+.story-quote{font-size:22px;font-style:italic;font-weight:300;color:rgba(255,255,255,0.9);line-height:1.6;border-left:4px solid var(--red);padding-left:24px;margin-top:32px}
+.story-placeholder{border:1.5px dashed rgba(255,255,255,0.15);padding:40px 36px}
+.story-ph-head{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:16px;font-weight:700}
+.story-placeholder p{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.8}
+.why-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.why-item{padding:28px 0;border-top:1px solid var(--border)}
+.why-item:last-child{border-bottom:1px solid var(--border)}
+.why-inner-row{display:grid;grid-template-columns:56px 1fr;gap:20px;align-items:start}
+.why-n{font-size:32px;font-weight:900;color:var(--red)}
+.why-item h4{font-size:17px;font-weight:700;margin-bottom:8px}
+.why-item p{font-size:14px;color:var(--text-muted);line-height:1.7}
+.partner-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.pt-item{display:flex;align-items:flex-start;gap:18px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.09)}
+.pt-item:last-child{border-bottom:1px solid rgba(255,255,255,0.09)}
+.pt-dash{width:20px;height:2px;background:var(--red);margin-top:12px;flex-shrink:0}
+.pt-item h4{font-size:14px;color:#fff;font-weight:700;margin-bottom:4px}
+.pt-item p{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6}
+.hiw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:48px}
+.hiw-card{text-align:center}
+.hiw-circle-num{width:48px;height:48px;border-radius:50%;background:var(--red);color:#fff;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.hiw-card h3{font-size:20px;font-weight:700;margin-bottom:12px}
+.hiw-card p{font-size:15px;color:var(--text-muted);line-height:1.7}
+.testimonials{background:var(--navy)}
+.test-header{text-align:center;margin-bottom:48px}
+.test-header h2{font-size:34px;font-weight:900;color:#fff}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.test-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:32px 28px}
+.test-stars{color:var(--red);font-size:16px;margin-bottom:16px;letter-spacing:2px}
+.test-text{font-size:15px;color:rgba(255,255,255,0.85);line-height:1.75;font-style:italic;margin-bottom:20px}
+.test-name{font-size:14px;font-weight:700;color:#fff}
+.test-role{font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px}
+.cta-section{background:var(--red);padding:88px 48px;text-align:center}
+.cta-section h2{font-size:38px;font-weight:900;color:#fff;margin-bottom:16px}
+.cta-section p{font-size:17px;color:rgba(255,255,255,0.85);max-width:520px;margin:0 auto 36px;line-height:1.7}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--red);border:none;padding:15px 36px;font-size:14px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;font-family:inherit;display:inline-block}
+.btn-outline-w{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.5);padding:15px 36px;font-size:14px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;font-family:inherit;display:inline-block}
+footer{background:var(--navy-deep);padding:56px 48px 28px}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:nowrap;gap:40px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.footer-brand img{height:40px;margin-bottom:12px}
+.footer-tagline{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);font-weight:700}
+.footer-col h5{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:16px;font-weight:700}
+.footer-col a,.footer-col p{display:block;font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:10px;line-height:1.6;transition:color 0.2s}
+.footer-col a:hover{color:#fff}
+.footer-links-row{display:flex;gap:48px;flex-wrap:nowrap;align-items:flex-start;}
+.footer-bottom{padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom span{font-size:12px;color:rgba(255,255,255,0.25)}
+/* ===== STORY SECTION IMAGES (SIDE BY SIDE) ===== */
+
+.story-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  align-items:start;
+}
+
+.story-left,
+.story-right{
+  min-width:0;
+}
+
+.story-text p{
+  font-size:15px;
+  color:rgba(255,255,255,0.72);
+  line-height:1.85;
+  margin-bottom:16px;
+}
+
+.story-images{
+  margin:28px 0 24px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.story-image-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:8px;
+  padding:10px;
+}
+
+.story-image-card img{
+  width:100%;
+  height:240px;
+  object-fit:contain;
+  object-position:center center;
+  border-radius:4px;
+  display:block;
+  background:#0a1730;
+}
+
+.story-quote{
+  font-size:22px;
+  font-style:italic;
+  font-weight:300;
+  color:rgba(255,255,255,0.92);
+  line-height:1.6;
+  border-left:4px solid var(--red);
+  padding-left:24px;
+  margin-top:8px;
+  max-width:100%;
+}
+
+.story-placeholder{
+  border:1px solid rgba(255,255,255,0.10);
+  padding:32px 32px 28px;
+  border-radius:8px;
+  background:rgba(255,255,255,0.02);
+}
+
+.story-ph-head{
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:0.04em;
+  color:#ffffff;
+  margin-bottom:6px;
+}
+
+.story-role{
+  color:rgba(255,255,255,0.72);
+  font-size:14px;
+  margin-bottom:18px;
+  letter-spacing:0.03em;
+}
+
+.story-placeholder p{
+  font-size:15px;
+  color:rgba(255,255,255,0.68);
+  line-height:1.85;
+}
+/* ===== FOOTER BRAND ===== */
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:12px;
+}
+
+.footer-brand img{
+  height:92px;
+  width:auto;
+  display:block;
+}
+
+.footer-brand-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  line-height:0.92;
+}
+
+.footer-brand-top{
+  font-size:12px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.62);
+  font-weight:700;
+  margin-bottom:2px;
+}
+
+.footer-brand-bottom{
+  font-size:24px;
+  letter-spacing:0.03em;
+  text-transform:uppercase;
+  color:#ffffff;
+  font-weight:900;
+}
+
+.footer-tagline{
+  font-size:11px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.3);
+  font-weight:700;
+}
+
+.footer-bottom{
+  padding-top:24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.footer-bottom span{
+  font-size:12px;
+  color:rgba(255,255,255,0.25);
+}
+/* ===== FIX DARK SECTION TEXT (WHY FRONTLINE) ===== */
+
+.section-dark .section-h2{
+  color:#ffffff;
+}
+
+.section-dark .section-p{
+  color:rgba(255,255,255,0.75);
+}
+
+.section-dark .why-item h4{
+  color:#ffffff;
+}
+
+.section-dark .why-item p{
+  color:rgba(255,255,255,0.65);
+}
+
+.section-dark .why-item{
+  border-top:1px solid rgba(255,255,255,0.12);
+}
+
+.section-dark .why-item:last-child{
+  border-bottom:1px solid rgba(255,255,255,0.12);
+}
+.footer-socials{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-left:20px;
+}
+
+.footer-socials a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+  height:auto;
+  border:none;
+  background:none;
+  padding:0;
+  transition:transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-socials a:hover{
+  transform:scale(1.08);
+}
+
+.footer-socials img{
+  width:34px;
+  height:34px;
+  object-fit:contain;
+  opacity:0.92;
+}
+
+.footer-socials a:hover img{
+  opacity:1;
+}
+/* Fix Facebook size imbalance */
+.footer-socials a:nth-child(2) img{
+  transform:scale(1.45);
+}
+
+/* Optional: slightly reduce Instagram so both meet perfectly */
+.footer-socials a:nth-child(1) img{
+  transform:scale(1.05);
+}
+.contact-form{
+  max-width:900px;
+  margin:36px auto 0;
+  text-align:left;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-bottom:18px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+.form-group label{
+  font-size:12px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.82);
+  margin-bottom:8px;
+  font-weight:700;
+}
+
+.form-group input,
+.form-group textarea{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid rgba(255,255,255,0.25);
+  background:#ffffff;
+  color:#111;
+  font-family:inherit;
+  font-size:15px;
+  outline:none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+  color:#999;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  border-color:#ffffff;
+  background:#ffffff;
+}
+
+.form-group-full{
+  margin-bottom:22px;
+}
+
+.form-group textarea{
+  resize:vertical;
+  min-height:140px;
+}
+.form-group input:-webkit-autofill,
+.form-group textarea:-webkit-autofill{
+  -webkit-box-shadow:0 0 0 1000px #ffffff inset;
+  -webkit-text-fill-color:#111;
+  transition:background-color 9999s ease-in-out 0s;
+}
+.who-serve-section{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  align-items:start;
+}
+
+.who-serve-left,
+.who-serve-right{
+  display:flex;
+  flex-direction:column;
+}
+
+.mission-block{
+  margin-bottom:24px;
+}
+
+.mission-stats{
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  margin-top:0;
+  padding-top:28px;
+  border-top:1px solid var(--border);
+  flex-wrap:wrap;
+  text-align:center;
+}
+
+.mission-stat{
+  flex:1;
+  min-width:160px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.mission-stat .num{
+  font-size:38px;
+  font-weight:900;
+  color:var(--navy);
+  line-height:1;
+}
+
+.mission-stat .lbl{
+  font-size:13px;
+  color:#888;
+  margin-top:8px;
+  line-height:1.5;
+  max-width:180px;
+}
+
+.stat-988{
+  color:#B22234;
+  font-weight:900;
+  text-decoration:none;
+}
+
+.stat-988:hover{
+  color:#8a1a27;
+}
+
+.stat-988-sub{
+  color:#B22234;
+  text-decoration:none;
+}
+
+.stat-988-sub:hover{
+  text-decoration:underline;
+}
+
+img, section, div{
+  max-width:100%;
+}
+
+.testimonials,
+.story-placeholder,
+.test-card,
+.svc-body,
+.serve-card{
+  min-width:0;
+}
+
+@media(max-width:900px){
+
+    html, body{
+    overflow-x:hidden;
+    max-width:100%;
+  }
+
+  .nav{
+    padding:14px 16px;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    flex-wrap:nowrap;
+  }
+
+  .nav-left{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex:1;
+    min-width:0;
+  }
+
+  .nav-logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    min-width:0;
+    flex:1;
+  }
+
+  .nav-logo img{
+    height:58px;
+    width:auto;
+    flex-shrink:0;
+  }
+
+  .nav-logo-text{
+    padding-bottom:0;
+    min-width:0;
+  }
+
+  .nav-logo-top{
+    font-size:10px;
+    letter-spacing:0.18em;
+    line-height:1.1;
+  }
+
+  .nav-logo-bottom{
+    font-size:18px;
+    line-height:1;
+    letter-spacing:0.04em;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav-cta{
+    margin-left:10px;
+    padding:10px 12px;
+    font-size:10px;
+    line-height:1.2;
+    max-width:128px;
+    min-width:128px;
+    text-align:center;
+    flex-shrink:0;
+  }
+
+  .hero{
+    padding:34px 20px 56px;
+    background:url("hero.png") center/cover no-repeat;
+  }
+
+  .hero-inner{
+    max-width:100%;
+  }
+
+  .hero-eyebrow{
+    font-size:10px;
+    letter-spacing:0.12em;
+    line-height:1.5;
+    margin-bottom:16px;
+  }
+
+  .hero h1{
+    font-size:28px;
+    line-height:1.08;
+    margin-bottom:18px;
+  }
+
+  .hero-sub{
+    font-size:15px;
+    line-height:1.7;
+    margin-bottom:28px;
+    max-width:100%;
+  }
+
+  .hero-btns{
+    flex-direction:column;
+    gap:12px;
+    width:100%;
+    margin-bottom:34px;
+  }
+
+  .btn-red,
+  .btn-ghost{
+    width:100%;
+    text-align:center;
+    justify-content:center;
+  }
+
+  .hero-stats{
+    gap:22px;
+    max-width:100%;
+    padding-top:24px;
+  }
+
+  .hero-stat{
+    min-width:90px;
+  }
+
+  .hero-stat .num{
+    font-size:28px;
+  }
+
+  .hero-stat .lbl{
+    max-width:100px;
+    font-size:11px;
+  }
+
+  section,
+  .pop-bar,
+  .cta-section,
+  footer{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .pop-bar{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    padding:16px 20px;
+  }
+
+  .pop-label{
+    grid-column:1 / -1;
+    margin-right:0;
+    margin-bottom:8px;
+  }
+
+  .pop-item{
+    border-left:none;
+    border-top:1px solid #d6d1c8;
+    padding:12px 0;
+    text-align:center;
+  }
+
+  .pop-item:last-child{
+    grid-column:1 / -1;
+  }
+
+  .two-col,
+  .story-inner,
+  .why-inner,
+  .partner-inner,
+  .who-serve-section{
+    grid-template-columns:1fr;
+    gap:36px;
+  }
+
+  .hiw-grid,
+  .test-grid,
+  .serve-grid{
+    grid-template-columns:1fr;
+  }
+
+  .svc-row{
+    grid-template-columns:1fr;
+  }
+
+  .svc-num{
+    font-size:32px;
+    justify-content:flex-start;
+    padding:20px 0 10px;
+  }
+
+  .svc-body{
+    border-left:none;
+    padding-left:0;
+    border-top:1px solid var(--border);
+  }
+
+  .test-card{
+    padding:24px 20px;
+  }
+
+  .story-images{
+    grid-template-columns:1fr;
+  }
+
+  .story-image-card img{
+    height:220px;
+  }
+
+  .story-quote{
+    font-size:18px;
+    padding-left:18px;
+  }
+
+  .mission-stats{
+    justify-content:center;
+    gap:28px;
+  }
+
+  .mission-stat{
+    flex:unset;
+    width:100%;
+  }
+
+  .mission-stat .num{
+    font-size:28px;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-top{
+    flex-direction:column;
+    gap:28px;
+    padding-bottom:14px;
+  }
+
+  .footer-brand{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .footer-brand img{
+    height:72px;
+  }
+
+  .footer-brand-top{
+    font-size:11px;
+  }
+
+  .footer-brand-bottom{
+    font-size:24px;
+  }
+
+  .footer-socials{
+    width:100%;
+    margin-left:0;
+    margin-top:10px;
+    justify-content:flex-start;
+    gap:14px;
+  }
+
+  .footer-socials img{
+    width:28px;
+    height:28px;
+  }
+
+  .footer-links-row{
+    gap:28px;
+    flex-wrap:wrap;
+  }
+
+  .footer-bottom{
+    justify-content:center;
+    text-align:center;
+    flex-direction:column;
+    gap:8px;
+    padding-top:18px;
+  }
+
+  .footer-bottom span{
+    font-size:11px;
+  }
+  .credibility-image{
+    max-width:100%;
+  }
+
+  .credibility-image img{
+    height:220px;
+  }
+  .location-map img{
+    height:220px;
+  }
+  
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <div class="nav-logo">
+      <img src="logo.png" alt="Frontline Solutions Logo">
+      <div class="nav-logo-text">
+        <span class="nav-logo-top">FRONTLINE</span>
+        <span class="nav-logo-bottom">SOLUTIONS</span>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="#who-we-serve">Who We Serve</a>
+      <a href="#services">Services</a>
+      <a href="#our-story">Our Story</a>
+      <a href="#partner">Partner With Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    Request a Proposal
+  </button>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Veteran-Owned &nbsp;&middot;&nbsp; Behavioral Health &nbsp;&middot;&nbsp; Founded in Service</div>
+    <h1>Support built for those who <em>serve</em> and protect</h1>
+    <p class="hero-sub">
+      Frontline Solutions provides behavioral health support services for veterans, first responders, and the communities they serve, delivering structured engagement, navigation, and accountability to ensure no one falls through the cracks.
+    </p>
+
+    <div class="hero-btns">
+      <button class="btn-red" onclick="document.getElementById('partner').scrollIntoView({behavior:'smooth'})">
+        Partner With Us &rarr;
+      </button>
+      <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+        Learn About Our Services
+      </button>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num">22</div>
+        <div class="lbl">Veterans lost to suicide every day in the U.S.</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">40%</div>
+        <div class="lbl">of veterans don't seek help due to stigma</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">1 in 3</div>
+        <div class="lbl">First responders experience PTSD or depression</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pop-bar">
+  <span class="pop-label">Serving</span>
+  <span class="pop-item">Veterans</span>
+  <span class="pop-item">Law Enforcement</span>
+  <span class="pop-item">EMS &amp; First Responders</span>
+  <span class="pop-item">Civilians</span>
+  <span class="pop-item">Nonprofits &amp; Government</span>
+</div>
+
+<section id="who-we-serve">
+  <div class="two-col who-serve-section">
+
+    <div class="who-serve-left">
+      <div class="rule"></div>
+      <div class="eyebrow">Our Mission</div>
+      <h2 class="section-h2">Empower. Support. Succeed.</h2>
+
+      <div class="mission-block">
+        <p>The people who sacrifice the most for our communities are often the least supported when they return — or when the weight of service becomes too heavy to carry alone.</p>
+        <p>Frontline Solutions was created to close that gap. We provide the structured human support, accountability, and navigation services that veterans, first responders, and communities need to move forward — and that organizations need to fulfill their mission.</p>
+        <p>We are a veteran-owned company. We understand the culture, the barriers, and what real trust looks like.</p>
+      </div>
+
+      <div class="mission-stats">
+        <div class="mission-stat">
+          <div class="num">
+            <a href="https://988lifeline.org" target="_blank" class="stat-988">988</a>
+          </div>
+          <div class="lbl">
+            Suicide &amp; Crisis Lifeline<br>
+            <a href="tel:988" class="stat-988-sub">Call or text 988</a>
+          </div>
+        </div>
+
+        <div class="mission-stat">
+          <div class="num">1:1</div>
+          <div class="lbl">Structured engagement, navigation, and accountability support</div>
+        </div>
+
+        <div class="mission-stat">
+          <div class="num">24/7</div>
+          <div class="lbl">Visibility into crisis resources for veterans, first responders, and communities</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="who-serve-right">
+      <div class="rule"></div>
+      <div class="eyebrow">Who We Serve</div>
+      <h2 class="section-h2">Built for those on the front line</h2>
+
+      <div class="serve-grid">
+        <div class="serve-card">
+          <h3>Veterans</h3>
+          <p>Structured check-ins, benefits navigation, accountability, and follow-through support for those who served.</p>
+        </div>
+
+        <div class="serve-card">
+          <h3>Law Enforcement</h3>
+          <p>Peer support coordination and wellness programming for officers and departments facing elevated stress.</p>
+        </div>
+
+        <div class="serve-card">
+          <h3>EMS &amp; First Responders</h3>
+          <p>Proactive outreach for those who respond to crisis daily but rarely receive support in return.</p>
+        </div>
+
+        <div class="serve-card">
+          <h3>Civilians</h3>
+          <p>Accessible behavioral health navigation for the broader community — including families of service members.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-alt">
+  <div style="text-align:center;margin-bottom:8px"><div class="eyebrow" style="display:inline-block">How It Works</div></div>
+  <h2 class="section-h2" style="text-align:center;margin-bottom:0">Simple, structured, and built for real results</h2>
+  <div class="hiw-grid">
+    <div class="hiw-card">
+      <div class="hiw-circle-num">1</div>
+      <h3>Tell us about your organization</h3>
+      <p>We listen to your challenges, your population, and what success looks like for your program. Every engagement starts with understanding.</p>
+    </div>
+    <div class="hiw-card">
+      <div class="hiw-circle-num">2</div>
+      <h3>We deploy structured outreach</h3>
+      <p>Our team begins regular check-ins, navigation, and accountability support &mdash; tailored to your clients and delivered with consistency.</p>
+    </div>
+    <div class="hiw-card">
+      <div class="hiw-circle-num">3</div>
+      <h3>You receive transparent reporting</h3>
+      <p>Weekly outcome reports with engagement metrics, progress notes, and flagged needs &mdash; so you always know the impact of our work.</p>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:48px">
+    <button class="btn-red" onclick="document.getElementById('partner').scrollIntoView({behavior:'smooth'})">Get Started &rarr;</button>
+  </div>
+</section>
+
+<section id="services">
+  <div class="rule"></div>
+  <div class="eyebrow">Our Services</div>
+  <h2 class="section-h2" style="margin-bottom:40px">What we deliver</h2>
+  <div class="svc-row">
+    <div class="svc-num">01</div>
+    <div class="svc-body">
+      <h3>Veteran engagement &amp; structured check-ins</h3>
+      <p>Regular outreach via call or text, designed to maintain connection, surface needs early, and ensure no one falls through the cracks. Each touchpoint is documented and reported.</p>
+      <span class="svc-tag">Core service &mdash; available now</span>
+    </div>
+  </div>
+  <div class="svc-row">
+    <div class="svc-num">02</div>
+    <div class="svc-body">
+      <h3>Navigation &amp; appointment accountability</h3>
+      <p>Helping individuals find programs, schedule appointments, and actually follow through &mdash; reducing no-show rates and improving continuity of care for your organization&rsquo;s clients.</p>
+      <span class="svc-tag">Core service &mdash; available now</span>
+    </div>
+  </div>
+  <div class="svc-row">
+    <div class="svc-num">03</div>
+    <div class="svc-body">
+      <h3>Outcomes reporting for organizations</h3>
+      <p>Weekly engagement reports delivered to your team. Transparent metrics on contact rates, referrals made, barriers encountered, and individual progress &mdash; built for compliance and grant reporting.</p>
+      <span class="svc-tag">Included with all contracts</span>
+    </div>
+  </div>
+  <div class="svc-row">
+    <div class="svc-num">04</div>
+    <div class="svc-body">
+      <h3>Behavioral support program</h3>
+      <p>A structured, clinically-informed program co-designed with licensed advisors. Built for organizations that need documented engagement and higher-acuity support services.</p>
+      <span class="svc-tag">Launching 2025</span>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="test-header">
+    <div class="eyebrow eyebrow-light" style="display:inline-block;margin-bottom:12px">What people are saying</div>
+    <h2>Real impact for those who serve</h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="test-text">&ldquo;Frontline Solutions changed how we support our veteran clients. The check-ins are consistent, the reporting is clear, and we&rsquo;ve seen real improvement in engagement. This is what a real partner looks like.&rdquo;</p>
+      <div class="test-name">Director, Veteran Services Nonprofit</div>
+      <div class="test-role">Mid-Atlantic Region</div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="test-text">&ldquo;We were losing veterans between appointments. Frontline stepped in with structured outreach and our show rates jumped immediately. The weekly reports give us everything we need for grant documentation.&rdquo;</p>
+      <div class="test-name">Program Coordinator</div>
+      <div class="test-role">Behavioral Health Clinic</div>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="test-text">&ldquo;What sets them apart is they actually understand the culture. They&rsquo;re veterans themselves. They know how to build trust with people who don&rsquo;t easily ask for help. That matters more than anything.&rdquo;</p>
+      <div class="test-name">Commander, Law Enforcement Agency</div>
+      <div class="test-role">Northeast U.S.</div>
+    </div>
+  </div>
+</section>
+
+<section id="our-story" class="section-dark">
+  <div class="story-inner">
+    
+    <div class="story-left">
+      <div class="rule"></div>
+      <div class="eyebrow eyebrow-light">Our Story</div>
+      <h2 class="section-h2 section-h2-light">Founded in service.<br>Built with purpose.</h2>
+
+      <div class="story-text">
+        <p>Frontline Solutions was founded by a veteran who saw firsthand the gap between the support that exists on paper and the support that people actually receive.</p>
+        <p>This company is built on the belief that real change happens through consistent human contact — not programs, not apps, not hotlines alone. It happens when someone shows up, follows through, and refuses to let people fall through the cracks.</p>
+      </div>
+
+      <div class="story-images">
+        <div class="story-image-card">
+          <img src="me-main.png" alt="Jordi Enric Sannella in law enforcement uniform">
+        </div>
+        <div class="story-image-card">
+          <img src="me-army.jpg" alt="Jordi Enric Sannella in military uniform">
+        </div>
+      </div>
+
+      <div class="story-quote">
+        “We are not building another program. We are building a system that actually works.”
+      </div>
+    </div>
+
+        <div class="story-right">
+      <div class="story-placeholder">
+        <div class="story-ph-head">Jordi Enric Sannella</div>
+        <div class="story-role">Founder & Director, Frontline Solutions</div>
+
+        <p>I built Frontline Solutions based on firsthand experience in both military and law enforcement environments, where accountability, consistency, and follow-through are mission-critical.</p>
+
+        <p style="margin-top:14px">In those roles, I saw a recurring problem: the gap between the support systems that exist on paper and the reality of what people actually receive. Resources are often available, but access, continuity, and trust are inconsistent—especially for those operating under stress.</p>
+
+        <p style="margin-top:14px">Frontline Solutions was created to address that gap.</p>
+
+        <p style="margin-top:14px">This work is grounded in real-world conditions—understanding how individuals engage with support systems when time is limited, pressure is high, and stigma is present. In those moments, structure and consistency are what determine whether support is effective or not.</p>
+
+        <p style="margin-top:14px">The model is simple: structured engagement, direct navigation, and consistent human contact. Not replacing existing systems, but strengthening how individuals move through them.</p>
+
+        <p style="margin-top:14px">The objective is clear: ensure that those who have served are supported by systems that function with the same reliability they were trained to uphold.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="why-inner">
+    <div>
+      <div class="rule"></div>
+      <div class="eyebrow">Why Frontline Solutions</div>
+      <h2 class="section-h2">A credible partner for serious work</h2>
+      <p class="section-p">We don’t overpromise. We build credibility through service, operational discipline, and a model designed for accountability, trust, and long-term partnership.</p>
+
+      <div class="credibility-image">
+        <img src="veteran.png" alt="Veteran-owned and operational credibility">
+      </div>
+    </div>
+
+    <div>
+      <div class="why-item"><div class="why-inner-row"><div class="why-n">01</div><div><h4>Veteran-owned and operated</h4><p>Founded and led by those who have lived the experience of service. We understand the culture, the barriers to help-seeking, and what real trust looks like in this population.</p></div></div></div>
+
+      <div class="why-item"><div class="why-inner-row"><div class="why-n">02</div><div><h4>Transparent outcomes reporting</h4><p>Every contract includes structured weekly reporting — so your organization always has documentation of impact, engagement, and progress toward program goals.</p></div></div></div>
+
+      <div class="why-item"><div class="why-inner-row"><div class="why-n">03</div><div><h4>Clinically informed, non-clinical delivery</h4><p>Our services are designed alongside licensed professionals — structured for safety, effectiveness, and eventual integration with clinical care pathways.</p></div></div></div>
+
+      <div class="why-item"><div class="why-inner-row"><div class="why-n">04</div><div><h4>Contract-ready and scalable</h4><p>From small nonprofits to municipal programs, our model is designed to scale — with SOPs, reporting infrastructure, and compliance documentation built in from day one.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="partner" class="section-dark">
+  <div class="partner-inner">
+    <div>
+      <div class="rule"></div>
+      <div class="eyebrow eyebrow-light">Partner With Us</div>
+      <h2 class="section-h2 section-h2-light">Organizations we work best with</h2>
+      <p class="section-p section-p-light">We are actively seeking contract partnerships with organizations that serve veterans, first responders, and underserved communities. Our model is designed to integrate with existing programs &mdash; not replace them.</p>
+      <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
+        <button class="btn-red" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Proposal &rarr;</button>
+        <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Schedule a Call</button>
+      </div>
+    </div>
+    <div style="margin-top:8px">
+      <div class="pt-item"><div class="pt-dash"></div><div><h4>Veteran nonprofits &amp; VSOs</h4><p>Augment your staff capacity with structured outreach, engagement tracking, and follow-through support for your veteran clients.</p></div></div>
+      <div class="pt-item"><div class="pt-dash"></div><div><h4>Clinics &amp; behavioral health programs</h4><p>Improve show rates, reduce dropout, and strengthen continuity of care with dedicated engagement coordination between appointments.</p></div></div>
+      <div class="pt-item"><div class="pt-dash"></div><div><h4>Government &amp; municipal agencies</h4><p>Contract-ready services with full reporting documentation, compliance infrastructure, and outcomes data to support grant and program requirements.</p></div></div>
+      <div class="pt-item"><div class="pt-dash"></div><div><h4>Law enforcement &amp; fire departments</h4><p>Peer support coordination and proactive wellness programming designed specifically for the culture and needs of first responder agencies.</p></div></div>
+    </div>
+  </div>
+</section>
+<section class="section-alt">
+  <div class="two-col" style="align-items:center">
+
+    <div>
+      <div class="rule"></div>
+      <div class="eyebrow">Our Location</div>
+      <h2 class="section-h2">Our location</h2>
+
+      <p class="section-p" style="margin-top:16px">
+        We are a remote company with employees nationwide. Our corporate presence is based in the heart of New York City.
+      </p>
+
+      <p class="section-p" style="margin-top:12px">
+        Frontline Solutions operates across the United States, supporting veterans, first responders, and organizations regardless of location.
+      </p>
+
+      <p class="section-p" style="margin-top:20px;font-weight:700">
+        New York City, NY
+      </p>
+    </div>
+
+    <div class="location-map">
+      <img src="map.png" alt="Frontline Solutions location in New York City">
+    </div>
+
+  </div>
+</section>
+<section class="cta-section" id="contact">
+  <h2>Ready to bring real support to those who serve?</h2>
+  <p>Tell us about your organization and what kind of support you’re looking for. We’ll get back to you directly.</p>
+
+  <form name="contact" method="POST" data-netlify="true" class="contact-form">
+    <input type="hidden" name="form-name" value="contact">
+
+    <div class="contact-grid">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+
+      <div class="form-group">
+        <label for="organization">Organization</label>
+        <input id="organization" name="organization" type="text" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="text">
+      </div>
+    </div>
+
+    <div class="form-group form-group-full">
+      <label for="message">How can we help?</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+    </div>
+
+    <div class="cta-btns">
+      <button type="submit" class="btn-white">Send Inquiry</button>
+    </div>
+  </form>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">
+  <img src="logo.png" alt="Frontline Solutions Logo">
+
+  <div class="footer-brand-text">
+    <span class="footer-brand-top">FRONTLINE</span>
+    <span class="footer-brand-bottom">SOLUTIONS</span>
+  </div>
+
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/frontlinesolutions.us" target="_blank">
+      <img src="instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61574339036797" target="_blank">
+      <img src="facebook.png" alt="Facebook">
+    </a>
+  </div>
+</div>
+
+      <div class="footer-tagline">Empower &nbsp;&middot;&nbsp; Support &nbsp;&middot;&nbsp; Succeed</div>
+    </div>
+
+    <div class="footer-links-row">
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#who-we-serve">Our Mission</a>
+        <a href="#our-story">Our Story</a>
+        <a href="#who-we-serve">Who We Serve</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="#services">Veteran Engagement</a>
+        <a href="#services">Navigation Support</a>
+        <a href="#services">Outcomes Reporting</a>
+        <a href="#services">Behavioral Support Program</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="mailto:frontlinesolutions.us@gmail.com">frontlinesolutions.us@gmail.com</a>
+        <p style="color:rgba(255,255,255,0.25);font-size:12px;margin-top:8px">Veteran-Owned Small Business</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; 2025 Frontline Solutions. All rights reserved.</span>
+    <span>Veteran-Owned &nbsp;&middot;&nbsp; Behavioral Health &nbsp;&middot;&nbsp; Community Support</span>
+  </div>
+</footer>
+</body>
+</html>
