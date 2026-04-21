@@ -1098,7 +1098,18 @@
       .serve-card {
         min-width: 0;
       }
+.nav,
+.hero,
+.pop-bar,
+section,
+footer{
+  width:100%;
+  max-width:100%;
+}
 
+body *{
+  box-sizing:border-box;
+}
       @media (max-width: 900px) {
         html,
         body {
@@ -1106,67 +1117,74 @@
           max-width: 100%;
         }
 
-        .nav {
-          padding: 14px 16px;
-          align-items: center;
-          justify-content: space-between;
-          gap: 10px;
-          flex-wrap: nowrap;
-        }
+        .nav{
+  padding:14px 16px;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:nowrap;
+  min-height:82px;
+}
 
-        .nav-left {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          flex: 1;
-          min-width: 0;
-        }
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:1;
+  min-width:0;
+}
 
-        .nav-logo {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          min-width: 0;
-          flex: 1;
-        }
+.nav-logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  flex:1;
+}
 
-        .nav-logo img {
-          height: 58px;
-          width: auto;
-          flex-shrink: 0;
-        }
+.nav-logo img{
+  height:58px;
+  width:auto;
+  flex-shrink:0;
+}
 
-        .nav-logo-text {
-          padding-bottom: 0;
-          min-width: 0;
-        }
+.nav-logo-text{
+  padding-bottom:0;
+  min-width:0;
+  justify-content:center;
+}
 
-        .nav-logo-top {
-          font-size: 10px;
-          letter-spacing: 0.18em;
-          line-height: 1.1;
-        }
+.nav-logo-top{
+  font-size:10px;
+  letter-spacing:0.18em;
+  line-height:1.1;
+  margin-bottom:3px;
+}
 
-        .nav-logo-bottom {
-          font-size: 18px;
-          line-height: 1;
-          letter-spacing: 0.04em;
-        }
+.nav-logo-bottom{
+  font-size:18px;
+  line-height:1;
+  letter-spacing:0.04em;
+  margin-top:0;
+}
 
-        .nav-links {
-          display: none;
-        }
+.nav-links{
+  display:none;
+}
 
-        .nav-cta {
-          margin-left: 10px;
-          padding: 10px 12px;
-          font-size: 10px;
-          line-height: 1.2;
-          max-width: 128px;
-          min-width: 128px;
-          text-align: center;
-          flex-shrink: 0;
-        }
+.nav-cta{
+  margin-left:10px;
+  padding:12px 14px;
+  font-size:10px;
+  line-height:1.1;
+  max-width:140px;
+  min-width:140px;
+  text-align:center;
+  flex-shrink:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
 
         .hero {
           padding: 34px 20px 56px;
