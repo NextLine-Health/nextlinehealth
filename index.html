@@ -2018,40 +2018,40 @@
         for. We’ll get back to you directly.
       </p>
 
-      <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        class="contact-form"
-      >
-        <input type="hidden" name="form-name" value="contact" />
+      <form action="https://formspree.io/f/mdaywodj" method="POST" class="contact-form">
+  <input type="hidden" name="_subject" value="New inquiry from NextLine Health website">
+<input type="hidden" name="_next" value="https://www.nextlinehealth.com/thank-you.html">
+  <div class="contact-grid">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input id="name" name="name" type="text" required>
+    </div>
 
-        <div class="contact-grid">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input id="name" name="name" type="text" required />
-          </div>
+    <div class="form-group">
+      <label for="organization">Organization</label>
+      <input id="organization" name="organization" type="text" required>
+    </div>
 
-          <div class="form-group">
-            <label for="organization">Organization</label>
-            <input id="organization" name="organization" type="text" required />
-          </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+    </div>
 
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
-          </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="text">
+    </div>
+  </div>
 
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="text" />
-          </div>
-        </div>
+  <div class="form-group form-group-full">
+    <label for="message">How can we help?</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  </div>
 
-        <div class="form-group form-group-full">
-          <label for="message">How can we help?</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-        </div>
+  <div class="cta-btns">
+    <button type="submit" class="btn-white">Send Inquiry</button>
+  </div>
+</form>
 
         <div class="cta-btns">
           <button type="submit" class="btn-white">Send Inquiry</button>
