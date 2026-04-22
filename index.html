@@ -1120,7 +1120,7 @@ body *{
 
 .approach-inner{
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 72px;
   align-items: center;
 }
@@ -1130,22 +1130,28 @@ body *{
 }
 
 .approach-text .section-p{
-  margin-top: 18px;
+  margin-top: 14px;
 }
 
 .approach-visual{
   width: 100%;
 }
 
+.approach-visual{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .approach-visual img{
   width: 100%;
-  max-width: 620px;
-  display: block;
-  margin-left: auto;
+  max-width: 480px;
+  height: auto;
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 18px 50px rgba(0,0,0,0.28);
 }
+
       @media (max-width: 900px) {
         html,
         body {
