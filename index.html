@@ -1114,6 +1114,38 @@ body *{
       .accent {
   color: var(--red);
 }
+      .approach-section{
+  padding: 120px 48px;
+}
+
+.approach-inner{
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.approach-text{
+  max-width: 620px;
+}
+
+.approach-text .section-p{
+  margin-top: 18px;
+}
+
+.approach-visual{
+  width: 100%;
+}
+
+.approach-visual img{
+  width: 100%;
+  max-width: 620px;
+  display: block;
+  margin-left: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.28);
+}
       @media (max-width: 900px) {
         html,
         body {
@@ -1414,6 +1446,23 @@ body *{
         .location-map img {
           height: 220px;
         }
+        .approach-section{
+  padding: 80px 20px;
+}
+
+.approach-inner{
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+.approach-text{
+  max-width: 100%;
+}
+
+.approach-visual img{
+  max-width: 100%;
+  margin: 0 auto;
+}
       }
     </style>
   </head>
@@ -1645,15 +1694,33 @@ body *{
         </button>
       </div>
     </section>
-<section class="section-dark">
-  <div class="rule"></div>
-  <div class="eyebrow eyebrow-light">Our Approach</div>
-  <h2 class="section-h2 section-h2-light">
-    Structured support that drives real follow-through
-  </h2>
-  <p class="section-p section-p-light" style="max-width: 900px">
-    Access to services is not the problem. Consistency is. NextLine Health ensures individuals stay engaged, follow through, and move forward through structured outreach, clear accountability, and direct support.
-  </p>
+<section class="section-dark approach-section">
+  <div class="approach-inner">
+    <div class="approach-text">
+      <div class="rule"></div>
+      <div class="eyebrow eyebrow-light">Our Approach</div>
+
+      <h2 class="section-h2 section-h2-light">
+        Structured support that drives real follow-through
+      </h2>
+
+      <p class="section-p section-p-light">
+        Access to services is not the problem. Consistency is.
+      </p>
+
+      <p class="section-p section-p-light">
+        NextLine Health operates between referral and outcome — ensuring individuals stay engaged, follow through, and continue progressing through structured outreach, accountability, and direct human support.
+      </p>
+
+      <p class="section-p section-p-light">
+        Our model is designed to strengthen existing systems, improve continuity, and give organizations confidence that the people they serve remain connected and moving forward.
+      </p>
+    </div>
+
+    <div class="approach-visual">
+      <img src="approach.png" alt="NextLine Health professional operations environment" />
+    </div>
+  </div>
 </section>
     <section id="services">
       <div class="rule"></div>
