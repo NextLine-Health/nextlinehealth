@@ -461,6 +461,69 @@
 .svc-btn:hover{
   background:var(--red);
 }
+      .services-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:24px;
+  margin-top:40px;
+}
+
+.service-card{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  padding:28px 26px;
+  background:#fff;
+  border:1px solid var(--border);
+  border-top:4px solid var(--red);
+  border-radius:10px;
+  transition:transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 32px rgba(0,0,0,0.08);
+  border-color:#d7d1c8;
+}
+
+.service-card-num{
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:0.08em;
+  color:var(--red);
+}
+
+.service-card h3{
+  font-size:28px;
+  font-weight:800;
+  line-height:1.15;
+  color:var(--navy);
+  margin:0;
+}
+
+.service-card p{
+  font-size:15px;
+  line-height:1.7;
+  color:var(--text-muted);
+  margin:0;
+}
+
+.service-card-tag{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--red);
+}
+
+.service-card-link{
+  margin-top:4px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--navy);
+}
       .story-inner {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1487,6 +1550,20 @@ body *{
   max-width: 100%;
   margin: 0 auto;
 }
+        .services-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .service-card{
+    padding:22px 20px;
+  }
+
+  .service-card h3{
+    font-size:22px;
+  }
+
+}
       }
     </style>
   </head>
@@ -1757,60 +1834,40 @@ body *{
 <p class="section-p" style="max-width: 720px; margin-top: 14px; margin-bottom: 40px;">
   NextLine Health delivers structured engagement, navigation, and accountability systems designed to improve continuity of care and measurable outcomes across populations.
 </p>
-      <div class="svc-row">
-        <div class="svc-num">01</div>
-        <div class="svc-body">
-          <h3>Veteran engagement &amp; structured check-ins</h3>
-          <p>Regular outreach by phone or text designed to maintain connection, identify needs early, and ensure individuals remain engaged with services and support systems. Each touchpoint is documented and tracked.</p>
-          <span class="svc-tag">Core service &mdash; available now</span>
-        </div>
-      </div>
-      <div class="svc-row">
-  <div class="svc-num">01</div>
-  <div class="svc-body">
-    <h3>Engagement &amp; Follow-Through Program</h3>
-    <p>
-      Structured outreach designed to ensure individuals remain engaged with services and continue progressing through care. Includes consistent check-ins, appointment follow-ups, and barrier identification to reduce disengagement and improve continuity.
-    </p>
-    <span class="svc-tag">Core service</span>
-    <a href="#contact" class="svc-btn">Learn More</a>
-  </div>
-</div>
+      <div class="services-grid">
 
-<div class="svc-row">
-  <div class="svc-num">02</div>
-  <div class="svc-body">
+  <a href="#contact" class="service-card">
+    <div class="service-card-num">01</div>
+    <h3>Engagement &amp; Follow-Through</h3>
+    <p>Structured outreach that keeps individuals engaged and moving forward.</p>
+    <span class="service-card-tag">Core service</span>
+    <span class="service-card-link">Learn More</span>
+  </a>
+
+  <a href="#contact" class="service-card">
+    <div class="service-card-num">02</div>
     <h3>Care Navigation &amp; Coordination</h3>
-    <p>
-      Direct support to help individuals access and move through services efficiently. Includes appointment coordination, program matching, and guidance across healthcare, veteran, and community systems.
-    </p>
-    <span class="svc-tag">Available with engagement program</span>
-    <a href="#contact" class="svc-btn">Learn More</a>
-  </div>
-</div>
+    <p>Guidance that helps individuals access care, appointments, and resources.</p>
+    <span class="service-card-tag">Add-on support</span>
+    <span class="service-card-link">Learn More</span>
+  </a>
 
-<div class="svc-row">
-  <div class="svc-num">03</div>
-  <div class="svc-body">
-    <h3>Outcomes Reporting &amp; Program Visibility</h3>
-    <p>
-      Weekly reporting with clear engagement metrics, contact rates, and progress tracking. Designed to support organizational oversight, compliance requirements, and funding accountability.
-    </p>
-    <span class="svc-tag">Included in contracts</span>
-    <a href="#contact" class="svc-btn">Learn More</a>
-  </div>
-</div>
+  <a href="#contact" class="service-card">
+    <div class="service-card-num">03</div>
+    <h3>Outcomes Reporting</h3>
+    <p>Clear visibility into engagement, follow-through, and program performance.</p>
+    <span class="service-card-tag">Included in contracts</span>
+    <span class="service-card-link">Learn More</span>
+  </a>
 
-<div class="svc-row">
-  <div class="svc-num">04</div>
-  <div class="svc-body">
+  <a href="#contact" class="service-card">
+    <div class="service-card-num">04</div>
     <h3>Behavioral Support Program</h3>
-    <p>
-      A structured, clinically-informed support layer designed for higher-acuity populations. Built to integrate with existing care systems and expand support beyond traditional service models.
-    </p>
-    <span class="svc-tag">Launching 2026</span>
-    <a href="#contact" class="svc-btn">Learn More</a>
-  </div>
+    <p>A structured support layer for higher-acuity populations and future expansion.</p>
+    <span class="service-card-tag">Launching 2026</span>
+    <span class="service-card-link">Learn More</span>
+  </a>
+
 </div>
     </section>
 
