@@ -1,0 +1,1308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Federal Government | NextLine Health</title>
+  <meta name="description" content="Behavioral health support, engagement, and measurement-based care solutions for federal government, military, and veteran-serving organizations." />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --navy:#0d1f3c;
+      --navy-deep:#07111f;
+      --red:#b22234;
+      --red-dark:#8a1a27;
+      --white:#fff;
+      --off-white:#f5f4f0;
+      --text:#1a1a2e;
+      --text-muted:#4a4a5a;
+      --border:#e0ddd6;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{
+      font-family:"Lato",sans-serif;
+      color:var(--text);
+      background:#fff;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .nav{
+      background:var(--navy);
+      padding:0 48px;
+      height:96px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      border-top:4px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-left{
+      display:flex;
+      align-items:center;
+      gap:34px;
+    }
+
+    .nav-logo{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .nav-logo img{
+      height:82px;
+      display:block;
+    }
+
+    .nav-logo-text{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      line-height:1;
+      min-height:82px;
+    }
+
+    .nav-logo-top{
+      font-size:13px;
+      letter-spacing:0.22em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,0.72);
+      font-weight:700;
+      margin:0 0 4px 0;
+      line-height:1;
+    }
+
+    .nav-logo-bottom{
+      font-size:28px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:#fff;
+      font-weight:900;
+      margin:0;
+      line-height:0.95;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:32px;
+      align-items:center;
+      height:100%;
+    }
+
+    .nav-links a{
+      font-size:13px;
+      color:rgba(255,255,255,0.75);
+      letter-spacing:0.05em;
+      text-transform:uppercase;
+      transition:color 0.2s;
+      line-height:1;
+      display:flex;
+      align-items:center;
+      height:100%;
+    }
+
+    .nav-links a:hover{color:#fff}
+
+    .nav-cta{
+      background:var(--red);
+      color:#fff;
+      border:none;
+      padding:0 28px;
+      height:48px;
+      font-size:13px;
+      letter-spacing:0.06em;
+      text-transform:uppercase;
+      cursor:pointer;
+      font-family:inherit;
+      transition:background 0.2s;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      line-height:1;
+    }
+
+    .nav-cta:hover{background:var(--red-dark)}
+
+    .nav-dropdown{
+      position:relative;
+      display:flex;
+      align-items:center;
+      height:100%;
+    }
+
+    .dropdown-menu{
+      position:absolute;
+      top:calc(100% + 14px);
+      left:0;
+      min-width:220px;
+      background:#fff;
+      border:1px solid var(--border);
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+      padding:10px 0;
+      display:none;
+      z-index:1001;
+    }
+
+    .dropdown-menu a{
+      display:block;
+      padding:12px 18px;
+      font-size:13px;
+      color:var(--navy);
+      letter-spacing:0.04em;
+      text-transform:uppercase;
+      line-height:1.2;
+      white-space:nowrap;
+      height:auto;
+    }
+
+    .dropdown-menu a:hover{
+      background:var(--off-white);
+      color:var(--red);
+    }
+
+    .nav-dropdown:hover .dropdown-menu{
+      display:block;
+    }
+
+    .hero-federal{
+      background:linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, #11284f 100%);
+      padding:90px 48px 96px;
+      position:relative;
+      overflow:hidden;
+      border-bottom:4px solid var(--red);
+    }
+
+    .hero-federal::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(120deg, rgba(255,255,255,0.02), transparent 45%),
+        repeating-linear-gradient(-55deg, transparent, transparent 38px, rgba(178,34,52,0.05) 38px, rgba(178,34,52,0.05) 39px);
+      pointer-events:none;
+    }
+
+    .hero-federal-inner{
+      max-width:1200px;
+      margin:0 auto;
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:56px;
+      align-items:start;
+    }
+
+    .hero-federal-eyebrow{
+      font-size:11px;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:18px;
+      font-weight:700;
+    }
+
+    .hero-federal h1{
+      font-size:54px;
+      line-height:1.05;
+      font-weight:900;
+      color:#fff;
+      margin-bottom:22px;
+      max-width:720px;
+    }
+
+    .hero-federal h1 span{color:var(--red)}
+
+    .hero-federal p{
+      font-size:18px;
+      line-height:1.75;
+      color:rgba(255,255,255,0.74);
+      max-width:680px;
+      margin-bottom:34px;
+    }
+
+    .hero-federal-btns{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .btn-red{
+      background:var(--red);
+      color:#fff;
+      border:none;
+      padding:15px 34px;
+      font-size:14px;
+      letter-spacing:0.07em;
+      text-transform:uppercase;
+      cursor:pointer;
+      font-family:inherit;
+      font-weight:700;
+      transition:background 0.2s;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .btn-red:hover{background:var(--red-dark)}
+
+    .btn-ghost{
+      background:transparent;
+      color:rgba(255,255,255,0.9);
+      border:1px solid rgba(255,255,255,0.28);
+      padding:15px 34px;
+      font-size:14px;
+      letter-spacing:0.07em;
+      text-transform:uppercase;
+      cursor:pointer;
+      font-family:inherit;
+      transition:all 0.2s;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .btn-ghost:hover{
+      border-color:rgba(255,255,255,0.6);
+      color:#fff;
+    }
+
+    .hero-stats{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    .hero-stat-card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      border-left:4px solid var(--red);
+      padding:22px 24px;
+      backdrop-filter:blur(4px);
+    }
+
+    .hero-stat-num{
+      font-size:42px;
+      line-height:1;
+      font-weight:900;
+      color:#fff;
+      margin-bottom:6px;
+    }
+
+    .hero-stat-num span{color:var(--red)}
+
+    .hero-stat-label{
+      font-size:14px;
+      line-height:1.5;
+      color:rgba(255,255,255,0.72);
+    }
+
+    .hero-stat-source{
+      margin-top:6px;
+      font-size:11px;
+      color:rgba(255,255,255,0.35);
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+    }
+
+    section{padding:90px 48px}
+    .section-alt{background:var(--off-white)}
+    .section-dark{background:var(--navy)}
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .rule{
+      width:40px;
+      height:4px;
+      background:var(--red);
+      margin-bottom:18px;
+    }
+
+    .eyebrow{
+      font-size:11px;
+      letter-spacing:0.16em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:14px;
+      font-weight:700;
+    }
+
+    .eyebrow-light{
+      color:rgba(255,200,200,0.85);
+    }
+
+    .section-h2{
+      font-size:38px;
+      font-weight:900;
+      line-height:1.15;
+      margin-bottom:16px;
+      color:var(--navy-deep);
+    }
+
+    .section-h2-light{color:#fff}
+
+    .section-p{
+      font-size:16px;
+      color:var(--text-muted);
+      line-height:1.8;
+      max-width:760px;
+    }
+
+    .section-p-light{
+      color:rgba(255,255,255,0.68);
+    }
+
+    .solutions-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      margin-top:44px;
+    }
+
+    .solution-card{
+      background:#fff;
+      padding:36px 30px;
+      border-top:4px solid var(--navy);
+      box-shadow:0 6px 24px rgba(0,0,0,0.06);
+    }
+
+    .solution-card.red{
+      border-top-color:var(--red);
+    }
+
+    .solution-card h3{
+      font-size:26px;
+      line-height:1.15;
+      font-weight:900;
+      margin-bottom:22px;
+      color:var(--navy-deep);
+      text-transform:uppercase;
+    }
+
+    .solution-list{
+      list-style:none;
+      margin-bottom:26px;
+    }
+
+    .solution-list li{
+      padding:12px 0;
+      border-bottom:1px solid var(--border);
+      font-size:15px;
+      line-height:1.65;
+      color:var(--text-muted);
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .solution-list li::before{
+      content:"▸";
+      color:var(--red);
+      font-size:12px;
+      margin-top:4px;
+      flex-shrink:0;
+    }
+
+    .solution-link{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:12px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      font-weight:800;
+      color:var(--navy);
+      border-bottom:2px solid var(--navy);
+      padding-bottom:2px;
+    }
+
+    .solution-card.red .solution-link{
+      color:var(--red);
+      border-color:var(--red);
+    }
+
+    .security-strip{
+      background:var(--navy-deep);
+      padding:64px 48px;
+      border-left:4px solid var(--red);
+    }
+
+    .security-inner{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.4fr 0.8fr;
+      gap:32px;
+      align-items:center;
+    }
+
+    .security-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      justify-content:flex-end;
+    }
+
+    .sec-badge{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.15);
+      padding:11px 18px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,0.72);
+    }
+
+    .capabilities-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1px;
+      background:var(--border);
+      margin-top:44px;
+    }
+
+    .cap-item{
+      background:#fff;
+      padding:34px 28px;
+    }
+
+    .cap-num{
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:0.16em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:10px;
+    }
+
+    .cap-item h4{
+      font-size:21px;
+      line-height:1.2;
+      font-weight:800;
+      color:var(--navy-deep);
+      margin-bottom:10px;
+      text-transform:uppercase;
+    }
+
+    .cap-item p{
+      font-size:15px;
+      line-height:1.7;
+      color:var(--text-muted);
+    }
+
+    .testimonial-section{
+      background:linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+      padding:80px 48px;
+    }
+
+    .testimonial-inner{
+      max-width:820px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .quote-mark{
+      font-size:68px;
+      line-height:0.8;
+      color:var(--red);
+      font-family:Georgia,serif;
+      margin-bottom:18px;
+      display:block;
+    }
+
+    blockquote{
+      font-size:26px;
+      line-height:1.65;
+      color:#fff;
+      font-style:italic;
+      font-weight:300;
+      margin-bottom:28px;
+    }
+
+    .quote-attrib{
+      font-size:14px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      font-weight:800;
+      color:rgba(255,255,255,0.76);
+    }
+
+    .quote-attrib span{
+      display:block;
+      margin-top:6px;
+      color:var(--red);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .admin-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      margin-top:44px;
+    }
+
+    .admin-card{
+      background:#fff;
+      padding:34px 30px;
+      box-shadow:0 4px 18px rgba(0,0,0,0.05);
+    }
+
+    .admin-card h3{
+      font-size:28px;
+      font-weight:900;
+      text-transform:uppercase;
+      color:var(--navy-deep);
+      margin-bottom:22px;
+      padding-bottom:14px;
+      border-bottom:2px solid var(--red);
+    }
+
+    .info-table{
+      width:100%;
+      border-collapse:collapse;
+    }
+
+    .info-table tr{
+      border-bottom:1px solid var(--border);
+    }
+
+    .info-table tr:last-child{border-bottom:none}
+
+    .info-table td{
+      padding:10px 0;
+      font-size:15px;
+      line-height:1.5;
+    }
+
+    .info-table td:first-child{
+      width:52%;
+      color:var(--text-muted);
+      font-weight:600;
+      padding-right:14px;
+    }
+
+    .info-table td:last-child{
+      color:var(--navy-deep);
+      font-weight:700;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:52px;
+      align-items:start;
+      margin-top:34px;
+    }
+
+    .contact-list{
+      list-style:none;
+      margin:24px 0 30px;
+    }
+
+    .contact-list li{
+      padding:8px 0;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      font-size:15px;
+      line-height:1.6;
+      color:var(--text-muted);
+    }
+
+    .contact-list li::before{
+      content:"";
+      width:8px;
+      height:8px;
+      background:var(--red);
+      border-radius:50%;
+      margin-top:8px;
+      flex-shrink:0;
+    }
+
+    .contact-form{
+      background:var(--off-white);
+      border-top:4px solid var(--navy);
+      padding:34px 30px;
+    }
+
+    .contact-form h4{
+      font-size:24px;
+      font-weight:900;
+      text-transform:uppercase;
+      color:var(--navy-deep);
+      margin-bottom:20px;
+    }
+
+    .form-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .form-group{
+      margin-bottom:16px;
+    }
+
+    .form-group label{
+      display:block;
+      font-size:12px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:var(--navy-deep);
+      margin-bottom:6px;
+      font-weight:700;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+      width:100%;
+      padding:12px 14px;
+      border:1.5px solid #d1d9e5;
+      background:#fff;
+      color:var(--navy-deep);
+      font-family:inherit;
+      font-size:15px;
+      outline:none;
+    }
+
+    .form-group textarea{
+      min-height:110px;
+      resize:vertical;
+    }
+
+    .form-submit{
+      width:100%;
+      background:var(--red);
+      color:#fff;
+      border:none;
+      padding:14px 28px;
+      font-size:15px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    .form-submit:hover{background:var(--red-dark)}
+
+    .form-success{
+      display:none;
+      text-align:center;
+      padding:26px 10px 8px;
+    }
+
+    .form-success h4{
+      font-size:24px;
+      margin-bottom:8px;
+      color:var(--navy-deep);
+      text-transform:uppercase;
+      font-weight:900;
+    }
+
+    .form-success p{
+      color:var(--text-muted);
+      font-size:15px;
+      line-height:1.7;
+    }
+
+    footer{
+      background:var(--navy-deep);
+      padding:56px 48px 28px;
+      border-top:3px solid var(--red);
+    }
+
+    .footer-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      flex-wrap:nowrap;
+      gap:40px;
+      padding-bottom:18px;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:12px;
+    }
+
+    .footer-brand img{
+      height:92px;
+      width:auto;
+      display:block;
+    }
+
+    .footer-brand-text{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      line-height:0.92;
+    }
+
+    .footer-brand-top{
+      font-size:12px;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,0.62);
+      font-weight:700;
+      margin-bottom:2px;
+    }
+
+    .footer-brand-bottom{
+      font-size:24px;
+      letter-spacing:0.03em;
+      text-transform:uppercase;
+      color:#ffffff;
+      font-weight:900;
+    }
+
+    .footer-tagline{
+      font-size:11px;
+      letter-spacing:0.12em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,0.3);
+      font-weight:700;
+    }
+
+    .footer-links-row{
+      display:flex;
+      gap:48px;
+      flex-wrap:nowrap;
+      align-items:flex-start;
+    }
+
+    .footer-col h5{
+      font-size:11px;
+      letter-spacing:0.14em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,0.3);
+      margin-bottom:16px;
+      font-weight:700;
+    }
+
+    .footer-col a,
+    .footer-col p{
+      display:block;
+      font-size:13px;
+      color:rgba(255,255,255,0.55);
+      margin-bottom:10px;
+      line-height:1.6;
+      transition:color 0.2s;
+    }
+
+    .footer-col a:hover{color:#fff}
+
+    .footer-bottom{
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .footer-bottom span{
+      font-size:12px;
+      color:rgba(255,255,255,0.25);
+    }
+
+    @media (max-width: 900px){
+      .nav{
+        padding:14px 16px;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+        flex-wrap:nowrap;
+        min-height:82px;
+        height:auto;
+      }
+
+      .nav-left{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        flex:1;
+        min-width:0;
+      }
+
+      .nav-logo{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        min-width:0;
+        flex:1;
+      }
+
+      .nav-logo img{
+        height:58px;
+        width:auto;
+        flex-shrink:0;
+      }
+
+      .nav-logo-text{
+        min-width:0;
+        justify-content:center;
+        min-height:auto;
+      }
+
+      .nav-logo-top{
+        font-size:10px;
+        letter-spacing:0.18em;
+        line-height:1.1;
+        margin-bottom:3px;
+      }
+
+      .nav-logo-bottom{
+        font-size:18px;
+        line-height:1;
+        letter-spacing:0.04em;
+      }
+
+      .nav-links{display:none}
+
+      .nav-cta{
+        margin-left:10px;
+        padding:12px 14px;
+        font-size:10px;
+               line-height:1.1;
+        max-width:140px;
+        min-width:140px;
+        text-align:center;
+        flex-shrink:0;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+      }
+
+      .hero-federal{
+        padding:60px 20px 70px;
+      }
+
+      .hero-federal-inner{
+        grid-template-columns:1fr;
+        gap:36px;
+      }
+
+      .hero-federal h1{
+        font-size:36px;
+      }
+
+      .hero-federal p{
+        font-size:16px;
+      }
+
+      .hero-federal-btns{
+        flex-direction:column;
+      }
+
+      .btn-red,
+      .btn-ghost{
+        width:100%;
+        justify-content:center;
+        text-align:center;
+      }
+
+      section,
+      .security-strip,
+      footer{
+        padding-left:20px;
+        padding-right:20px;
+      }
+
+      .solutions-grid,
+      .security-inner,
+      .admin-grid,
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .security-badges{
+        justify-content:flex-start;
+      }
+
+      .capabilities-grid{
+        grid-template-columns:1fr;
+      }
+
+      .form-row{
+        grid-template-columns:1fr;
+      }
+
+      .footer-top{
+        flex-direction:column;
+        gap:28px;
+      }
+
+      .footer-links-row{
+        flex-wrap:wrap;
+        gap:28px;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="NextLine Health Logo" />
+        <div class="nav-logo-text">
+          <span class="nav-logo-top">NEXTLINE</span>
+          <span class="nav-logo-bottom">HEALTH</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <a href="index.html#who-we-serve">Who We Serve</a>
+          <div class="dropdown-menu">
+            <a href="federal-government.html">Federal Government</a>
+          </div>
+        </div>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#our-story">Our Story</a>
+        <a href="index.html#partner">Partner With Us</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+
+    <a class="nav-cta" href="#contact">Schedule a Meeting</a>
+  </nav>
+
+  <section class="hero-federal">
+    <div class="hero-federal-inner">
+      <div>
+        <div class="hero-federal-eyebrow">Federal Government</div>
+        <h1>Behavioral health support for <span>government</span> and service populations</h1>
+        <p>
+          NextLine Health provides structured engagement, outreach, and follow-through support for federal, military, veteran, and public-sector programs. Our model is designed to strengthen existing systems, improve continuity, and help organizations keep people connected to the support they need.
+        </p>
+        <div class="hero-federal-btns">
+          <a href="#contact" class="btn-red">Schedule a Meeting</a>
+          <a href="#solutions" class="btn-ghost">Explore Solutions</a>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat-card">
+          <div class="hero-stat-num">B2G<span>+</span></div>
+          <div class="hero-stat-label">Positioned for federal, state, municipal, and veteran-focused contracting opportunities.</div>
+          <div class="hero-stat-source">Contract Pathway</div>
+        </div>
+
+        <div class="hero-stat-card">
+          <div class="hero-stat-num">24/7<span></span></div>
+          <div class="hero-stat-label">Visibility into crisis resources, support pathways, and structured follow-up options.</div>
+          <div class="hero-stat-source">Support Infrastructure</div>
+        </div>
+
+        <div class="hero-stat-card">
+          <div class="hero-stat-num">1:1<span></span></div>
+          <div class="hero-stat-label">Human-centered engagement designed to improve trust, accountability, and follow-through.</div>
+          <div class="hero-stat-source">Engagement Model</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="solutions section-alt" id="solutions">
+    <div class="container">
+      <div class="rule"></div>
+      <div class="eyebrow">Tailored Solutions</div>
+      <h2 class="section-h2">Built for public-sector and service-connected programs</h2>
+      <p class="section-p">
+        NextLine Health is designed to support organizations responsible for veterans, active duty personnel, first responders, and civilians who require consistent outreach, navigation, and engagement support.
+      </p>
+
+      <div class="solutions-grid">
+        <div class="solution-card">
+          <h3>Federal &amp; Defense Programs</h3>
+          <ul class="solution-list">
+            <li>Support resilience, readiness, and behavioral health engagement programs.</li>
+            <li>Provide structured follow-through for service members and military-connected populations.</li>
+            <li>Strengthen existing programs with outreach, accountability, and measurable reporting.</li>
+          </ul>
+          <a href="#contact" class="solution-link">Learn More →</a>
+        </div>
+
+        <div class="solution-card red">
+          <h3>Veteran &amp; Public Health Programs</h3>
+          <ul class="solution-list">
+            <li>Improve engagement for veterans connected to care, benefits, and community programs.</li>
+            <li>Reduce missed appointments and drop-off through structured follow-up.</li>
+            <li>Support grant-funded and contract-based programs with measurable outcomes reporting.</li>
+          </ul>
+          <a href="#contact" class="solution-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="security-strip">
+    <div class="security-inner">
+      <div>
+        <div class="eyebrow eyebrow-light">Trust &amp; Compliance Direction</div>
+        <h2 class="section-h2 section-h2-light">Built with security, privacy, and accountability in mind</h2>
+        <p class="section-p section-p-light">
+          NextLine Health is being structured for responsible data handling, secure workflows, and compliance-ready operations. As the company expands, the platform roadmap includes HIPAA-aligned processes, role-based access, audit-ready reporting, and security controls appropriate for healthcare and government partners.
+        </p>
+      </div>
+
+      <div class="security-badges">
+        <div class="sec-badge">Veteran-Owned</div>
+        <div class="sec-badge">Compliance-Ready</div>
+        <div class="sec-badge">B2G-Focused</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="capabilities" id="capabilities">
+    <div class="container">
+      <div class="rule"></div>
+      <div class="eyebrow">Platform Capabilities</div>
+      <h2 class="section-h2">High-touch support with a scalable technology layer</h2>
+      <p class="section-p">
+        Our service model combines direct human outreach with a platform roadmap designed to track engagement, document follow-through, and give organizations visibility into the populations they serve.
+      </p>
+
+      <div class="capabilities-grid">
+        <div class="cap-item">
+          <div class="cap-num">01</div>
+          <h4>Engagement Tracking</h4>
+          <p>Document outreach attempts, participant responses, and engagement status across programs.</p>
+        </div>
+
+        <div class="cap-item">
+          <div class="cap-num">02</div>
+          <h4>Risk &amp; Needs Visibility</h4>
+          <p>Identify who may be disengaging, missing appointments, or needing additional navigation support.</p>
+        </div>
+
+        <div class="cap-item">
+          <div class="cap-num">03</div>
+          <h4>Follow-Up Workflows</h4>
+          <p>Create structured next steps, reminders, and accountability actions after each interaction.</p>
+        </div>
+
+        <div class="cap-item">
+          <div class="cap-num">04</div>
+          <h4>Omnichannel Outreach</h4>
+          <p>Support communication through phone, SMS, email, and future platform-based engagement.</p>
+        </div>
+
+        <div class="cap-item">
+          <div class="cap-num">05</div>
+          <h4>Assessment Modules</h4>
+          <p>Support structured screening flows for anxiety, depression, PTSD, insomnia, and engagement risk.</p>
+        </div>
+
+        <div class="cap-item">
+          <div class="cap-num">06</div>
+          <h4>Outcomes Reporting</h4>
+          <p>Generate clear summaries for contact rates, follow-through, barriers, and program performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-section">
+    <div class="testimonial-inner">
+      <span class="quote-mark">“</span>
+      <blockquote>
+        The future of behavioral health support is not only access. It is engagement, accountability, and making sure people actually move through the systems built to help them.
+      </blockquote>
+      <div class="quote-attrib">
+        NextLine Health
+        <span>Structured Engagement &amp; Follow-Through Model</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="admin-section section-alt" id="admin">
+    <div class="container">
+      <div class="rule"></div>
+      <div class="eyebrow">Procurement Pathway</div>
+      <h2 class="section-h2">Contracting and grant-aligned growth path</h2>
+      <p class="section-p">
+        NextLine Health is positioned to pursue private contracts, government partnerships, subcontracting opportunities, and grant-funded program support as the business develops past performance.
+      </p>
+
+      <div class="admin-grid">
+        <div class="admin-card">
+          <h3>Contracting Direction</h3>
+          <table class="info-table">
+            <tr><td>Business Type</td><td>Veteran-Owned Small Business</td></tr>
+            <tr><td>Revenue Path</td><td>B2B / B2G Contracts</td></tr>
+            <tr><td>Primary Buyers</td><td>Clinics, Agencies, Nonprofits</td></tr>
+            <tr><td>Service Model</td><td>Engagement &amp; Follow-Through</td></tr>
+            <tr><td>Expansion Path</td><td>Subcontracting to Prime Contracts</td></tr>
+          </table>
+        </div>
+
+        <div class="admin-card">
+          <h3>Funding Alignment</h3>
+          <table class="info-table">
+            <tr><td>Veteran Programs</td><td>Supportive Services / Outreach</td></tr>
+            <tr><td>Behavioral Health</td><td>Engagement / Follow-Up</td></tr>
+            <tr><td>First Responders</td><td>Wellness / Resilience Programs</td></tr>
+            <tr><td>Grant Support</td><td>Reporting &amp; Accountability</td></tr>
+            <tr><td>Future Platform</td><td>Data + Engagement Infrastructure</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="rule"></div>
+      <div class="eyebrow">Get Started</div>
+      <h2 class="section-h2">Schedule a meeting to discuss federal and public-sector support</h2>
+
+      <div class="contact-grid">
+        <div>
+          <p class="section-p">
+            Whether you are exploring pilot programs, grant-funded support, subcontracting opportunities, or future government contracting pathways, NextLine Health can help structure an engagement model aligned with your population and goals.
+          </p>
+
+          <ul class="contact-list">
+            <li>Improve engagement and follow-through across service populations.</li>
+            <li>Support veterans, first responders, military-connected individuals, and civilians.</li>
+            <li>Strengthen reporting for organizational, grant, or contract requirements.</li>
+            <li>Build a scalable support model with future technology integration.</li>
+          </ul>
+
+          <a href="mailto:info@nextlinehealth.com" class="btn-red">info@nextlinehealth.com</a>
+        </div>
+
+        <div class="contact-form">
+          <h4>Request a Meeting</h4>
+
+          <form action="https://formspree.io/f/mdaywodj" method="POST">
+            <input type="hidden" name="_subject" value="Federal Government Page Inquiry - NextLine Health" />
+            <input type="hidden" name="_next" value="https://www.nextlinehealth.com/thank-you.html" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="first_name" required />
+              </div>
+
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="last_name" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Work Email</label>
+              <input type="email" name="email" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Job Title</label>
+                <input type="text" name="job_title" />
+              </div>
+
+              <div class="form-group">
+                <label>Organization</label>
+                <input type="text" name="organization" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Area of Interest</label>
+              <select name="interest">
+                <option value="">Select one...</option>
+                <option>Federal Government</option>
+                <option>Veteran Programs</option>
+                <option>First Responder Programs</option>
+                <option>Municipal / State Agency</option>
+                <option>Grant-Funded Program</option>
+                <option>Subcontracting Opportunity</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Additional Details</label>
+              <textarea name="message" placeholder="Tell us about your program, population, or goals..."></textarea>
+            </div>
+
+            <button class="form-submit" type="submit">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="logo.png" alt="NextLine Health Logo" />
+          <div class="footer-brand-text">
+            <span class="footer-brand-top">NEXTLINE</span>
+            <span class="footer-brand-bottom">HEALTH</span>
+          </div>
+        </div>
+        <div class="footer-tagline">
+          Engagement &nbsp;&middot;&nbsp; Accountability &nbsp;&middot;&nbsp; Execution
+        </div>
+      </div>
+
+      <div class="footer-links-row">
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="index.html#who-we-serve">Our Mission</a>
+          <a href="index.html#our-story">Our Story</a>
+          <a href="index.html#who-we-serve">Who We Serve</a>
+        </div>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="index.html#services">Engagement Program</a>
+          <a href="index.html#services">Care Navigation</a>
+          <a href="index.html#services">Outcomes Reporting</a>
+          <a href="federal-government.html">Federal Government</a>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="mailto:info@nextlinehealth.com">info@nextlinehealth.com</a>
+          <p style="color:rgba(255,255,255,0.25);font-size:12px;margin-top:8px;">
+            Veteran-Owned Small Business
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2025 NextLine Health Group. All rights reserved.</span>
+      <span>Veteran-Owned &nbsp;&middot;&nbsp; Behavioral Health &nbsp;&middot;&nbsp; Community Support</span>
+    </div>
+  </footer>
+
+</body>
+</html>
