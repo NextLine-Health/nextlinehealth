@@ -181,6 +181,44 @@
       .nav-cta:hover {
         background: var(--red-dark);
       }
+      .nav-dropdown{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu{
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  padding: 10px 0;
+  display: none;
+  z-index: 1001;
+}
+
+.dropdown-menu a{
+  display: block;
+  padding: 12px 18px;
+  font-size: 13px;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover{
+  background: var(--off-white);
+  color: var(--red);
+}
+
+.nav-dropdown:hover .dropdown-menu{
+  display: block;
+}
       .hero {
         background: url("hero.png") center/cover no-repeat;
         padding: 56px 48px 80px;
@@ -1579,19 +1617,23 @@ body *{
         </div>
 
         <div class="nav-links">
-          <a href="#who-we-serve">Who We Serve</a>
-          <a href="#services">Services</a>
-          <a href="#our-story">Our Story</a>
-          <a href="#partner">Partner With Us</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
+  <div class="nav-dropdown">
+    <a href="#who-we-serve">Who We Serve</a>
+    <div class="dropdown-menu">
+      <a href="federal-government.html">Federal Government</a>
+    </div>
+  </div>
+  <a href="#services">Services</a>
+  <a href="#our-story">Our Story</a>
+  <a href="#partner">Partner With Us</a>
+  <a href="#contact">Contact</a>
+</div>
 
       <button
         class="nav-cta"
         onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
       >
-        Request a Proposal
+        Request a Demo
       </button>
     </nav>
 
