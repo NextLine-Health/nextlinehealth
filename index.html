@@ -219,6 +219,28 @@
 .nav-dropdown:hover .dropdown-menu{
   display: block;
 }
+      .nav-dropbtn{
+  background:none;
+  border:0;
+  color:rgba(255,255,255,0.75);
+  font-family:inherit;
+  font-size:13px;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  cursor:pointer;
+  height:100%;
+  display:flex;
+  align-items:center;
+}
+
+.nav-dropbtn:hover{
+  color:#fff;
+}
+
+.dropdown-menu{
+  top:100%;
+  padding-top:10px;
+}
       .hero {
         background: url("hero.png") center/cover no-repeat;
         padding: 56px 48px 80px;
@@ -1618,11 +1640,12 @@ body *{
 
         <div class="nav-links">
   <div class="nav-dropdown">
-    <a href="#who-we-serve">Who We Serve</a>
-    <div class="dropdown-menu">
-      <a href="federal-government.html">Federal Government</a>
-    </div>
+  <button class="nav-dropbtn" type="button">Who We Serve</button>
+  <div class="dropdown-menu">
+    <a href="index.html#who-we-serve">Overview</a>
+    <a href="federal-government.html">Federal Government</a>
   </div>
+</div>
   <a href="#services">Services</a>
   <a href="#our-story">Our Story</a>
   <a href="#partner">Partner With Us</a>
