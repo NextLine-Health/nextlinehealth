@@ -89,11 +89,12 @@
       }
       .nav{
   background: var(--navy);
-  padding: 0 48px;              
-  height: 96px;                 
-  display: flex;
-  align-items: center;          
-  justify-content: space-between;
+  padding: 0 72px;
+  height: 96px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 56px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -101,10 +102,7 @@
 }
 
 .nav-left{
-  display: flex;
-  align-items: center;
-  gap: 34px;
-  flex: 1;
+  display: contents;
 }
 
 .nav-logo{
@@ -144,11 +142,10 @@
 
       .nav-links{
   display:flex;
-  gap:32px;
+  gap:38px;
   align-items:center;
+  justify-content:center;
   padding-bottom:0;
-  margin-left:42px;
-  margin-right:70px;
 }
 
 .nav-links a{
@@ -164,11 +161,11 @@
       .nav-links a:hover {
         color: #fff;
       }
-      .nav-cta{
+     .nav-cta{
   background: var(--red);
   color: #fff;
   border: none;
-  padding: 0 28px;
+  padding: 0 34px;
   height: 48px;
   font-size: 13px;
   letter-spacing: 0.06em;
@@ -181,6 +178,7 @@
   justify-content: center;
   line-height: 1;
   flex-shrink: 0;
+  justify-self: end;
 }
 
       
