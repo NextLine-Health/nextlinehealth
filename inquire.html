@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      name="google-site-verification"
+      content="PejJXgFPxCPPhZZsV98CMyaqrxGgqkMzJcb46YQjuBo"
+    />
+    <meta charset="utf-8" />
+    <title>
+      NextLine Health | Behavioral Health Support Services & patient engagement
+    </title>
+    <link rel="canonical" href="https://www.nextlinehealth.com/" />
+    <meta
+      name="description"
+      content="NextLine Health provides patient engagement, outreach, and behavioral health support services for veterans, first responders, and civilians. Reduce no-shows and improve outcomes."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/images/logo.png" alt="NextLine Health Logo" />
+          <div class="nav-logo-text">
+            <span class="nav-logo-top">NEXTLINE</span>
+            <span class="nav-logo-bottom">HEALTH</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <button class="nav-dropbtn" type="button">Who We Serve</button>
+          <div class="dropdown-menu">
+            <a href="index.html#who-we-serve">Overview</a>
+            <a href="federal-government.html">Federal Government</a>
+          </div>
+        </div>
+
+        <a href="#services">Services</a>
+        <a href="#our-story">Our Story</a>
+        <a href="#partner">Partner With Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-right">
+        <a class="nav-cta" href="inquire.html"> Inquire </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          onclick="toggleMenu()"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+    <section class="cta-section" id="contact">
+      <h2>Let’s build something that actually works</h2>
+      <p>
+        Tell us about your organization and what kind of support you’re looking
+        for. We’ll get back to you directly.
+      </p>
+
+      <form
+        action="https://formspree.io/f/mdaywodj"
+        method="POST"
+        class="contact-form"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New inquiry from NextLine Health website"
+        />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://www.nextlinehealth.com/thank-you.html"
+        />
+        <div class="contact-grid">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div class="form-group">
+            <label for="organization">Organization</label>
+            <input id="organization" name="organization" type="text" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="text" />
+          </div>
+        </div>
+
+        <div class="form-group form-group-full">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <div class="cta-btns">
+          <button type="submit" class="btn-white">Send Inquiry</button>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="Nextline Solutions Logo" />
+
+            <div class="footer-brand-text">
+              <span class="footer-brand-top">NEXTLINE</span>
+              <span class="footer-brand-bottom">HEALTH</span>
+            </div>
+
+            <div class="footer-socials">
+              <a
+                href="https://www.instagram.com/nextline.health"
+                target="_blank"
+              >
+                <img src="assets/images/instagram.png" alt="Instagram" />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61574339036797"
+                target="_blank"
+              >
+                <img src="assets/images/facebook.png" alt="Facebook" />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-tagline">
+            Empower &nbsp;&middot;&nbsp; Support &nbsp;&middot;&nbsp; Succeed
+          </div>
+        </div>
+
+        <div class="footer-links-row">
+          <div class="footer-col">
+            <h5>Company</h5>
+            <a href="#who-we-serve">Our Mission</a>
+            <a href="#our-story">Our Story</a>
+            <a href="#who-we-serve">Who We Serve</a>
+          </div>
+
+          <div class="footer-col">
+            <h5>Services</h5>
+            <a href="#services">Veteran Engagement</a>
+            <a href="#services">Navigation Support</a>
+            <a href="#services">Outcomes Reporting</a>
+            <a href="#services">Behavioral Support Program</a>
+          </div>
+
+          <div class="footer-col">
+            <h5>Contact</h5>
+            <a href="mailto:info@nextlinehealth.com">info@nextlinehealth.com</a>
+            <p
+              style="
+                color: rgba(255, 255, 255, 0.25);
+                font-size: 12px;
+                margin-top: 8px;
+              "
+            >
+              Veteran-Owned Small Business
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025 NextLine Health Group. All rights reserved.</span>
+        <span
+          >Veteran-Owned &nbsp;&middot;&nbsp; Behavioral Health
+          &nbsp;&middot;&nbsp; Community Support</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
