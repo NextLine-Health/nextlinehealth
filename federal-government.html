@@ -33,24 +33,23 @@
     a{text-decoration:none;color:inherit}
     img{max-width:100%;display:block}
 
-    .nav{
-      background:var(--navy);
-      padding:0 48px;
-      height:96px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      border-top:4px solid rgba(255,255,255,0.08);
-    }
-
-    .nav-left{
-      display:flex;
-      align-items:center;
-      gap:34px;
-    }
+   .nav{
+  background: var(--navy);
+  padding: 0 48px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-top: 4px solid rgba(255,255,255,0.08);
+}
+   .nav-left{
+  display:flex;
+  align-items:center;
+  gap:34px;
+}
 
     .nav-logo{
       display:flex;
@@ -92,11 +91,11 @@
     }
 
     .nav-links{
-      display:flex;
-      gap:32px;
-      align-items:center;
-      height:100%;
-    }
+  display:flex;
+  gap:32px;
+  align-items:center;
+  padding-bottom:0;
+}
 
     .nav-links a{
       font-size:13px;
@@ -113,22 +112,24 @@
     .nav-links a:hover{color:#fff}
 
     .nav-cta{
-      background:var(--red);
-      color:#fff;
-      border:none;
-      padding:0 28px;
-      height:48px;
-      font-size:13px;
-      letter-spacing:0.06em;
-      text-transform:uppercase;
-      cursor:pointer;
-      font-family:inherit;
-      transition:background 0.2s;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      line-height:1;
-    }
+  background: var(--red);
+  color: #fff;
+  border: none;
+  padding: 0 34px;
+  height: 48px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-left: 48px;
+}
 
     .nav-cta:hover{background:var(--red-dark)}
 
@@ -964,32 +965,32 @@
 <body>
 
   <nav class="nav">
-    <div class="nav-left">
-      <a href="index.html" class="nav-logo">
-        <img src="logo.png" alt="NextLine Health Logo" />
-        <div class="nav-logo-text">
-          <span class="nav-logo-top">NEXTLINE</span>
-          <span class="nav-logo-bottom">HEALTH</span>
-        </div>
-      </a>
-
-      <div class="nav-links">
-        <div class="nav-dropdown">
-          <a href="index.html#who-we-serve">Who We Serve</a>
-          <div class="dropdown-menu">
-            <a href="federal-government.html">Federal Government</a>
-          </div>
-        </div>
-        <a href="index.html#services">Services</a>
-        <a href="index.html#our-story">Our Story</a>
-        <a href="index.html#partner">Partner With Us</a>
-        <a href="index.html#contact">Contact</a>
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="NextLine Health Logo" />
+      <div class="nav-logo-text">
+        <span class="nav-logo-top">NEXTLINE</span>
+        <span class="nav-logo-bottom">HEALTH</span>
       </div>
+    </a>
+
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <button class="nav-dropbtn" type="button">Who We Serve</button>
+        <div class="dropdown-menu">
+          <a href="index.html#who-we-serve">Overview</a>
+          <a href="federal-government.html">Federal Government</a>
+        </div>
+      </div>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#our-story">Our Story</a>
+      <a href="index.html#partner">Partner With Us</a>
+      <a href="index.html#contact">Contact</a>
     </div>
+  </div>
 
-    <a class="nav-cta" href="#contact">Schedule a Meeting</a>
-  </nav>
-
+  <a class="nav-cta" href="index.html#contact">Request a Demo</a>
+</nav>
   <section class="hero-federal">
     <div class="hero-federal-inner">
       <div>
