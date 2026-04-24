@@ -87,24 +87,24 @@
         display: block;
         filter: brightness(0.96) saturate(0.9) contrast(1.03);
       }
-      .nav{
+     .nav{
   background: var(--navy);
-  padding: 0 72px;
+  padding: 0 48px;
   height: 96px;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  column-gap: 56px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-top: 4px solid rgba(255,255,255,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .nav-left{
-  display: contents;
+  display:flex;
+  align-items:center;
 }
-
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
 .nav-logo{
   display: flex;
   align-items: center;
@@ -142,10 +142,8 @@
 
       .nav-links{
   display:flex;
-  gap:38px;
+  gap:32px;
   align-items:center;
-  justify-content:center;
-  padding-bottom:0;
 }
 
 .nav-links a{
@@ -1298,6 +1296,19 @@ body *{
   object-fit: cover;
   box-shadow: 0 18px 50px rgba(0,0,0,0.28);
 }
+      .menu-toggle{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+}
+
+.menu-toggle span{
+  width:22px;
+  height:2px;
+  background:white;
+  display:block;
+}
 
       @media (max-width: 900px) {
         html,
@@ -1629,42 +1640,78 @@ body *{
     font-size:22px;
   }
 
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:96px;
+    left:0;
+    width:100%;
+    background: var(--navy);
+    flex-direction:column;
+    align-items:flex-start;
+    padding:24px;
+    gap:18px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-cta{
+    display:none; /* REMOVE BUTTON ON MOBILE */
+  }
+
+  .menu-toggle{
+    display:flex;
+  }
+
+}
 }
       }
     </style>
   </head>
   <body>
-    <nav class="nav">
-      <div class="nav-left">
-        <div class="nav-logo">
-          <img src="logo.png" alt="Nextline Solutions Logo" />
-          <div class="nav-logo-text">
-            <span class="nav-logo-top">NEXTLINE</span>
-            <span class="nav-logo-bottom">HEALTH</span>
-          </div>
-        </div>
-
-        <div class="nav-links">
-  <div class="nav-dropdown">
-  <button class="nav-dropbtn" type="button">Who We Serve</button>
-  <div class="dropdown-menu">
-    <a href="index.html#who-we-serve">Overview</a>
-    <a href="federal-government.html">Federal Government</a>
+   <nav class="nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="NextLine Health Logo" />
+      <div class="nav-logo-text">
+        <span class="nav-logo-top">NEXTLINE</span>
+        <span class="nav-logo-bottom">HEALTH</span>
+      </div>
+    </a>
   </div>
-</div>
-  <a href="#services">Services</a>
-  <a href="#our-story">Our Story</a>
-  <a href="#partner">Partner With Us</a>
-  <a href="#contact">Contact</a>
-</div>
 
-      <button
-        class="nav-cta"
-        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
-      >
-        Request a Demo
-      </button>
-    </nav>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button class="nav-dropbtn" type="button">Who We Serve</button>
+      <div class="dropdown-menu">
+        <a href="index.html#who-we-serve">Overview</a>
+        <a href="federal-government.html">Federal Government</a>
+      </div>
+    </div>
+
+    <a href="#services">Services</a>
+    <a href="#our-story">Our Story</a>
+    <a href="#partner">Partner With Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="nav-right">
+    <button
+      class="nav-cta"
+      onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+    >
+      Request a Demo
+    </button>
+
+    <button class="menu-toggle" type="button" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
 
     <section class="hero">
       <div class="hero-inner">
@@ -2382,6 +2429,11 @@ body *{
         >
       </div>
     </footer>
+    <script>
+function toggleMenu(){
+  document.querySelector('.nav-links').classList.toggle('active');
+}
+</script>
   </body>
 </html>
 
