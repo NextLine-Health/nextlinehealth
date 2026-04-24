@@ -53,12 +53,7 @@
       </div>
 
       <div class="nav-right">
-        <button
-          class="nav-cta"
-          onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
-        >
-          Request a Demo
-        </button>
+        <a class="nav-cta" href="inquire.html"> Inquire </a>
 
         <button
           class="menu-toggle"
@@ -711,59 +706,38 @@
         </div>
       </div>
     </section>
-    <section class="cta-section" id="contact">
-      <h2>Let’s build something that actually works</h2>
+
+    <section class="cta-section" id="subscribe">
+      <h2>Subscribe</h2>
       <p>
-        Tell us about your organization and what kind of support you’re looking
-        for. We’ll get back to you directly.
+        Get occasional updates on our mission to provide better beahvioral
+        health support to those who have served on the front lines.
       </p>
 
-      <form
-        action="https://formspree.io/f/mdaywodj"
-        method="POST"
-        class="contact-form"
-      >
-        <input
-          type="hidden"
-          name="_subject"
-          value="New inquiry from NextLine Health website"
-        />
-        <input
-          type="hidden"
-          name="_next"
-          value="https://www.nextlinehealth.com/thank-you.html"
-        />
-        <div class="contact-grid">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input id="name" name="name" type="text" required />
-          </div>
-
-          <div class="form-group">
-            <label for="organization">Organization</label>
-            <input id="organization" name="organization" type="text" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="text" />
-          </div>
-        </div>
-
+      <form id="subscribe-form" class="contact-form">
         <div class="form-group form-group-full">
-          <label for="message">How can we help?</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
+          <label for="subscribe-email">Email</label>
+          <input id="subscribe-email" name="email" type="email" required />
         </div>
+
+        <input
+          type="text"
+          name="website"
+          id="subscribe-website"
+          tabindex="-1"
+          autocomplete="off"
+          style="position: absolute; left: -9999px"
+          aria-hidden="true"
+        />
 
         <div class="cta-btns">
-          <button type="submit" class="btn-white">Send Inquiry</button>
+          <button type="submit" id="subscribe-btn" class="btn-white">
+            Subscribe
+          </button>
         </div>
       </form>
+
+      <p id="subscribe-message" class="form-message"></p>
     </section>
 
     <footer>
@@ -838,6 +812,8 @@
         >
       </div>
     </footer>
+    <script src=" https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.104.1/dist/umd/supabase.min.js "></script>
+    <script src="assets/js/subscribe.js"></script>
     <script>
       function toggleMenu() {
         document.querySelector(".nav-links").classList.toggle("active");

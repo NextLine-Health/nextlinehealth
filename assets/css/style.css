@@ -1083,6 +1083,7 @@ footer {
   max-width: 900px;
   margin: 36px auto 0;
   text-align: left;
+  margin-bottom: 20px;
 }
 
 .contact-grid {
@@ -1673,5 +1674,9 @@ body * {
 
   .nav-links.active {
     display: flex;
+  }
+
+  .form-message {
+    text-align: center;
   }
 }
