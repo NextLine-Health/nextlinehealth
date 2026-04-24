@@ -837,18 +837,19 @@
 .menu-toggle{
   display:none;
   background:transparent;
-  border:0;
-  padding:8px;
+  border:none;
   cursor:pointer;
+  padding:6px;
+  z-index:1002;
 }
 
 .menu-toggle span{
   display:block;
-  width:28px;
+  width:26px;
   height:2px;
   background:#fff;
-  margin:6px 0;
-  border-radius:2px;
+  margin:5px 0;
+  transition:0.3s;
 }
     @media (max-width: 900px){
       .nav{
@@ -987,32 +988,50 @@
         text-align:center;
       }
 
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:96px;
-    left:0;
-    width:100%;
-    background: var(--navy);
-    flex-direction:column;
-    align-items:flex-start;
-    padding:24px;
-    gap:18px;
-  }
+ .nav-links{
+  display:none;
+  position:absolute;
+  top:82px;
+  left:0;
+  width:100%;
+  background: var(--navy);
+  flex-direction:column;
+  padding:20px;
+  gap:18px;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
 
-  .nav-links.active{
-    display:flex;
-  }
+.nav-links.active{
+  display:flex;
+}
 
   .nav-cta{
-    display:none; /* REMOVE BUTTON ON MOBILE */
-  }
-
-  .menu-toggle{
-    display:flex;
-  }
-
+  display:none;
 }
+
+.menu-toggle{
+  display:flex;
+}
+
+.nav-links{
+  display:none;
+  position:absolute;
+  top:82px;
+  left:0;
+  width:100%;
+  background:var(--navy);
+  flex-direction:column;
+  align-items:flex-start;
+  padding:24px;
+  gap:18px;
+  z-index:1001;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.nav-links.active{
+  display:flex;
+}
+
     }
   </style>
 </head>
