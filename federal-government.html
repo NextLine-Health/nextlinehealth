@@ -187,25 +187,16 @@
     }
 
     .hero-federal{
-      background:linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, #11284f 100%);
-      padding:90px 48px 96px;
-      position:relative;
-      overflow:hidden;
-      border-bottom:4px solid var(--red);
-    }
+  background: url("federal-government-back.png") no-repeat center right;
+  background-size: cover;
+  padding: 110px 48px 120px;
+  position: relative;
+  border-bottom: 4px solid var(--red);
+}
 
-    .hero-federal::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(120deg, rgba(255,255,255,0.02), transparent 45%),
-        repeating-linear-gradient(-55deg, transparent, transparent 38px, rgba(178,34,52,0.05) 38px, rgba(178,34,52,0.05) 39px);
-      pointer-events:none;
-    }
 
     .hero-federal-inner{
-  max-width:1200px;
+  max-width:700px;
   margin:0 auto;
   position:relative;
   z-index:2;
@@ -926,14 +917,15 @@
         justify-content:center;
       }
 
-      .hero-federal{
-        padding:60px 20px 70px;
-      }
+  .hero-federal{
+    background-position: 70% center;
+    padding: 70px 20px 80px;
+  }
 
-      .hero-federal-inner{
-        grid-template-columns:1fr;
-        gap:36px;
-      }
+  .hero-federal-inner{
+    max-width: 100%;
+  }
+}
 
       .hero-federal h1{
         font-size:36px;
