@@ -185,7 +185,7 @@
       .nav-cta:hover {
         background: var(--red-dark);
       }
-      .nav-dropdown{
+     .nav-dropdown{
   position: relative;
   display: flex;
   align-items: center;
@@ -193,7 +193,7 @@
 
 .dropdown-menu{
   position: absolute;
-  top: calc(100% + 14px);
+  top: 100%;
   left: 0;
   min-width: 220px;
   background: #fff;
@@ -224,17 +224,19 @@
   display: block;
 }
       .nav-dropbtn{
-  background:none;
-  border:0;
-  color:rgba(255,255,255,0.75);
-  font-family:inherit;
-  font-size:13px;
-  letter-spacing:0.05em;
-  text-transform:uppercase;
-  cursor:pointer;
-  height:100%;
-  display:flex;
-  align-items:center;
+  background: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  color: rgba(255,255,255,0.75);
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
 }
 
 .nav-dropbtn:hover{
