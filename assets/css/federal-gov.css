@@ -470,19 +470,21 @@ section {
   background-repeat: no-repeat;
 
   padding: 90px 48px;
-  text-align: center;
+
+  border-top: 4px solid var(--red);     
+  border-bottom: 4px solid var(--red);  
+
+  text-align: left;  
 }
 .security-strip h2,
 .security-strip p {
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 640px;  
+  margin-left: 0;
+  margin-right: 0;
 }
 .security-inner {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
-  display: block;
-  text-align: center;
 }
 .security-inner .section-p {
   text-align: center;
@@ -491,12 +493,8 @@ section {
 }
 
 .security-badges {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 34px;
+  justify-content: flex-start;
+  margin-top: 30px;
 }
 
 .sec-badge {
