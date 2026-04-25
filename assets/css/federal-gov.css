@@ -896,8 +896,8 @@ footer {
 }
 
 .nl-icon img{
-  width:64px;
-  height:64px;
+  width:130px;
+  height:130px;
   object-fit:contain;
   filter: brightness(0) saturate(100%) invert(12%) sepia(30%) saturate(1200%) hue-rotate(190deg);
 }
@@ -905,7 +905,7 @@ footer {
   display:flex;
   justify-content:center;
   align-items:center;
-  margin-bottom:20px;
+  margin-bottom:28px;
 }
 
 .nl-icon svg{
