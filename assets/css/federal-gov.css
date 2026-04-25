@@ -1029,6 +1029,22 @@ footer {
 .hero-federal-inner > div:last-child {
   flex: 1;
 }
+.contract-img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.contract-img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0) 60%,
+    rgba(245,244,240,1) 100%
+  );
+}
 @media (max-width: 900px) {
   .nav {
     padding: 14px 16px;
