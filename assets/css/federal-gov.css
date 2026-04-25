@@ -895,10 +895,11 @@ footer {
   text-align:left;
 }
 
-.nl-icon{
+.nl-icon img{
   width:64px;
   height:64px;
-  margin-bottom:20px;
+  object-fit:contain;
+  filter: brightness(0) saturate(100%) invert(12%) sepia(30%) saturate(1200%) hue-rotate(190deg);
 }
 
 .nl-icon svg{
