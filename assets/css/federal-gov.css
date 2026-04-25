@@ -490,9 +490,9 @@ section {
   text-align: left;
 }
 .security-inner .section-p {
-  text-align: center;
-  margin: 28px auto 0;
-  max-width: 760px;
+  text-align: left;
+  margin: 28px 0 0;
+  max-width: 620px;
 }
 
 .security-badges {
@@ -1069,7 +1069,6 @@ footer {
   border-radius: 18px;   
   box-shadow: 0 18px 40px rgba(0,0,0,0.12);
   opacity: 0.95;
-}
 }
 @media (max-width: 900px) {
   .nav {
