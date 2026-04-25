@@ -612,60 +612,6 @@ blockquote {
   font-weight: 700;
 }
 
-.admin-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-top: 44px;
-}
-
-.admin-card {
-  background: #fff;
-  padding: 34px 30px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
-}
-
-.admin-card h3 {
-  font-size: 28px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: var(--navy-deep);
-  margin-bottom: 22px;
-  padding-bottom: 14px;
-  border-bottom: 2px solid var(--red);
-}
-
-.info-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.info-table tr {
-  border-bottom: 1px solid var(--border);
-}
-
-.info-table tr:last-child {
-  border-bottom: none;
-}
-
-.info-table td {
-  padding: 10px 0;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.info-table td:first-child {
-  width: 52%;
-  color: var(--text-muted);
-  font-weight: 600;
-  padding-right: 14px;
-}
-
-.info-table td:last-child {
-  color: var(--navy-deep);
-  font-weight: 700;
-}
-
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
