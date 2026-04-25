@@ -892,7 +892,7 @@ footer {
   border-radius:14px;
   padding:40px 34px;
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  text-align:left;
+  text-align:center;
 }
 
 .nl-icon img{
@@ -900,6 +900,12 @@ footer {
   height:64px;
   object-fit:contain;
   filter: brightness(0) saturate(100%) invert(12%) sepia(30%) saturate(1200%) hue-rotate(190deg);
+}
+.nl-icon{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:20px;
 }
 
 .nl-icon svg{
