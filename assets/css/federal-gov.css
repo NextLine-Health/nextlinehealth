@@ -989,6 +989,55 @@ footer {
   font-size:14px;
 }
 
+.nf-cap-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:18px;
+  margin-top:50px;
+}
+
+.nf-cap-card{
+  background:#fff;
+  border:1px solid #dedbd4;
+  border-radius:14px;
+  padding:34px 24px;
+  min-height:300px;
+  box-shadow:0 10px 28px rgba(0,0,0,0.06);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.nf-cap-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.12);
+  border-color:#b22234;
+}
+
+.nf-icon{
+  width:62px;
+  height:62px;
+  border-radius:18px;
+  background:#f5f4f0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  margin-bottom:24px;
+}
+
+.nf-cap-card h4{
+  font-size:20px;
+  line-height:1.15;
+  font-weight:900;
+  color:#07111f;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+
+.nf-cap-card p{
+  font-size:15px;
+  line-height:1.7;
+  color:#4f5060;
+}
 @media (max-width: 900px) {
   .nav {
     padding: 14px 16px;
@@ -1176,56 +1225,7 @@ footer {
   .cap-item p{
     font-size:16px;
   }
-  .nf-cap-grid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:18px;
-  margin-top:50px;
 }
-
-.nf-cap-card{
-  background:#fff;
-  border:1px solid #dedbd4;
-  border-radius:14px;
-  padding:34px 24px;
-  min-height:300px;
-  box-shadow:0 10px 28px rgba(0,0,0,0.06);
-  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-}
-
-.nf-cap-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 40px rgba(0,0,0,0.12);
-  border-color:#b22234;
-}
-
-.nf-icon{
-  width:62px;
-  height:62px;
-  border-radius:18px;
-  background:#f5f4f0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
-  margin-bottom:24px;
-}
-
-.nf-cap-card h4{
-  font-size:20px;
-  line-height:1.15;
-  font-weight:900;
-  color:#07111f;
-  text-transform:uppercase;
-  margin-bottom:16px;
-}
-
-.nf-cap-card p{
-  font-size:15px;
-  line-height:1.7;
-  color:#4f5060;
-}
-
 @media(max-width:1100px){
   .nf-cap-grid{
     grid-template-columns:repeat(2,1fr);
