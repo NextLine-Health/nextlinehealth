@@ -454,14 +454,30 @@ section {
 }
 
 .security-strip {
-  background: var(--navy-deep);
-  padding: 80px 48px;
-  border-left: none;
-  border-top: 4px solid var(--red);
-  border-bottom: 4px solid var(--red);
+  background:
+    linear-gradient(
+      to right,
+      rgba(7,17,31,1) 0%,
+      rgba(7,17,31,0.95) 40%,
+      rgba(7,17,31,0.8) 65%,
+      rgba(7,17,31,0.5) 85%,
+      rgba(7,17,31,0.25) 100%
+    ),
+    url("../images/cyberlocknextline.png");
+
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+
+  padding: 90px 48px;
   text-align: center;
 }
-
+.security-strip h2,
+.security-strip p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .security-inner {
   max-width: 900px;
   margin: 0 auto;
