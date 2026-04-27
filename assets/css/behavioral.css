@@ -191,8 +191,8 @@ img {
   display: block;
 }
 
-.hero-federal {
-  background-image: url("../images/federal-government-back.png");
+.hero-behavioral {
+  background-image: url("../images/behavioralback.png");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -200,16 +200,16 @@ img {
   border-bottom: 4px solid var(--red);
 }
 
-.hero-federal-inner {
+.hero-behavioral-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 0;
 }
-.hero-federal-inner > div {
+.hero-behavioral-inner > div {
   max-width: 560px;
 }
 
-.hero-federal-eyebrow {
+.hero-behavioral-eyebrow {
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -218,7 +218,7 @@ img {
   font-weight: 700;
 }
 
-.hero-federal h1 {
+.hero-behavioral h1 {
   font-size: 54px;
   line-height: 1.05;
   font-weight: 900;
@@ -227,11 +227,11 @@ img {
   max-width: 820px;
 }
 
-.hero-federal h1 span {
+.hero-behavioral h1 span {
   color: var(--red);
 }
 
-.hero-federal p {
+.hero-behavioral p {
   font-size: 18px;
   line-height: 1.75;
   color: rgba(255, 255, 255, 0.74);
@@ -239,7 +239,7 @@ img {
   margin-bottom: 28px;
 }
 
-.hero-federal-btns {
+.hero-behavioral-btns {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
