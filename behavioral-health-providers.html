@@ -30,202 +30,309 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/behavioral.css" />
+    <link rel="stylesheet" href="assets/css/federal-gov.css" />
   </head>
   <body>
-<nav class="nav">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/images/logo.png" alt="NextLine Health Logo" />
+          <div class="nav-logo-text">
+            <span class="nav-logo-top">NEXTLINE</span>
+            <span class="nav-logo-bottom">HEALTH</span>
+          </div>
+        </a>
+      </div>
 
-  <div class="nav-left">
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <button class="nav-dropbtn" type="button">Who We Serve</button>
+          <div class="dropdown-menu">
+            <a href="index.html#who-we-serve">Overview</a>
+            <a href="federal-government.html">Federal Government</a>
+          </div>
+        </div>
 
-    <div class="nav-logo">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#our-story">Our Story</a>
+        <a href="index.html#partner">Partner With Us</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
 
-      <img src="assets/images/logo.png" alt="NextLine Health">
+      <div class="nav-right">
+        <button
+          class="nav-cta"
+          onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+        >
+          Request a Demo
+        </button>
 
-      <div class="nav-logo-text">
+        <button
+          class="menu-toggle"
+          type="button"
+          onclick="toggleMenu()"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+    <section class="hero-federal">
+      <div class="hero-federal-inner">
+        <div>
+          <div class="hero-federal-eyebrow">FOR FEDERAL GOVERNMENT</div>
 
-        <span class="nav-logo-top">NEXTLINE</span>
+          <h1>
+            The best platform for <span>resiliency</span> &amp;
+            measurement-based care
+          </h1>
 
-        <span class="nav-logo-bottom">HEALTH</span>
+          <p>
+            A scalable platform for measurement-based care, enabling structured
+            data capture, resilience tracking, and operational readiness across
+            federal agencies, military personnel and civilian workforce
+            programs.
+          </p>
+          <div class="hero-federal-btns">
+           <a href="#contact" class="btn-red">Schedule a Meeting</a>
+            <a href="#solutions" class="btn-ghost">Explore Solutions</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="nl-cards">
+  <div class="nl-container">
+
+    <!-- LEFT CARD -->
+    <div class="nl-card">
+      <div class="nl-icon">
+  <img src="assets/images/shield.png" alt="Federal Icon">
+</div>
+
+      <h3>NextLine for Federal Programs</h3>
+
+      <ul>
+        <li>Detect and support high and rising-risk personnel</li>
+        <li>Enhance readiness and resilience programs with structured engagement</li>
+        <li>Track trends and improve decision-making with actionable data</li>
+      </ul>
+
+      <a href="#contact">Learn More</a>
+    </div>
+
+
+    <!-- RIGHT CARD -->
+    <div class="nl-card">
+     <div class="nl-icon">
+  <img src="assets/images/doctor.png" alt="Healthcare Icon">
+</div>
+
+      <h3>BHL Powered by NextLine for the VA</h3>
+
+      <ul>
+        <li>Automate delivery of assessments and surveys between appointments for efficient measurement-based care</li>
+        <li>Reduce administrative burden and improve efficiency and visibility for VA providers</li>
+        <li>Streamline data-sharing through integration with critical VA systems: Cerner, CPRS, VistA</li>
+      </ul>
+
+      <a href="#contact">Learn More</a>
+    </div>
+
+  </div>
+</section>
+
+    <div class="security-strip">
+  <div class="security-inner security-centered">
+    <div>
+      <div class="eyebrow eyebrow-light">Trust &amp; Compliance Direction</div>
+
+      <h2 class="section-h2 section-h2-light">
+        Built with security, privacy, and accountability in mind
+      </h2>
+
+      <p class="section-p section-p-light">
+        NextLine Health is being structured for responsible data handling, secure workflows, and compliance-ready operations. As the company expands, the platform roadmap includes HIPAA-aligned processes, role-based access, audit-ready reporting, and security controls appropriate for healthcare and government partners.
+      </p>
+
+      <div class="security-badges">
+        <div class="sec-badge">Veteran-Owned</div>
+        <div class="sec-badge">Compliance-Ready</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <section class="capabilities nf-section" id="capabilities">
+  <div class="container">
+    <div class="rule"></div>
+    <div class="eyebrow">Platform Capabilities</div>
+
+    <h2 class="section-h2">
+      High-Tech and High-Touch Support for Service Members and Veterans
+    </h2>
+
+    <div class="nf-cap-grid">
+
+      <div class="nf-cap-card">
+        <div class="nf-icon">
+  <i class="fas fa-laptop-code"></i>
+</div>
+        <h4>Data Collection &amp; Delivery</h4>
+        <p>Secure collection of valuable population health data, integrated directly into your existing tools.</p>
+      </div>
+
+      <div class="nf-cap-card">
+        <div class="nf-icon">
+  <i class="fas fa-users"></i>
+</div>
+        <h4>Population Risk Stratification</h4>
+        <p>Analytics for upstream detection of service members and Veterans in need.</p>
+      </div>
+
+      <div class="nf-cap-card">
+        <div class="nf-icon">
+  <i class="fas fa-exclamation-circle"></i>
+</div>
+        <h4>Suicide Prevention</h4>
+        <p>High-touch intervention for suicidal ideation with population-specific crisis resources.</p>
+      </div>
+
+      <div class="nf-cap-card">
+        <div class="nf-icon">
+  <i class="fas fa-mobile-alt"></i>
+</div>
+        <h4>Omnichannel Engagement</h4>
+        <p>24/7 access to content and resources on topics specific to military life, resilience, and readiness.</p>
+      </div>
+
+      <div class="nf-cap-card">
+        <div class="nf-icon">
+  <i class="fas fa-clipboard-check"></i>
+</div>
+        <h4>90+ Clinically-Validated Assessments</h4>
+        <p>Measurement-based care touchpoint for monitoring whole health.</p>
       </div>
 
     </div>
-
   </div>
-
-  <div class="nav-links">
-
-    <a href="index.html">Home</a>
-
-    <a href="federal-government.html">Federal</a>
-
-    <a href="behavioral-health-providers.html">Providers</a>
-
-    <a href="#contact">Contact</a>
-
-  </div>
-
-  <button class="nav-cta">Request Info</button>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="provider-hero">
-
-  <div class="provider-hero-inner">
-
-    <div class="eyebrow">Behavioral Health Providers</div>
-
-    <h1>Extend care beyond the session</h1>
-
-    <p>
-
-      NextLine Health helps providers improve engagement, reduce missed follow-through, and identify risk earlier through structured outreach and operational support.
-
-    </p>
-
-    <button class="btn-red">Request a Demo</button>
-
-  </div>
-
 </section>
 
-<!-- OVERVIEW -->
-
-<section class="provider-overview">
-
-  <div class="provider-split">
-
-    <div>
-
-      <div class="rule"></div>
-
-      <div class="eyebrow">Provider Support Layer</div>
-
-      <h2 class="section-h2">Built to support clinicians, not replace them</h2>
-
-    </div>
-
-    <div>
-
-      <p class="section-p">
-
-        NextLine Health acts as an operational layer around behavioral health services, enabling providers to maintain visibility between sessions, automate follow-up, and scale care delivery without increasing administrative burden.
-
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CAPABILITIES -->
-
-<section class="provider-capabilities">
-
-  <div class="provider-list">
-
-    <div class="provider-item">
-
-      <span>01</span>
-
-      <h3>Engagement Between Sessions</h3>
-
-      <p>Automated check-ins and reminders help maintain consistent patient engagement.</p>
-
-    </div>
-
-    <div class="provider-item">
-
-      <span>02</span>
-
-      <h3>Risk Visibility</h3>
-
-      <p>Identify missed engagement patterns and detect potential risk earlier.</p>
-
-    </div>
-
-    <div class="provider-item">
-
-      <span>03</span>
-
-      <h3>Measurement-Based Care</h3>
-
-      <p>Support structured assessments such as PHQ-9, GAD-7, PTSD, and insomnia tracking.</p>
-
-    </div>
-
-    <div class="provider-item">
-
-      <span>04</span>
-
-      <h3>Workflow Automation</h3>
-
-      <p>Automate follow-ups, reminders, and scheduling workflows to reduce manual effort.</p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- DARK -->
-
-<section class="provider-dark">
-
-  <div class="provider-dark-inner">
-
-    <div>
-
-      <div class="eyebrow eyebrow-light">Future Roadmap</div>
-
-      <h2 class="section-h2 section-h2-light">
-
-        Scalable behavioral health delivery
-
-      </h2>
-
-    </div>
-
-    <div class="provider-roadmap">
-
-      <p>Anonymous engagement pathways to reduce stigma and encourage early support.</p>
-
-      <p>Secure text-based therapy and asynchronous communication.</p>
-
-      <p>24/7 virtual therapy through licensed provider networks.</p>
-
-      <p>AI-assisted scheduling, reminders, and workflow optimization.</p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="provider-cta">
-
-  <div class="provider-cta-inner">
-
-    <h2 class="section-h2">Partner with NextLine Health</h2>
-
-    <p class="section-p">
-
-      Improve engagement, increase visibility, and support better outcomes across the populations you serve.
-
-    </p>
-
-    <button class="btn-red">Contact Us</button>
-
-  </div>
-
-</section>
-
-<footer>
+    <section class="testimonial-section">
+      <div class="testimonial-inner">
+        <span class="quote-mark">“</span>
+        <blockquote>
+          The future of behavioral health support is not only access. It is
+          engagement, accountability, and making sure people actually move
+          through the systems built to help them.
+        </blockquote>
+        <div class="quote-attrib">
+          NextLine Health
+          <span>Structured Engagement &amp; Follow-Through Model</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="rule"></div>
+        <div class="eyebrow">Get Started</div>
+        <h2 class="section-h2">
+Schedule a meeting to explore operational support for your program
+</h2>
+
+        <div class="contact-grid">
+          <div>
+            <p class="section-p">
+NextLine Health supports federal agencies, veteran programs, and public-sector organizations by improving engagement, follow-through, and visibility across the populations they serve.
+</p>
+
+            <ul class="contact-list">
+  <li>Increase participant engagement and reduce missed follow-through</li>
+  <li>Identify at-risk individuals earlier through structured outreach</li>
+  <li>Improve reporting for grant, contract, and program accountability</li>
+  <li>Deploy a scalable support model without adding internal burden</li>
+</ul>
+
+           <div class="contract-img-wrap">
+  <img src="assets/images/federal-contract.png" alt="Federal Contract">
+</div>
+    </div>        
+          <div class="contact-form">
+            <h4>Request a Meeting</h4>
+
+            <form action="https://formspree.io/f/mdaywodj" method="POST">
+              <input
+                type="hidden"
+                name="_subject"
+                value="Federal Government Page Inquiry - NextLine Health"
+              />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://www.nextlinehealth.com/thank-you.html"
+              />
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" name="first_name" required />
+                </div>
+
+                <div class="form-group">
+                  <label>Last Name</label>
+                  <input type="text" name="last_name" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Work Email</label>
+                <input type="email" name="email" required />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Job Title</label>
+                  <input type="text" name="job_title" />
+                </div>
+
+                <div class="form-group">
+                  <label>Organization</label>
+                  <input type="text" name="organization" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Area of Interest</label>
+                <select name="interest">
+                  <option value="">Select one...</option>
+                  <option>Federal Government</option>
+                  <option>Veteran Programs</option>
+                  <option>First Responder Programs</option>
+                  <option>Municipal / State Agency</option>
+                  <option>Grant-Funded Program</option>
+                  <option>Subcontracting Opportunity</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Additional Details</label>
+                <textarea
+                  name="message"
+                  placeholder="Tell us about your program, population, or goals..."
+                ></textarea>
+              </div>
+
+              <button class="form-submit" type="submit">Submit Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
       <div class="footer-top">
         <div>
           <div class="footer-brand">
@@ -287,8 +394,4 @@
       }
     </script>
   </body>
-</html>
-
-</body>
-
 </html>
