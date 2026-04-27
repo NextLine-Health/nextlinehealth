@@ -192,7 +192,7 @@ img {
 }
 
 .hero-behavioral {
-  background-image: url("../images/behavioral-back.png");
+  background-image: url("/assets/images/behavioral-back.png");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
