@@ -1324,4 +1324,58 @@ footer {
   .nf-cap-grid{
     grid-template-columns:1fr;
   }
+  @media (max-width: 900px) {
+  .nav {
+    min-height: 92px;
+    padding: 12px 18px;
+  }
+
+  .nav-logo img {
+    height: 82px;
+    width: auto;
+  }
+
+  .nav-links {
+    top: 92px;
+    padding: 22px 20px;
+    gap: 0;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .nav-dropbtn {
+    width: 100%;
+    text-align: left;
+    padding: 14px 0;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    min-width: 100%;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    background: rgba(255,255,255,0.06);
+    padding: 0;
+    margin: 0 0 10px 0;
+    display: block;
+  }
+
+  .dropdown-menu a {
+    color: rgba(255,255,255,0.75) !important;
+    padding: 12px 0 12px 18px;
+    font-size: 12px;
+  }
+
+  .dropdown-menu a:hover {
+    color: var(--red) !important;
+    background: transparent;
+  }
+}
 }
