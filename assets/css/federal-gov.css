@@ -55,11 +55,12 @@ img {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 28px; 
 }
 
 .nav-logo img {
-  height: 82px;
+  height: 246px;
+  width: auto;
   display: block;
 }
 
@@ -68,27 +69,23 @@ img {
   flex-direction: column;
   justify-content: center;
   line-height: 1;
-  min-height: 82px;
 }
 
 .nav-logo-top {
-  font-size: 13px;
+  font-size: 39px; 
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.72);
   font-weight: 700;
-  margin: 0 0 4px 0;
-  line-height: 1;
 }
 
 .nav-logo-bottom {
-  font-size: 28px;
+  font-size: 84px; 
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #fff;
   font-weight: 900;
-  margin: 0;
-  line-height: 0.95;
+  margin-top: 12px;
 }
 
 .nav-links {
