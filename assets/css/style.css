@@ -86,7 +86,7 @@ img {
   gap: 20px;
 }
 .nav {
-  height: 52px; /* lower navbar height */
+  height: 72px; /* lower navbar height */
   padding: 0 48px;
 }
 
@@ -97,7 +97,7 @@ img {
 }
 
 .nav-logo img {
-  height: 125px; /* keep logo large */
+  height: 128px; /* keep logo large */
   width: auto;
   display: block;
 }
