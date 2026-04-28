@@ -47,24 +47,19 @@
       gap:20px;
     }
 
-   .nav {
-  background: var(--navy);
-  padding: 12px 48px; /* adds top/bottom breathing room */
-  min-height: 96px;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .nav {
+  height: 72px; /* lower navbar height */
+  padding: 0 48px;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
 }
 
 .nav-logo img {
-  height: 140px; /* reduced from oversized version */
+  height: 145px; /* keep logo large */
   width: auto;
   display: block;
 }
@@ -77,20 +72,20 @@
 }
 
 .nav-logo-top {
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255,255,255,0.72);
   font-weight: 700;
 }
 
 .nav-logo-bottom {
-  font-size: 48px;
+  font-size: 42px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #fff;
   font-weight: 900;
-  margin-top: 6px;
+  margin-top: 3px;
 }
 
     .nav-links{
