@@ -87,7 +87,7 @@ img {
 }
 .nav {
   background: var(--navy);
-  padding: 12px 48px; /* adds top/bottom breathing room */
+  padding: 0px 48px; 
   min-height: 96px;
   height: auto;
   display: flex;
@@ -98,17 +98,11 @@ img {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 18px;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 18px;
+  gap: 28px; /* increased spacing */
 }
 
 .nav-logo img {
-  height: 118px; /* larger logo without blowing out header */
+  height: 246px; /* 3x bigger */
   width: auto;
   display: block;
 }
@@ -121,7 +115,7 @@ img {
 }
 
 .nav-logo-top {
-  font-size: 20px;
+  font-size: 30px; /* 3x bigger */
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.72);
@@ -129,12 +123,12 @@ img {
 }
 
 .nav-logo-bottom {
-  font-size: 46px;
+  font-size: 78px; /* 3x bigger */
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #fff;
   font-weight: 900;
-  margin-top: 4px;
+  margin-top: 12px;
 }
 .nav-links {
   display: flex;
