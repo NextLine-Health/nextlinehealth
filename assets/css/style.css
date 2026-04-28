@@ -1794,5 +1794,83 @@ body * {
     color: var(--red) !important;
     background: transparent;
   }
+@media (max-width: 900px) {
+  /* Bigger mobile logo */
+  .nav-logo img {
+    height: 110px;
+    width: auto;
+  }
+
+  .nav-logo {
+    gap: 12px;
+  }
+
+  .nav-logo-top {
+    font-size: 14px;
+  }
+
+  .nav-logo-bottom {
+    font-size: 30px;
+  }
+
+  /* Main mobile menu */
+  .nav-links {
+    top: 92px;
+    padding: 22px 20px;
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Dropdown container */
+  .nav-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-dropbtn {
+    width: 100%;
+    text-align: left;
+    padding: 14px 0;
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+  }
+
+  /* Hide submenu by default */
+  .dropdown-menu {
+    display: none;
+    position: static;
+    transform: none;
+    width: 100%;
+    min-width: 100%;
+    background: rgba(255,255,255,0.06);
+    border: none;
+    box-shadow: none;
+    margin-top: 8px;
+    padding: 8px 0;
+  }
+
+  /* Show submenu only on active dropdown */
+  .nav-dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 14px 18px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.78) !important;
+  }
+
+  .dropdown-menu a:hover {
+    color: var(--red) !important;
+    background: transparent;
+  }
 }
 }
