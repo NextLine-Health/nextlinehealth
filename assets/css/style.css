@@ -86,23 +86,18 @@ img {
   gap: 20px;
 }
 .nav {
-  background: var(--navy);
-  padding: 0px 48px; 
-  min-height: 96px;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  height: 52px; /* lower navbar height */
+  padding: 0 48px;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 28px; /* increased spacing */
+  gap: 16px;
 }
 
 .nav-logo img {
-  height: 246px; /* 3x bigger */
+  height: 125px; /* keep logo large */
   width: auto;
   display: block;
 }
@@ -115,21 +110,22 @@ img {
 }
 
 .nav-logo-top {
-  font-size: 30px; /* 3x bigger */
+  font-size: 18px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255,255,255,0.72);
   font-weight: 700;
 }
 
 .nav-logo-bottom {
-  font-size: 78px; /* 3x bigger */
+  font-size: 42px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #fff;
   font-weight: 900;
-  margin-top: 12px;
+  margin-top: 3px;
 }
+
 .nav-links {
   display: flex;
   gap: 32px;
