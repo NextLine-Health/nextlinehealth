@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resources | NextLine Health</title>
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --navy:#0d1f3c;
+      --navy-deep:#07111f;
+      --red:#b22234;
+      --red-dark:#8a1a27;
+      --white:#fff;
+      --off-white:#f5f4f0;
+      --text:#1a1a2e;
+      --text-muted:#4a4a5a;
+      --border:#e0ddd6;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{font-family:"Lato",sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{max-width:1200px;margin:0 auto}
+
+    .nav{
+      background:var(--navy);
+      padding:0 48px;
+      height:88px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .nav-left,.nav-right{display:flex;align-items:center}
+    .nav-logo{display:flex;align-items:center;gap:14px}
+    .nav-logo img{height:145px;width:auto;display:block}
+
+    .nav-links{
+      display:flex;
+      gap:32px;
+      align-items:center;
+    }
+
+    .nav-links a,
+    .nav-dropbtn{
+      font-size:13px;
+      color:rgba(255,255,255,.75);
+      letter-spacing:.05em;
+      text-transform:uppercase;
+      font-family:inherit;
+    }
+
+    .nav-links a:hover,
+    .nav-dropbtn:hover{color:#fff}
+
+    .nav-dropdown{
+      position:relative;
+      display:flex;
+      align-items:center;
+      height:88px;
+    }
+
+    .nav-dropbtn{
+      background:transparent;
+      border:none;
+      outline:none;
+      cursor:pointer;
+      padding:0;
+      line-height:1;
+    }
+
+    .dropdown-menu{
+      position:absolute;
+      top:88px;
+      left:0;
+      min-width:370px;
+      background:#fff;
+      border:1px solid var(--border);
+      box-shadow:0 18px 40px rgba(0,0,0,.12);
+      padding:14px 0;
+      display:none;
+      z-index:3000;
+    }
+
+    .nav-dropdown:hover .dropdown-menu{display:block}
+
+    .dropdown-menu a{
+      display:block;
+      padding:16px 24px;
+      font-size:13px;
+      color:var(--navy)!important;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      line-height:1.3;
+      white-space:nowrap;
+      height:auto;
+    }
+
+    .dropdown-menu a:hover{
+      background:var(--off-white);
+      color:var(--red)!important;
+    }
+
+    .nav-cta{
+      background:var(--red);
+      color:#fff;
+      border:none;
+      padding:0 34px;
+      height:48px;
+      font-size:13px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      cursor:pointer;
+      font-family:inherit;
+      font-weight:800;
+    }
+
+    .menu-toggle{
+      display:none;
+      width:34px;
+      height:28px;
+      background:transparent;
+      border:none;
+      cursor:pointer;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      gap:6px;
+    }
+
+    .menu-toggle span{
+      display:block;
+      width:28px;
+      height:2px;
+      background:#fff;
+      border-radius:2px;
+    }
+
+    .rule{width:40px;height:4px;background:var(--red);margin-bottom:18px}
+    .eyebrow{
+      font-size:11px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:14px;
+      font-weight:900;
+    }
+
+    .resources-hero{
+      background:linear-gradient(135deg,var(--navy-deep),var(--navy));
+      padding:110px 48px 95px;
+      border-bottom:4px solid var(--red);
+      color:#fff;
+    }
+
+    .resources-hero h1{
+      font-size:62px;
+      line-height:1.02;
+      font-weight:900;
+      max-width:900px;
+      margin-bottom:22px;
+    }
+
+    .resources-hero p{
+      font-size:18px;
+      line-height:1.75;
+      color:rgba(255,255,255,.72);
+      max-width:780px;
+    }
+
+    .category-nav{padding:70px 48px;background:#fff}
+
+    .apple-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+    }
+
+    .apple-card{
+      min-height:260px;
+      border-radius:28px;
+      padding:30px;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      background:var(--navy);
+      box-shadow:0 18px 45px rgba(0,0,0,.14);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      transition:.25s ease;
+    }
+
+    .apple-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 24px 55px rgba(0,0,0,.2);
+    }
+
+    .apple-card h2{
+      font-size:30px;
+      line-height:1.08;
+      font-weight:900;
+      margin:10px 0 16px;
+    }
+
+    .apple-card p{
+      font-size:15px;
+      line-height:1.65;
+      color:rgba(255,255,255,.8);
+    }
+
+    .apple-card span{
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-weight:900;
+      color:rgba(255,255,255,.72);
+    }
+
+    .apple-card a{
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:900;
+      color:#fff;
+      margin-top:22px;
+      display:inline-flex;
+    }
+
+    .veterans-card{background:linear-gradient(135deg,#0d1f3c,#405679)}
+    .responders-card{background:linear-gradient(135deg,#07111f,#173a59)}
+    .community-card{background:linear-gradient(135deg,#1f2937,#607080)}
+
+    .resources-section{
+      padding:85px 48px;
+      background:var(--off-white);
+    }
+
+    .resources-section.white{background:#fff}
+
+    .section-head{
+      max-width:920px;
+      margin-bottom:38px;
+    }
+
+    .section-head h2{
+      font-size:42px;
+      line-height:1.1;
+      font-weight:900;
+      color:var(--navy-deep);
+      margin-bottom:12px;
+    }
+
+    .section-head p{
+      font-size:16px;
+      line-height:1.75;
+      color:var(--text-muted);
+    }
+
+    .resource-group{margin:32px 0 44px}
+
+    .resource-group h3{
+      font-size:17px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--red);
+      margin-bottom:18px;
+      font-weight:900;
+    }
+
+    .resource-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .resource-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:22px;
+      min-height:145px;
+      box-shadow:0 8px 24px rgba(0,0,0,.05);
+      transition:.2s ease;
+    }
+
+    .resource-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 16px 34px rgba(0,0,0,.1);
+      border-color:rgba(178,34,52,.45);
+    }
+
+    .resource-card h4{
+      font-size:18px;
+      line-height:1.25;
+      font-weight:900;
+      color:var(--navy-deep);
+      margin-bottom:8px;
+    }
+
+    .resource-card p{
+      font-size:14px;
+      line-height:1.55;
+      color:var(--text-muted);
+      margin-bottom:14px;
+    }
+
+    .resource-card a{
+      display:inline-flex;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:900;
+      color:var(--red);
+    }
+
+    footer{
+      background:var(--navy-deep);
+      padding:56px 48px 28px;
+      border-top:3px solid var(--red);
+    }
+
+    .footer-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:40px;
+      padding-bottom:18px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:12px;
+    }
+
+    .footer-brand img{
+      height:145px;
+      width:auto;
+      display:block;
+    }
+
+    .footer-tagline{
+      font-size:11px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.3);
+      font-weight:700;
+    }
+
+    .footer-links-row{
+      display:flex;
+      gap:48px;
+      align-items:flex-start;
+    }
+
+    .footer-col h5{
+      font-size:11px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.3);
+      margin-bottom:16px;
+      font-weight:700;
+    }
+
+    .footer-col a,
+    .footer-col p{
+      display:block;
+      font-size:13px;
+      color:rgba(255,255,255,.55);
+      margin-bottom:10px;
+      line-height:1.6;
+    }
+
+    .footer-col a:hover{color:#fff}
+
+    .footer-bottom{
+      padding-top:24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .footer-bottom span{
+      font-size:12px;
+      color:rgba(255,255,255,.25);
+    }
+
+    @media(max-width:1000px){
+      .apple-grid,.resource-grid{grid-template-columns:1fr}
+      .resources-hero h1{font-size:42px}
+      .footer-top{flex-direction:column}
+      .footer-links-row{flex-wrap:wrap}
+    }
+
+    @media(max-width:900px){
+      .nav{min-height:92px;height:auto;padding:12px 18px}
+      .nav-logo img{height:110px;width:auto}
+      .nav-cta{display:none}
+      .menu-toggle{display:flex}
+
+      .nav-links{
+        display:none;
+        position:absolute;
+        top:92px;
+        left:0;
+        width:100%;
+        background:var(--navy);
+        flex-direction:column;
+        align-items:flex-start;
+        padding:22px 20px;
+        gap:16px;
+        z-index:1001;
+        border-top:1px solid rgba(255,255,255,.1);
+      }
+
+      .nav-links.active{display:flex}
+
+      .nav-dropdown{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+      }
+
+      .nav-dropbtn{
+        width:100%;
+        text-align:left;
+        padding:14px 0;
+        font-size:15px;
+      }
+
+      .dropdown-menu{
+        display:none;
+        position:static;
+        transform:none;
+        width:100%;
+        min-width:100%;
+        background:rgba(255,255,255,.06);
+        border:none;
+        box-shadow:none;
+        margin-top:8px;
+        padding:8px 0;
+      }
+
+      .nav-dropdown.active .dropdown-menu{display:block}
+
+      .dropdown-menu a{
+        padding:14px 18px;
+        color:rgba(255,255,255,.78)!important;
+      }
+
+      .dropdown-menu a:hover{
+        color:var(--red)!important;
+        background:transparent;
+      }
+
+      .resources-hero,.category-nav,.resources-section,footer{
+        padding-left:20px;
+        padding-right:20px;
+      }
+
+      .footer-brand img{height:115px}
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo.png" alt="NextLine Health Logo" />
+    </a>
+  </div>
+
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button class="nav-dropbtn" type="button">Who We Serve</button>
+      <div class="dropdown-menu">
+        <a href="index.html#who-we-serve">Overview</a>
+        <a href="federal-government.html">Federal Government</a>
+        <a href="behavioral-health-providers.html">Behavioral Health Providers</a>
+      </div>
+    </div>
+
+    <a href="index.html#services">Services</a>
+    <a href="index.html#our-story">Our Story</a>
+    <a href="index.html#partner">Partner With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="resources.html">Resources</a>
+  </div>
+
+  <div class="nav-right">
+    <button class="nav-cta" onclick="location.href='index.html#contact'">Request a Demo</button>
+    <button class="menu-toggle" type="button" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="resources-hero">
+  <div class="container">
+    <div class="rule"></div>
+    <div class="eyebrow">Resource Directory</div>
+    <h1>Trusted support resources for veterans, first responders, and the community.</h1>
+    <p>Access crisis support, behavioral health, housing, employment, financial assistance, legal aid, and wellness resources through one centralized directory.</p>
+  </div>
+</section>
+
+<section class="category-nav">
+  <div class="container apple-grid">
+    <div class="apple-card veterans-card">
+      <div>
+        <span>Veterans</span>
+        <h2>For those who served.</h2>
+        <p>VA services, crisis support, behavioral health, housing, employment, family, and recovery resources.</p>
+      </div>
+      <a href="#veterans">View Veterans Resources →</a>
+    </div>
+
+    <div class="apple-card responders-card">
+      <div>
+        <span>First Responders</span>
+        <h2>Support for those who respond.</h2>
+        <p>Crisis support, peer networks, behavioral health, recovery, and survivor resources.</p>
+      </div>
+      <a href="#responders">View First Responder Resources →</a>
+    </div>
+
+    <div class="apple-card community-card">
+      <div>
+        <span>Community</span>
+        <h2>Care for the community.</h2>
+        <p>Crisis lines, therapy access, basic needs, housing, employment, and legal support.</p>
+      </div>
+      <a href="#community">View Community Resources →</a>
+    </div>
+  </div>
+</section>
+
+<section class="resources-section" id="veterans">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Veterans</div>
+      <h2>Veteran resources</h2>
+      <p>Crisis support, VA services, behavioral health, housing, employment, financial assistance, family support, legal advocacy, education, disability resources, and directories.</p>
+    </div>
+    <div id="veterans-resources"></div>
+  </div>
+</section>
+
+<section class="resources-section white" id="responders">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">First Responders</div>
+      <h2>First responder resources</h2>
+      <p>Support for law enforcement, fire, EMS, and frontline responder communities.</p>
+    </div>
+    <div id="responders-resources"></div>
+  </div>
+</section>
+
+<section class="resources-section" id="community">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Community</div>
+      <h2>Community resources</h2>
+      <p>General crisis, mental health, substance use, healthcare, housing, employment, family, legal, and specialized support resources.</p>
+    </div>
+    <div id="community-resources"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="NextLine Health Logo" />
+      </div>
+      <div class="footer-tagline">Engagement &nbsp;&middot;&nbsp; Accountability &nbsp;&middot;&nbsp; Execution</div>
+    </div>
+
+    <div class="footer-links-row">
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="index.html#who-we-serve">Our Mission</a>
+        <a href="index.html#our-story">Our Story</a>
+        <a href="resources.html">Resources</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="federal-government.html">Federal Government</a>
+        <a href="behavioral-health-providers.html">Behavioral Health Providers</a>
+        <a href="index.html#services">Engagement Program</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="mailto:info@nextlinehealth.com">info@nextlinehealth.com</a>
+        <p style="color:rgba(255,255,255,.25);font-size:12px;margin-top:8px;">Veteran-Owned Small Business</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; 2025 NextLine Health Group. All rights reserved.</span>
+    <span>Veteran-Owned &nbsp;&middot;&nbsp; Behavioral Health &nbsp;&middot;&nbsp; Community Support</span>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+
+document.querySelector(".nav-dropbtn").addEventListener("click", function(e){
+  if(window.innerWidth <= 900){
+    e.preventDefault();
+    document.querySelector(".nav-dropdown").classList.toggle("active");
+  }
+});
+
+const veterans = {
+  "Crisis & Immediate Support": [
+    ["Veterans Crisis Line","24/7 confidential support via call, text, or chat","https://www.veteranscrisisline.net/"],
+    ["988 Suicide & Crisis Lifeline","","https://988lifeline.org/"],
+    ["Psychological Health Resource Center","","https://health.mil/Military-Health-Topics/Centers-of-Excellence/Psychological-Health-Center-of-Excellence/Psychological-Health-Resource-Center"],
+    ["Veterans Affairs Suicide Prevention","","https://www.mentalhealth.va.gov/suicide_prevention/"]
+  ],
+  "VA & Government Services": [
+    ["U.S. Department of Veterans Affairs","","https://www.va.gov/"],
+    ["VA Mental Health Services","","https://www.va.gov/health-care/health-needs-conditions/mental-health/"],
+    ["VA Mental Health Portal","","https://www.mentalhealth.va.gov/"],
+    ["Vet Centers Counseling","","https://www.vetcenter.va.gov/"],
+    ["National Resource Directory","","https://nrd.gov/"],
+    ["National Call Center for Homeless Veterans","","https://www.va.gov/homeless/nationalcallcenter.asp"],
+    ["Military OneSource","","https://www.militaryonesource.mil/"]
+  ],
+  "Mental Health & Behavioral Health": [
+    ["Wounded Warrior Project","","https://www.woundedwarriorproject.org/"],
+    ["Cohen Veterans Network","","https://www.cohenveteransnetwork.org/"],
+    ["Headstrong Project","","https://theheadstrongproject.org/"],
+    ["Give an Hour","","https://giveanhour.org/"],
+    ["Make the Connection","","https://www.maketheconnection.net/"],
+    ["Centerstone Military Services","","https://centerstone.org/military-services/"],
+    ["PTSD Foundation of America","","https://ptsdusa.org/"],
+    ["The Battle Within","","https://thebattlewithin.org/"],
+    ["Stop Soldier Suicide","","https://stopsoldiersuicide.org/"]
+  ],
+  "Substance Abuse & Recovery": [
+    ["SAMHSA Treatment Locator","","https://findtreatment.gov/"],
+    ["National Alliance on Mental Illness","","https://www.nami.org/"],
+    ["National Institute of Mental Health","","https://www.nimh.nih.gov/"],
+    ["Addiction.com Veteran Resources","","https://www.addictions.com/military-veterans-addiction-mental-health-resources/"]
+  ],
+  "Housing & Homelessness Support": [
+    ["HUD-VASH Program","","https://www.hud.gov/program_offices/public_indian_housing/programs/hcv/vash"],
+    ["U.S. VETS","","https://usvets.org/"],
+    ["National Coalition for Homeless Veterans","","https://nchv.org/"],
+    ["Homes For Our Troops","","https://www.hfotusa.org/"],
+    ["Building Homes for Heroes","","https://buildinghomesforheroes.org/"]
+  ],
+  "Employment & Career Transition": [
+    ["Hire Heroes USA","","https://www.hireheroesusa.org/"],
+    ["American Corporate Partners","","https://www.acp-usa.org/"],
+    ["Department of Labor Veterans Employment","","https://www.dol.gov/agencies/vets"],
+    ["Onward to Opportunity","","https://ivmf.syracuse.edu/programs/career-training/"]
+  ],
+  "Financial Assistance": [
+    ["Operation Homefront","","https://operationhomefront.org/"],
+    ["Semper Fi & America’s Fund","","https://thefund.org/"],
+    ["USA Cares","","https://usacares.org/"],
+    ["Coalition to Salute America’s Heroes","","https://saluteheroes.org/"]
+  ],
+  "Family & Caregiver Support": [
+    ["Fisher House Foundation","","https://www.fisherhouse.org/"],
+    ["Blue Star Families","","https://bluestarfam.org/"],
+    ["Caregiver Action Network","","https://www.caregiveraction.org/"],
+    ["Gold Star Wives of America","","https://www.goldstarwives.org/"],
+    ["American Gold Star Mothers","","https://www.goldstarmoms.com/"]
+  ],
+  "Legal & Advocacy": [
+    ["National Veterans Legal Services Program","","https://www.nvlsp.org/"],
+    ["Veterans Consortium Pro Bono Program","","https://www.vetsprobono.org/"],
+    ["Swords to Plowshares","","https://www.swords-to-plowshares.org/"]
+  ],
+  "Education & Scholarships": [
+    ["Student Veterans of America","","https://studentveterans.org/"],
+    ["Pat Tillman Foundation","","https://pattillmanfoundation.org/"],
+    ["Folds of Honor","","https://foldsofhonor.org/"]
+  ],
+  "Disability & Specialized Support": [
+    ["Paralyzed Veterans of America","","https://pva.org/"],
+    ["Blind Veterans Association","","https://bva.org/"],
+    ["Amputation Foundation","","https://amputeestore.com/"],
+    ["K9s For Warriors","","https://www.k9sforwarriors.org/"]
+  ],
+  "General Resource Directories": [
+    ["National Resource Directory","","https://nrd.gov/"],
+    ["Veterans Crisis Line Resource Finder","","https://www.veteranscrisisline.net/find-resources/local-resources/"]
+  ]
+};
+
+const responders = {
+  "Crisis & Immediate Support": [
+    ["988 Suicide & Crisis Lifeline","","https://988lifeline.org/"],
+    ["Safe Call Now","24/7 confidential support for first responders","https://safecallnow.org/"],
+    ["CopLine","Law enforcement hotline","https://www.copline.org/"],
+    ["Fire/EMS Helpline","","https://www.nvfc.org/programs/fire-ems-helpline/"],
+    ["Crisis Text Line","Text HOME to 741741","https://www.crisistextline.org/"]
+  ],
+  "Mental Health & Behavioral Health": [
+    ["First Responder Support Network","","https://www.frsn.org/"],
+    ["Badge of Life","","https://badgeoflife.org/"],
+    ["Blue H.E.L.P.","","https://bluehelp.org/"],
+    ["International Critical Incident Stress Foundation","","https://icisf.org/"],
+    ["National Alliance on Mental Illness","","https://www.nami.org/"],
+    ["All Clear Foundation","","https://allclearfoundation.org/"],
+    ["Frontline Responder Services","","https://www.frontlineresponderservices.org/"]
+  ],
+  "Peer Support & Community": [
+    ["CopLine Peer Support","","https://www.copline.org/"],
+    ["Firefighter Behavioral Health Alliance","","https://www.ffbha.org/"],
+    ["Next Rung","","https://www.nextrung.org/"],
+    ["Responder Alliance","","https://responderalliance.com/"],
+    ["Brotherhood for the Fallen","","https://brotherhoodforthefallen.org/"]
+  ],
+  "Family & Survivor Support": [
+    ["National Fallen Firefighters Foundation","","https://www.firehero.org/"],
+    ["Concerns of Police Survivors","","https://www.concernsofpolicesurvivors.org/"],
+    ["First Responders Children’s Foundation","","https://1strcf.org/"],
+    ["Tunnel to Towers Foundation","","https://t2t.org/"]
+  ],
+  "Substance Abuse & Recovery": [
+    ["Shatterproof","","https://www.shatterproof.org/"],
+    ["SAMHSA Treatment Locator","","https://findtreatment.gov/"],
+    ["Recovery Centers of America First Responder Programs","","https://recoverycentersofamerica.com/"],
+    ["National Institute on Drug Abuse","","https://nida.nih.gov/"]
+  ],
+  "Training, Education & Resilience": [
+    ["National Volunteer Fire Council","","https://www.nvfc.org/"],
+    ["IAFF Behavioral Health","","https://www.iaff.org/behavioral-health/"],
+    ["International Association of Chiefs of Police","","https://www.theiacp.org/"],
+    ["FBI Law Enforcement Bulletin","","https://leb.fbi.gov/"],
+    ["All Clear Foundation Training Programs","","https://allclearfoundation.org/"]
+  ],
+  "Financial & Emergency Assistance": [
+    ["Code Green Campaign","","https://codegreencampaign.org/"],
+    ["First Responders Foundation","","https://firstrespondersfoundation.org/"],
+    ["National Police Credit Union Resources","","https://www.nationalpolicecu.com/"],
+    ["Federal Employee Assistance Programs","","https://www.opm.gov/"]
+  ],
+  "Legal & Advocacy": [
+    ["National Police Foundation","","https://www.policefoundation.org/"],
+    ["Police Executive Research Forum","","https://www.policeforum.org/"],
+    ["Fraternal Order of Police","","https://www.fop.net/"],
+    ["National Sheriffs’ Association","","https://www.sheriffs.org/"]
+  ],
+  "General Resource Directories": [
+    ["National First Responder Resource Center","","https://www.firstrespondercenter.org/"],
+    ["DHS First Responder Resources","","https://www.dhs.gov/science-and-technology/first-responders"],
+    ["SAMHSA First Responder Toolkit","","https://www.samhsa.gov/"]
+  ]
+};
+
+const community = {
+  "Crisis & Immediate Support": [
+    ["988 Suicide & Crisis Lifeline","","https://988lifeline.org/"],
+    ["Crisis Text Line","","https://www.crisistextline.org/"],
+    ["SAMHSA National Helpline","","https://www.samhsa.gov/find-help/national-helpline"],
+    ["National Domestic Violence Hotline","","https://www.thehotline.org/"],
+    ["National Sexual Assault Hotline RAINN","","https://www.rainn.org/"],
+    ["Trevor Project","","https://www.thetrevorproject.org/"]
+  ],
+  "Mental Health & Behavioral Health": [
+    ["National Alliance on Mental Illness","","https://www.nami.org/"],
+    ["Mental Health America","","https://www.mhanational.org/"],
+    ["National Institute of Mental Health","","https://www.nimh.nih.gov/"],
+    ["Psychology Today Therapist Finder","","https://www.psychologytoday.com/us/therapists"],
+    ["American Psychological Association","","https://www.apa.org/"],
+    ["Open Path Psychotherapy Collective","","https://openpathcollective.org/"]
+  ],
+  "Substance Abuse & Recovery": [
+    ["SAMHSA Treatment Locator","","https://findtreatment.gov/"],
+    ["Alcoholics Anonymous","","https://www.aa.org/"],
+    ["Narcotics Anonymous","","https://www.na.org/"],
+    ["SMART Recovery","","https://www.smartrecovery.org/"],
+    ["National Institute on Drug Abuse","","https://nida.nih.gov/"],
+    ["Partnership to End Addiction","","https://drugfree.org/"]
+  ],
+  "Healthcare & General Wellness": [
+    ["Healthcare.gov","","https://www.healthcare.gov/"],
+    ["Centers for Disease Control and Prevention","","https://www.cdc.gov/"],
+    ["National Institutes of Health","","https://www.nih.gov/"],
+    ["Mayo Clinic","","https://www.mayoclinic.org/"],
+    ["Cleveland Clinic","","https://my.clevelandclinic.org/"]
+  ],
+  "Financial & Basic Needs Support": [
+    ["United Way 211","","https://www.211.org/"],
+    ["Feeding America","","https://www.feedingamerica.org/"],
+    ["Salvation Army","","https://www.salvationarmyusa.org/"],
+    ["Catholic Charities USA","","https://www.catholiccharitiesusa.org/"],
+    ["National Low Income Housing Coalition","","https://nlihc.org/"]
+  ],
+  "Housing & Homelessness Support": [
+    ["National Coalition for the Homeless","","https://nationalhomeless.org/"],
+    ["HUD Housing Assistance","","https://www.hud.gov/"],
+    ["Emergency Housing Vouchers","","https://www.hud.gov/program_offices/public_indian_housing/ehv"],
+    ["Covenant House","","https://www.covenanthouse.org/"]
+  ],
+  "Employment & Career Support": [
+    ["U.S. Department of Labor","","https://www.dol.gov/"],
+    ["CareerOneStop","","https://www.careeronestop.org/"],
+    ["Goodwill Job Training Programs","","https://www.goodwill.org/"],
+    ["Indeed Career Guide","","https://www.indeed.com/career-advice"],
+    ["LinkedIn Workforce Resources","","https://www.linkedin.com/learning/"]
+  ],
+  "Legal & Advocacy": [
+    ["Legal Services Corporation","","https://www.lsc.gov/"],
+    ["American Civil Liberties Union","","https://www.aclu.org/"],
+    ["National Legal Aid & Defender Association","","https://www.nlada.org/"],
+    ["USA.gov Legal Help","","https://www.usa.gov/legal-aid"]
+  ],
+  "Family & Community Support": [
+    ["Child Welfare Information Gateway","","https://www.childwelfare.gov/"],
+    ["National Parent Helpline","","https://www.nationalparenthelpline.org/"],
+    ["Boys & Girls Clubs of America","","https://www.bgca.org/"],
+    ["YMCA","","https://www.ymca.org/"]
+  ],
+  "Specialized Support Groups": [
+    ["Trevor Project","","https://www.thetrevorproject.org/"],
+    ["National Eating Disorders Association","","https://www.nationaleatingdisorders.org/"],
+    ["Autism Society","","https://www.autism-society.org/"],
+    ["Alzheimer’s Association","","https://www.alz.org/"],
+    ["American Cancer Society","","https://www.cancer.org/"]
+  ],
+  "General Resource Directories": [
+    ["USA.gov","","https://www.usa.gov/"],
+    ["Benefits.gov","","https://www.benefits.gov/"],
+    ["FindHelp.org","","https://www.findhelp.org/"]
+  ]
+};
+
+function renderResources(data, target){
+  const container = document.getElementById(target);
+
+  Object.entries(data).forEach(([group, items]) => {
+    const section = document.createElement("div");
+    section.className = "resource-group";
+    section.innerHTML = `<h3>${group}</h3><div class="resource-grid"></div>`;
+    const grid = section.querySelector(".resource-grid");
+
+    items.forEach(([name, desc, url]) => {
+      const card = document.createElement("div");
+      card.className = "resource-card";
+      card.innerHTML = `
+        <h4>${name}</h4>
+        <p>${desc || "External resource for support, information, or services."}</p>
+        <a href="${url}" target="_blank" rel="noopener">Visit Resource →</a>
+      `;
+      grid.appendChild(card);
+    });
+
+    container.appendChild(section);
+  });
+}
+
+renderResources(veterans, "veterans-resources");
+renderResources(responders, "responders-resources");
+renderResources(community, "community-resources");
+</script>
+
+</body>
+</html>
