@@ -155,11 +155,23 @@
     }
 
     .resources-hero{
-      background:linear-gradient(135deg,var(--navy-deep),var(--navy));
-      padding:110px 48px 95px;
-      border-bottom:4px solid var(--red);
-      color:#fff;
-    }
+  background:
+    linear-gradient(
+      to right,
+      rgba(7,17,31,0.96) 0%,
+      rgba(7,17,31,0.88) 42%,
+      rgba(7,17,31,0.55) 70%,
+      rgba(7,17,31,0.22) 100%
+    ),
+    url("assets/images/resources.png");
+
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding: 110px 48px 95px;
+  border-bottom: 4px solid var(--red);
+  color: #fff;
+}
 
     .resources-hero h1{
       font-size:62px;
