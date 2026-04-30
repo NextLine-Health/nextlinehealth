@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Resources | NextLine Health</title>
 
+  <meta
+    name="description"
+    content="Trusted behavioral health, crisis, housing, employment, legal, and wellness resources for veterans, first responders, and the community."
+  />
+
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,6 +42,8 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
+      position:relative;
+      z-index:1000;
     }
 
     .nav-left,.nav-right{display:flex;align-items:center}
@@ -123,6 +130,8 @@
       font-weight:800;
     }
 
+    .nav-cta:hover{background:var(--red-dark)}
+
     .menu-toggle{
       display:none;
       width:34px;
@@ -145,6 +154,7 @@
     }
 
     .rule{width:40px;height:4px;background:var(--red);margin-bottom:18px}
+
     .eyebrow{
       font-size:11px;
       letter-spacing:.16em;
@@ -155,23 +165,22 @@
     }
 
     .resources-hero{
-  background:
-    linear-gradient(
-      to right,
-      rgba(7,17,31,0.96) 0%,
-      rgba(7,17,31,0.88) 42%,
-      rgba(7,17,31,0.55) 70%,
-      rgba(7,17,31,0.22) 100%
-    ),
-    url("assets/images/resources.png");
-
-  background-size: cover;
-  background-position: right center;
-  background-repeat: no-repeat;
-  padding: 110px 48px 95px;
-  border-bottom: 4px solid var(--red);
-  color: #fff;
-}
+      background:
+        linear-gradient(
+          to right,
+          rgba(7,17,31,0.98) 0%,
+          rgba(7,17,31,0.92) 42%,
+          rgba(7,17,31,0.58) 70%,
+          rgba(7,17,31,0.18) 100%
+        ),
+        url("assets/images/resources.png");
+      background-size:cover;
+      background-position:right center;
+      background-repeat:no-repeat;
+      padding:118px 48px 105px;
+      border-bottom:4px solid var(--red);
+      color:#fff;
+    }
 
     .resources-hero h1{
       font-size:62px;
@@ -184,11 +193,220 @@
     .resources-hero p{
       font-size:18px;
       line-height:1.75;
-      color:rgba(255,255,255,.72);
+      color:rgba(255,255,255,.76);
       max-width:780px;
     }
 
-    .category-nav{padding:70px 48px;background:#fff}
+    .hero-actions{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:34px;
+    }
+
+    .btn-red{
+      background:var(--red);
+      color:#fff;
+      padding:15px 30px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:900;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .btn-red:hover{background:var(--red-dark)}
+
+    .btn-ghost{
+      border:1px solid rgba(255,255,255,.32);
+      color:#fff;
+      padding:15px 30px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:900;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .btn-ghost:hover{border-color:#fff}
+
+    .crisis-strip{
+      background:var(--navy-deep);
+      padding:26px 48px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .crisis-inner{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.1fr repeat(4,1fr);
+      gap:14px;
+      align-items:stretch;
+    }
+
+    .crisis-title{
+      color:#fff;
+      padding:20px 0;
+    }
+
+    .crisis-title span{
+      display:block;
+      font-size:11px;
+      color:var(--red);
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-weight:900;
+      margin-bottom:8px;
+    }
+
+    .crisis-title strong{
+      font-size:24px;
+      line-height:1.15;
+      font-weight:900;
+    }
+
+    .crisis-card{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);
+      padding:18px;
+      color:#fff;
+      border-radius:16px;
+      transition:.2s ease;
+    }
+
+    .crisis-card:hover{
+      transform:translateY(-3px);
+      background:rgba(255,255,255,.09);
+      border-color:rgba(178,34,52,.55);
+    }
+
+    .crisis-card h3{
+      font-size:15px;
+      line-height:1.25;
+      font-weight:900;
+      margin-bottom:8px;
+    }
+
+    .crisis-card p{
+      font-size:13px;
+      line-height:1.5;
+      color:rgba(255,255,255,.65);
+      margin-bottom:10px;
+    }
+
+    .crisis-card a{
+      color:#fff;
+      font-size:11px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:900;
+    }
+
+    .search-panel{
+      background:#fff;
+      padding:42px 48px 30px;
+      border-bottom:1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:800;
+    }
+
+    .search-grid{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr auto;
+      gap:18px;
+      align-items:center;
+    }
+
+    .resource-search{
+      width:100%;
+      border:1.5px solid var(--border);
+      border-radius:18px;
+      padding:18px 20px;
+      font-size:16px;
+      font-family:inherit;
+      outline:none;
+      background:#fafafa;
+    }
+
+    .resource-search:focus{
+      border-color:rgba(178,34,52,.55);
+      background:#fff;
+      box-shadow:0 0 0 4px rgba(178,34,52,.08);
+    }
+
+    .filter-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .filter-btn{
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--navy);
+      padding:12px 16px;
+      border-radius:999px;
+      font-size:12px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-weight:900;
+      cursor:pointer;
+      font-family:inherit;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover{
+      background:var(--navy);
+      color:#fff;
+      border-color:var(--navy);
+    }
+
+    .jump-nav{
+      background:var(--off-white);
+      padding:20px 48px;
+      border-bottom:1px solid var(--border);
+    }
+
+    .jump-inner{
+      max-width:1200px;
+      margin:0 auto;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .jump-inner a{
+      background:#fff;
+      border:1px solid var(--border);
+      padding:12px 18px;
+      border-radius:999px;
+      color:var(--navy);
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:900;
+      box-shadow:0 6px 18px rgba(0,0,0,.04);
+    }
+
+    .jump-inner a:hover{
+      background:var(--red);
+      color:#fff;
+      border-color:var(--red);
+    }
+
+    .category-nav{
+      padding:70px 48px;
+      background:#fff;
+    }
 
     .apple-grid{
       display:grid;
@@ -197,7 +415,7 @@
     }
 
     .apple-card{
-      min-height:260px;
+      min-height:280px;
       border-radius:28px;
       padding:30px;
       color:#fff;
@@ -251,6 +469,36 @@
     .responders-card{background:linear-gradient(135deg,#07111f,#173a59)}
     .community-card{background:linear-gradient(135deg,#1f2937,#607080)}
 
+    .cta-band{
+      background:linear-gradient(135deg,var(--navy-deep),var(--navy));
+      padding:58px 48px;
+      color:#fff;
+      border-top:4px solid var(--red);
+      border-bottom:4px solid var(--red);
+    }
+
+    .cta-band-inner{
+      max-width:1200px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.3fr auto;
+      gap:30px;
+      align-items:center;
+    }
+
+    .cta-band h2{
+      font-size:34px;
+      line-height:1.15;
+      font-weight:900;
+      margin-bottom:10px;
+    }
+
+    .cta-band p{
+      color:rgba(255,255,255,.7);
+      line-height:1.7;
+      max-width:760px;
+    }
+
     .resources-section{
       padding:85px 48px;
       background:var(--off-white);
@@ -277,7 +525,7 @@
       color:var(--text-muted);
     }
 
-    .resource-group{margin:32px 0 44px}
+    .resource-group{margin:32px 0 48px}
 
     .resource-group h3{
       font-size:17px;
@@ -297,11 +545,14 @@
     .resource-card{
       background:#fff;
       border:1px solid var(--border);
-      border-radius:20px;
+      border-radius:22px;
       padding:22px;
-      min-height:145px;
+      min-height:170px;
       box-shadow:0 8px 24px rgba(0,0,0,.05);
       transition:.2s ease;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
     }
 
     .resource-card:hover{
@@ -325,6 +576,30 @@
       margin-bottom:14px;
     }
 
+    .badge-row{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+
+    .badge{
+      display:inline-flex;
+      padding:6px 9px;
+      border-radius:999px;
+      background:var(--off-white);
+      color:var(--navy);
+      font-size:10px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-weight:900;
+    }
+
+    .badge.crisis{background:rgba(178,34,52,.1);color:var(--red)}
+    .badge.gov{background:rgba(13,31,60,.1);color:var(--navy)}
+    .badge.health{background:rgba(50,90,130,.12);color:#173a59}
+    .badge.support{background:rgba(90,90,90,.1);color:#333}
+
     .resource-card a{
       display:inline-flex;
       font-size:12px;
@@ -332,6 +607,17 @@
       text-transform:uppercase;
       font-weight:900;
       color:var(--red);
+    }
+
+    .no-results{
+      display:none;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:30px;
+      text-align:center;
+      color:var(--text-muted);
+      margin-top:30px;
     }
 
     footer{
@@ -410,11 +696,11 @@
       color:rgba(255,255,255,.25);
     }
 
-    @media(max-width:1000px){
-      .apple-grid,.resource-grid{grid-template-columns:1fr}
-      .resources-hero h1{font-size:42px}
-      .footer-top{flex-direction:column}
-      .footer-links-row{flex-wrap:wrap}
+    @media(max-width:1100px){
+      .crisis-inner{grid-template-columns:1fr 1fr}
+      .apple-grid,.resource-grid{grid-template-columns:1fr 1fr}
+      .search-grid{grid-template-columns:1fr}
+      .filter-row{justify-content:flex-start}
     }
 
     @media(max-width:900px){
@@ -480,12 +766,42 @@
         background:transparent;
       }
 
-      .resources-hero,.category-nav,.resources-section,footer{
+      .resources-hero,
+      .crisis-strip,
+      .search-panel,
+      .jump-nav,
+      .category-nav,
+      .cta-band,
+      .resources-section,
+      footer{
         padding-left:20px;
         padding-right:20px;
       }
 
+      .resources-hero{
+        padding-top:80px;
+        padding-bottom:78px;
+        background-position:center center;
+      }
+
+      .resources-hero h1{font-size:42px}
+
+      .hero-actions{flex-direction:column}
+      .btn-red,.btn-ghost{width:100%;text-align:center}
+
+      .crisis-inner,
+      .apple-grid,
+      .resource-grid,
+      .cta-band-inner{
+        grid-template-columns:1fr;
+      }
+
+      .search-panel{position:relative;top:auto}
+
+      .footer-top{flex-direction:column}
+      .footer-links-row{flex-wrap:wrap}
       .footer-brand img{height:115px}
+      .footer-bottom{flex-direction:column;text-align:center}
     }
   </style>
 </head>
@@ -530,6 +846,68 @@
     <div class="eyebrow">Resource Directory</div>
     <h1>Trusted support resources for veterans, first responders, and the community.</h1>
     <p>Access crisis support, behavioral health, housing, employment, financial assistance, legal aid, and wellness resources through one centralized directory.</p>
+
+    <div class="hero-actions">
+      <a href="#immediate-help" class="btn-red">Immediate Help</a>
+      <a href="#resource-search-panel" class="btn-ghost">Search Resources</a>
+    </div>
+  </div>
+</section>
+
+<section class="crisis-strip" id="immediate-help">
+  <div class="crisis-inner">
+    <div class="crisis-title">
+      <span>Immediate Support</span>
+      <strong>If this is urgent, start here.</strong>
+    </div>
+
+    <div class="crisis-card">
+      <h3>988 Suicide & Crisis Lifeline</h3>
+      <p>24/7 crisis support for anyone in emotional distress.</p>
+      <a href="https://988lifeline.org/" target="_blank" rel="noopener">Visit 988 →</a>
+    </div>
+
+    <div class="crisis-card">
+      <h3>Veterans Crisis Line</h3>
+      <p>Confidential support for veterans and their families.</p>
+      <a href="https://www.veteranscrisisline.net/" target="_blank" rel="noopener">Visit Resource →</a>
+    </div>
+
+    <div class="crisis-card">
+      <h3>Safe Call Now</h3>
+      <p>Confidential support for first responders and families.</p>
+      <a href="https://safecallnow.org/" target="_blank" rel="noopener">Visit Resource →</a>
+    </div>
+
+    <div class="crisis-card">
+      <h3>Crisis Text Line</h3>
+      <p>Text HOME to 741741 for immediate text support.</p>
+      <a href="https://www.crisistextline.org/" target="_blank" rel="noopener">Visit Resource →</a>
+    </div>
+  </div>
+</section>
+
+<section class="search-panel" id="resource-search-panel">
+  <div class="search-grid">
+    <input id="resourceSearch" class="resource-search" type="text" placeholder="Search by resource name, category, population, or need..." />
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="crisis">Crisis</button>
+      <button class="filter-btn" data-filter="mental health">Mental Health</button>
+      <button class="filter-btn" data-filter="housing">Housing</button>
+      <button class="filter-btn" data-filter="employment">Employment</button>
+      <button class="filter-btn" data-filter="legal">Legal</button>
+    </div>
+  </div>
+</section>
+
+<section class="jump-nav">
+  <div class="jump-inner">
+    <a href="#veterans">Veterans</a>
+    <a href="#responders">First Responders</a>
+    <a href="#community">Community</a>
+    <a href="#immediate-help">Immediate Help</a>
   </div>
 </section>
 
@@ -564,6 +942,16 @@
   </div>
 </section>
 
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <div>
+      <h2>Need help finding the right support?</h2>
+      <p>NextLine Health is building a structured navigation model to help people identify appropriate resources, understand next steps, and stay connected to support.</p>
+    </div>
+    <a href="index.html#contact" class="btn-red">Contact NextLine</a>
+  </div>
+</section>
+
 <section class="resources-section" id="veterans">
   <div class="container">
     <div class="section-head">
@@ -594,6 +982,7 @@
       <p>General crisis, mental health, substance use, healthcare, housing, employment, family, legal, and specialized support resources.</p>
     </div>
     <div id="community-resources"></div>
+    <div class="no-results" id="noResults">No resources matched your search. Try another keyword or clear the filter.</div>
   </div>
 </section>
 
@@ -649,224 +1038,237 @@ document.querySelector(".nav-dropbtn").addEventListener("click", function(e){
 
 const veterans = {
   "Crisis & Immediate Support": [
-    ["Veterans Crisis Line","24/7 confidential support via call, text, or chat","https://www.veteranscrisisline.net/"],
-    ["988 Suicide & Crisis Lifeline","","https://988lifeline.org/"],
-    ["Psychological Health Resource Center","","https://health.mil/Military-Health-Topics/Centers-of-Excellence/Psychological-Health-Center-of-Excellence/Psychological-Health-Resource-Center"],
-    ["Veterans Affairs Suicide Prevention","","https://www.mentalhealth.va.gov/suicide_prevention/"]
+    ["Veterans Crisis Line","24/7 confidential support via call, text, or chat","https://www.veteranscrisisline.net/","crisis 24/7 veteran"],
+    ["988 Suicide & Crisis Lifeline","24/7 crisis support for anyone in emotional distress.","https://988lifeline.org/","crisis 24/7 community"],
+    ["Psychological Health Resource Center","Military psychological health information and support resources.","https://health.mil/Military-Health-Topics/Centers-of-Excellence/Psychological-Health-Center-of-Excellence/Psychological-Health-Resource-Center","mental health government veteran"],
+    ["Veterans Affairs Suicide Prevention","VA suicide prevention information, tools, and support.","https://www.mentalhealth.va.gov/suicide_prevention/","crisis government veteran"]
   ],
   "VA & Government Services": [
-    ["U.S. Department of Veterans Affairs","","https://www.va.gov/"],
-    ["VA Mental Health Services","","https://www.va.gov/health-care/health-needs-conditions/mental-health/"],
-    ["VA Mental Health Portal","","https://www.mentalhealth.va.gov/"],
-    ["Vet Centers Counseling","","https://www.vetcenter.va.gov/"],
-    ["National Resource Directory","","https://nrd.gov/"],
-    ["National Call Center for Homeless Veterans","","https://www.va.gov/homeless/nationalcallcenter.asp"],
-    ["Military OneSource","","https://www.militaryonesource.mil/"]
+    ["U.S. Department of Veterans Affairs","Federal benefits, healthcare, claims, and veteran services.","https://www.va.gov/","government veteran"],
+    ["VA Mental Health Services","VA behavioral health care and treatment resources.","https://www.va.gov/health-care/health-needs-conditions/mental-health/","mental health government veteran"],
+    ["VA Mental Health Portal","Central VA mental health information and program access.","https://www.mentalhealth.va.gov/","mental health government veteran"],
+    ["Vet Centers Counseling","Community-based counseling for veterans, service members, and families.","https://www.vetcenter.va.gov/","mental health government veteran"],
+    ["National Resource Directory","Federal resource directory for service members, veterans, families, and caregivers.","https://nrd.gov/","government directory veteran"],
+    ["National Call Center for Homeless Veterans","Support for veterans who are homeless or at risk of homelessness.","https://www.va.gov/homeless/nationalcallcenter.asp","housing crisis government veteran"],
+    ["Military OneSource","Military family and service member support resources.","https://www.militaryonesource.mil/","government family veteran"]
   ],
   "Mental Health & Behavioral Health": [
-    ["Wounded Warrior Project","","https://www.woundedwarriorproject.org/"],
-    ["Cohen Veterans Network","","https://www.cohenveteransnetwork.org/"],
-    ["Headstrong Project","","https://theheadstrongproject.org/"],
-    ["Give an Hour","","https://giveanhour.org/"],
-    ["Make the Connection","","https://www.maketheconnection.net/"],
-    ["Centerstone Military Services","","https://centerstone.org/military-services/"],
-    ["PTSD Foundation of America","","https://ptsdusa.org/"],
-    ["The Battle Within","","https://thebattlewithin.org/"],
-    ["Stop Soldier Suicide","","https://stopsoldiersuicide.org/"]
+    ["Wounded Warrior Project","Programs supporting wounded veterans and families.","https://www.woundedwarriorproject.org/","mental health veteran"],
+    ["Cohen Veterans Network","Mental health clinics for veterans, service members, and families.","https://www.cohenveteransnetwork.org/","mental health veteran"],
+    ["Headstrong Project","Confidential mental health treatment for veterans and service members.","https://theheadstrongproject.org/","mental health veteran"],
+    ["Give an Hour","Mental health support through volunteer professionals and programs.","https://giveanhour.org/","mental health support"],
+    ["Make the Connection","Veteran stories and recovery resources from VA.","https://www.maketheconnection.net/","mental health government veteran"],
+    ["Centerstone Military Services","Counseling and support for military-connected individuals.","https://centerstone.org/military-services/","mental health veteran"],
+    ["PTSD Foundation of America","PTSD support and programs for veterans and families.","https://ptsdusa.org/","mental health veteran"],
+    ["The Battle Within","Mental health support for veterans and first responders.","https://thebattlewithin.org/","mental health veteran first responder"],
+    ["Stop Soldier Suicide","Suicide prevention and support for service members and veterans.","https://stopsoldiersuicide.org/","crisis mental health veteran"]
   ],
   "Substance Abuse & Recovery": [
-    ["SAMHSA Treatment Locator","","https://findtreatment.gov/"],
-    ["National Alliance on Mental Illness","","https://www.nami.org/"],
-    ["National Institute of Mental Health","","https://www.nimh.nih.gov/"],
-    ["Addiction.com Veteran Resources","","https://www.addictions.com/military-veterans-addiction-mental-health-resources/"]
+    ["SAMHSA Treatment Locator","Find mental health and substance use treatment providers.","https://findtreatment.gov/","substance recovery mental health government"],
+    ["National Alliance on Mental Illness","Mental health education, advocacy, and support.","https://www.nami.org/","mental health support"],
+    ["National Institute of Mental Health","Federal mental health research and education.","https://www.nimh.nih.gov/","mental health government"],
+    ["Addiction.com Veteran Resources","Military and veteran addiction and mental health resource guide.","https://www.addictions.com/military-veterans-addiction-mental-health-resources/","substance recovery veteran"]
   ],
   "Housing & Homelessness Support": [
-    ["HUD-VASH Program","","https://www.hud.gov/program_offices/public_indian_housing/programs/hcv/vash"],
-    ["U.S. VETS","","https://usvets.org/"],
-    ["National Coalition for Homeless Veterans","","https://nchv.org/"],
-    ["Homes For Our Troops","","https://www.hfotusa.org/"],
-    ["Building Homes for Heroes","","https://buildinghomesforheroes.org/"]
+    ["HUD-VASH Program","HUD and VA housing assistance for eligible veterans.","https://www.hud.gov/program_offices/public_indian_housing/programs/hcv/vash","housing government veteran"],
+    ["U.S. VETS","Housing, employment, and support services for veterans.","https://usvets.org/","housing employment veteran"],
+    ["National Coalition for Homeless Veterans","Advocacy and resources addressing veteran homelessness.","https://nchv.org/","housing veteran"],
+    ["Homes For Our Troops","Adapted homes for injured post-9/11 veterans.","https://www.hfotusa.org/","housing veteran"],
+    ["Building Homes for Heroes","Housing support for veterans and families.","https://buildinghomesforheroes.org/","housing veteran"]
   ],
   "Employment & Career Transition": [
-    ["Hire Heroes USA","","https://www.hireheroesusa.org/"],
-    ["American Corporate Partners","","https://www.acp-usa.org/"],
-    ["Department of Labor Veterans Employment","","https://www.dol.gov/agencies/vets"],
-    ["Onward to Opportunity","","https://ivmf.syracuse.edu/programs/career-training/"]
+    ["Hire Heroes USA","Career transition and employment support for veterans.","https://www.hireheroesusa.org/","employment veteran"],
+    ["American Corporate Partners","Veteran mentorship and career development.","https://www.acp-usa.org/","employment veteran"],
+    ["Department of Labor Veterans Employment","Federal veteran employment resources and programs.","https://www.dol.gov/agencies/vets","employment government veteran"],
+    ["Onward to Opportunity","Career training for service members, veterans, and spouses.","https://ivmf.syracuse.edu/programs/career-training/","employment education veteran"]
   ],
   "Financial Assistance": [
-    ["Operation Homefront","","https://operationhomefront.org/"],
-    ["Semper Fi & America’s Fund","","https://thefund.org/"],
-    ["USA Cares","","https://usacares.org/"],
-    ["Coalition to Salute America’s Heroes","","https://saluteheroes.org/"]
+    ["Operation Homefront","Financial assistance and family support for military families.","https://operationhomefront.org/","financial family veteran"],
+    ["Semper Fi & America’s Fund","Support for wounded, critically ill, and injured service members and families.","https://thefund.org/","financial veteran"],
+    ["USA Cares","Financial and advocacy support for military families.","https://usacares.org/","financial veteran"],
+    ["Coalition to Salute America’s Heroes","Emergency financial aid for wounded veterans.","https://saluteheroes.org/","financial veteran"]
   ],
   "Family & Caregiver Support": [
-    ["Fisher House Foundation","","https://www.fisherhouse.org/"],
-    ["Blue Star Families","","https://bluestarfam.org/"],
-    ["Caregiver Action Network","","https://www.caregiveraction.org/"],
-    ["Gold Star Wives of America","","https://www.goldstarwives.org/"],
-    ["American Gold Star Mothers","","https://www.goldstarmoms.com/"]
+    ["Fisher House Foundation","Housing near medical centers for military and veteran families.","https://www.fisherhouse.org/","family housing veteran"],
+    ["Blue Star Families","Support programs for military-connected families.","https://bluestarfam.org/","family veteran"],
+    ["Caregiver Action Network","Caregiver support and education resources.","https://www.caregiveraction.org/","family caregiver"],
+    ["Gold Star Wives of America","Support for spouses of fallen service members.","https://www.goldstarwives.org/","family veteran"],
+    ["American Gold Star Mothers","Support for mothers of fallen service members.","https://www.goldstarmoms.com/","family veteran"]
   ],
   "Legal & Advocacy": [
-    ["National Veterans Legal Services Program","","https://www.nvlsp.org/"],
-    ["Veterans Consortium Pro Bono Program","","https://www.vetsprobono.org/"],
-    ["Swords to Plowshares","","https://www.swords-to-plowshares.org/"]
+    ["National Veterans Legal Services Program","Legal advocacy for veterans and service members.","https://www.nvlsp.org/","legal veteran"],
+    ["Veterans Consortium Pro Bono Program","Free legal representation for veterans in qualifying cases.","https://www.vetsprobono.org/","legal veteran"],
+    ["Swords to Plowshares","Veteran legal, housing, and support services.","https://www.swords-to-plowshares.org/","legal housing veteran"]
   ],
   "Education & Scholarships": [
-    ["Student Veterans of America","","https://studentveterans.org/"],
-    ["Pat Tillman Foundation","","https://pattillmanfoundation.org/"],
-    ["Folds of Honor","","https://foldsofhonor.org/"]
+    ["Student Veterans of America","Campus support and advocacy for student veterans.","https://studentveterans.org/","education veteran"],
+    ["Pat Tillman Foundation","Scholarship and leadership development for veterans and spouses.","https://pattillmanfoundation.org/","education veteran"],
+    ["Folds of Honor","Scholarships for families of fallen or disabled service members.","https://foldsofhonor.org/","education family veteran"]
   ],
   "Disability & Specialized Support": [
-    ["Paralyzed Veterans of America","","https://pva.org/"],
-    ["Blind Veterans Association","","https://bva.org/"],
-    ["Amputation Foundation","","https://amputeestore.com/"],
-    ["K9s For Warriors","","https://www.k9sforwarriors.org/"]
+    ["Paralyzed Veterans of America","Advocacy and support for veterans with disabilities.","https://pva.org/","disability veteran"],
+    ["Blind Veterans Association","Support for blinded veterans and families.","https://bva.org/","disability veteran"],
+    ["Amputation Foundation","Amputation support and resources.","https://amputeestore.com/","disability support"],
+    ["K9s For Warriors","Service dogs for veterans with PTSD or trauma.","https://www.k9sforwarriors.org/","mental health veteran disability"]
   ],
   "General Resource Directories": [
-    ["National Resource Directory","","https://nrd.gov/"],
-    ["Veterans Crisis Line Resource Finder","","https://www.veteranscrisisline.net/find-resources/local-resources/"]
+    ["National Resource Directory","Federal resource directory for military-connected communities.","https://nrd.gov/","directory government veteran"],
+    ["Veterans Crisis Line Resource Finder","Local resources from the Veterans Crisis Line.","https://www.veteranscrisisline.net/find-resources/local-resources/","directory crisis veteran"]
   ]
 };
 
 const responders = {
   "Crisis & Immediate Support": [
-    ["988 Suicide & Crisis Lifeline","","https://988lifeline.org/"],
-    ["Safe Call Now","24/7 confidential support for first responders","https://safecallnow.org/"],
-    ["CopLine","Law enforcement hotline","https://www.copline.org/"],
-    ["Fire/EMS Helpline","","https://www.nvfc.org/programs/fire-ems-helpline/"],
-    ["Crisis Text Line","Text HOME to 741741","https://www.crisistextline.org/"]
+    ["988 Suicide & Crisis Lifeline","24/7 crisis support for anyone in emotional distress.","https://988lifeline.org/","crisis 24/7"],
+    ["Safe Call Now","24/7 confidential support for first responders.","https://safecallnow.org/","crisis 24/7 first responder"],
+    ["CopLine","Law enforcement hotline staffed by retired officers.","https://www.copline.org/","crisis law enforcement first responder"],
+    ["Fire/EMS Helpline","Support line for fire and EMS personnel.","https://www.nvfc.org/programs/fire-ems-helpline/","crisis fire ems first responder"],
+    ["Crisis Text Line","Text HOME to 741741 for immediate text support.","https://www.crisistextline.org/","crisis 24/7"]
   ],
   "Mental Health & Behavioral Health": [
-    ["First Responder Support Network","","https://www.frsn.org/"],
-    ["Badge of Life","","https://badgeoflife.org/"],
-    ["Blue H.E.L.P.","","https://bluehelp.org/"],
-    ["International Critical Incident Stress Foundation","","https://icisf.org/"],
-    ["National Alliance on Mental Illness","","https://www.nami.org/"],
-    ["All Clear Foundation","","https://allclearfoundation.org/"],
-    ["Frontline Responder Services","","https://www.frontlineresponderservices.org/"]
+    ["First Responder Support Network","Behavioral health programs for first responders and families.","https://www.frsn.org/","mental health first responder"],
+    ["Badge of Life","Law enforcement mental health and suicide prevention resources.","https://badgeoflife.org/","mental health law enforcement"],
+    ["Blue H.E.L.P.","Law enforcement suicide awareness and family support.","https://bluehelp.org/","crisis mental health law enforcement"],
+    ["International Critical Incident Stress Foundation","Critical incident stress education and resources.","https://icisf.org/","mental health first responder"],
+    ["National Alliance on Mental Illness","Mental health education, advocacy, and support.","https://www.nami.org/","mental health"],
+    ["All Clear Foundation","Resilience, wellness, and mental health support for responders.","https://allclearfoundation.org/","mental health first responder"],
+    ["Frontline Responder Services","Mental health and wellness services for frontline responders.","https://www.frontlineresponderservices.org/","mental health first responder"]
   ],
   "Peer Support & Community": [
-    ["CopLine Peer Support","","https://www.copline.org/"],
-    ["Firefighter Behavioral Health Alliance","","https://www.ffbha.org/"],
-    ["Next Rung","","https://www.nextrung.org/"],
-    ["Responder Alliance","","https://responderalliance.com/"],
-    ["Brotherhood for the Fallen","","https://brotherhoodforthefallen.org/"]
+    ["CopLine Peer Support","Confidential peer support for law enforcement.","https://www.copline.org/","peer support law enforcement"],
+    ["Firefighter Behavioral Health Alliance","Firefighter and EMS behavioral health advocacy.","https://www.ffbha.org/","mental health fire ems"],
+    ["Next Rung","Peer support network for firefighters and first responders.","https://www.nextrung.org/","peer support first responder"],
+    ["Responder Alliance","Resilience resources for responders and organizations.","https://responderalliance.com/","peer support first responder"],
+    ["Brotherhood for the Fallen","Support for families of fallen officers.","https://brotherhoodforthefallen.org/","family law enforcement"]
   ],
   "Family & Survivor Support": [
-    ["National Fallen Firefighters Foundation","","https://www.firehero.org/"],
-    ["Concerns of Police Survivors","","https://www.concernsofpolicesurvivors.org/"],
-    ["First Responders Children’s Foundation","","https://1strcf.org/"],
-    ["Tunnel to Towers Foundation","","https://t2t.org/"]
+    ["National Fallen Firefighters Foundation","Support for families of fallen firefighters.","https://www.firehero.org/","family fire"],
+    ["Concerns of Police Survivors","Support for survivors of fallen law enforcement officers.","https://www.concernsofpolicesurvivors.org/","family law enforcement"],
+    ["First Responders Children’s Foundation","Support for first responder families and children.","https://1strcf.org/","family first responder"],
+    ["Tunnel to Towers Foundation","Housing and support for military and first responder families.","https://t2t.org/","housing family first responder"]
   ],
   "Substance Abuse & Recovery": [
-    ["Shatterproof","","https://www.shatterproof.org/"],
-    ["SAMHSA Treatment Locator","","https://findtreatment.gov/"],
-    ["Recovery Centers of America First Responder Programs","","https://recoverycentersofamerica.com/"],
-    ["National Institute on Drug Abuse","","https://nida.nih.gov/"]
+    ["Shatterproof","Addiction support, advocacy, and education.","https://www.shatterproof.org/","substance recovery"],
+    ["SAMHSA Treatment Locator","Find substance use and mental health treatment.","https://findtreatment.gov/","substance recovery government"],
+    ["Recovery Centers of America First Responder Programs","Recovery programs serving first responders.","https://recoverycentersofamerica.com/","substance recovery first responder"],
+    ["National Institute on Drug Abuse","Federal addiction research and education.","https://nida.nih.gov/","substance recovery government"]
   ],
   "Training, Education & Resilience": [
-    ["National Volunteer Fire Council","","https://www.nvfc.org/"],
-    ["IAFF Behavioral Health","","https://www.iaff.org/behavioral-health/"],
-    ["International Association of Chiefs of Police","","https://www.theiacp.org/"],
-    ["FBI Law Enforcement Bulletin","","https://leb.fbi.gov/"],
-    ["All Clear Foundation Training Programs","","https://allclearfoundation.org/"]
+    ["National Volunteer Fire Council","Training, advocacy, and health resources for fire/EMS.","https://www.nvfc.org/","training fire ems"],
+    ["IAFF Behavioral Health","Behavioral health resources for firefighters.","https://www.iaff.org/behavioral-health/","mental health fire"],
+    ["International Association of Chiefs of Police","Law enforcement leadership and resource center.","https://www.theiacp.org/","training law enforcement"],
+    ["FBI Law Enforcement Bulletin","Law enforcement education and mental health articles.","https://leb.fbi.gov/","training law enforcement government"],
+    ["All Clear Foundation Training Programs","Responder wellness and training resources.","https://allclearfoundation.org/","training mental health first responder"]
   ],
   "Financial & Emergency Assistance": [
-    ["Code Green Campaign","","https://codegreencampaign.org/"],
-    ["First Responders Foundation","","https://firstrespondersfoundation.org/"],
-    ["National Police Credit Union Resources","","https://www.nationalpolicecu.com/"],
-    ["Federal Employee Assistance Programs","","https://www.opm.gov/"]
+    ["Code Green Campaign","Mental health awareness and support for responders.","https://codegreencampaign.org/","mental health crisis first responder"],
+    ["First Responders Foundation","Support services and programs for first responders.","https://firstrespondersfoundation.org/","financial support first responder"],
+    ["National Police Credit Union Resources","Financial resources for law enforcement communities.","https://www.nationalpolicecu.com/","financial law enforcement"],
+    ["Federal Employee Assistance Programs","Federal employee support and assistance resources.","https://www.opm.gov/","government support"]
   ],
   "Legal & Advocacy": [
-    ["National Police Foundation","","https://www.policefoundation.org/"],
-    ["Police Executive Research Forum","","https://www.policeforum.org/"],
-    ["Fraternal Order of Police","","https://www.fop.net/"],
-    ["National Sheriffs’ Association","","https://www.sheriffs.org/"]
+    ["National Police Foundation","Research and resources for policing and public safety.","https://www.policefoundation.org/","legal law enforcement"],
+    ["Police Executive Research Forum","Law enforcement policy and research organization.","https://www.policeforum.org/","legal law enforcement"],
+    ["Fraternal Order of Police","Law enforcement advocacy and member support.","https://www.fop.net/","legal law enforcement"],
+    ["National Sheriffs’ Association","Sheriff and law enforcement advocacy resources.","https://www.sheriffs.org/","legal law enforcement"]
   ],
   "General Resource Directories": [
-    ["National First Responder Resource Center","","https://www.firstrespondercenter.org/"],
-    ["DHS First Responder Resources","","https://www.dhs.gov/science-and-technology/first-responders"],
-    ["SAMHSA First Responder Toolkit","","https://www.samhsa.gov/"]
+    ["National First Responder Resource Center","Resource hub for first responder wellness and support.","https://www.firstrespondercenter.org/","directory first responder"],
+    ["DHS First Responder Resources","Department of Homeland Security first responder resources.","https://www.dhs.gov/science-and-technology/first-responders","government first responder"],
+    ["SAMHSA First Responder Toolkit","Federal toolkit and behavioral health resources.","https://www.samhsa.gov/","government mental health first responder"]
   ]
 };
 
 const community = {
   "Crisis & Immediate Support": [
-    ["988 Suicide & Crisis Lifeline","","https://988lifeline.org/"],
-    ["Crisis Text Line","","https://www.crisistextline.org/"],
-    ["SAMHSA National Helpline","","https://www.samhsa.gov/find-help/national-helpline"],
-    ["National Domestic Violence Hotline","","https://www.thehotline.org/"],
-    ["National Sexual Assault Hotline RAINN","","https://www.rainn.org/"],
-    ["Trevor Project","","https://www.thetrevorproject.org/"]
+    ["988 Suicide & Crisis Lifeline","24/7 crisis support for anyone in emotional distress.","https://988lifeline.org/","crisis 24/7"],
+    ["Crisis Text Line","Text HOME to 741741 for immediate text support.","https://www.crisistextline.org/","crisis 24/7"],
+    ["SAMHSA National Helpline","Confidential treatment referral and information service.","https://www.samhsa.gov/find-help/national-helpline","crisis substance government"],
+    ["National Domestic Violence Hotline","Confidential domestic violence support and safety planning.","https://www.thehotline.org/","crisis family"],
+    ["National Sexual Assault Hotline RAINN","Support for survivors of sexual assault.","https://www.rainn.org/","crisis support"],
+    ["Trevor Project","Crisis support for LGBTQ+ young people.","https://www.thetrevorproject.org/","crisis mental health"]
   ],
   "Mental Health & Behavioral Health": [
-    ["National Alliance on Mental Illness","","https://www.nami.org/"],
-    ["Mental Health America","","https://www.mhanational.org/"],
-    ["National Institute of Mental Health","","https://www.nimh.nih.gov/"],
-    ["Psychology Today Therapist Finder","","https://www.psychologytoday.com/us/therapists"],
-    ["American Psychological Association","","https://www.apa.org/"],
-    ["Open Path Psychotherapy Collective","","https://openpathcollective.org/"]
+    ["National Alliance on Mental Illness","Mental health education, advocacy, and support.","https://www.nami.org/","mental health"],
+    ["Mental Health America","Mental health screening, education, and resources.","https://www.mhanational.org/","mental health"],
+    ["National Institute of Mental Health","Federal mental health research and education.","https://www.nimh.nih.gov/","mental health government"],
+    ["Psychology Today Therapist Finder","Find therapists by location, specialty, and insurance.","https://www.psychologytoday.com/us/therapists","mental health therapy"],
+    ["American Psychological Association","Psychology information and professional resources.","https://www.apa.org/","mental health"],
+    ["Open Path Psychotherapy Collective","Affordable therapy network.","https://openpathcollective.org/","mental health therapy"]
   ],
   "Substance Abuse & Recovery": [
-    ["SAMHSA Treatment Locator","","https://findtreatment.gov/"],
-    ["Alcoholics Anonymous","","https://www.aa.org/"],
-    ["Narcotics Anonymous","","https://www.na.org/"],
-    ["SMART Recovery","","https://www.smartrecovery.org/"],
-    ["National Institute on Drug Abuse","","https://nida.nih.gov/"],
-    ["Partnership to End Addiction","","https://drugfree.org/"]
+    ["SAMHSA Treatment Locator","Find mental health and substance use treatment providers.","https://findtreatment.gov/","substance recovery government"],
+    ["Alcoholics Anonymous","Peer support for alcohol recovery.","https://www.aa.org/","substance recovery"],
+    ["Narcotics Anonymous","Peer support for drug recovery.","https://www.na.org/","substance recovery"],
+    ["SMART Recovery","Self-management recovery support.","https://www.smartrecovery.org/","substance recovery"],
+    ["National Institute on Drug Abuse","Federal addiction research and education.","https://nida.nih.gov/","substance recovery government"],
+    ["Partnership to End Addiction","Family resources and addiction support.","https://drugfree.org/","substance recovery family"]
   ],
   "Healthcare & General Wellness": [
-    ["Healthcare.gov","","https://www.healthcare.gov/"],
-    ["Centers for Disease Control and Prevention","","https://www.cdc.gov/"],
-    ["National Institutes of Health","","https://www.nih.gov/"],
-    ["Mayo Clinic","","https://www.mayoclinic.org/"],
-    ["Cleveland Clinic","","https://my.clevelandclinic.org/"]
+    ["Healthcare.gov","Federal health insurance marketplace.","https://www.healthcare.gov/","government healthcare"],
+    ["Centers for Disease Control and Prevention","Public health information and guidance.","https://www.cdc.gov/","government healthcare"],
+    ["National Institutes of Health","Federal health research and education.","https://www.nih.gov/","government healthcare"],
+    ["Mayo Clinic","Health information and medical education.","https://www.mayoclinic.org/","healthcare"],
+    ["Cleveland Clinic","Health and wellness education resources.","https://my.clevelandclinic.org/","healthcare"]
   ],
   "Financial & Basic Needs Support": [
-    ["United Way 211","","https://www.211.org/"],
-    ["Feeding America","","https://www.feedingamerica.org/"],
-    ["Salvation Army","","https://www.salvationarmyusa.org/"],
-    ["Catholic Charities USA","","https://www.catholiccharitiesusa.org/"],
-    ["National Low Income Housing Coalition","","https://nlihc.org/"]
+    ["United Way 211","Local assistance for food, housing, utilities, and crisis support.","https://www.211.org/","financial housing support"],
+    ["Feeding America","Food bank and hunger relief network.","https://www.feedingamerica.org/","food support"],
+    ["Salvation Army","Emergency assistance and social services.","https://www.salvationarmyusa.org/","financial housing support"],
+    ["Catholic Charities USA","Community-based social services and assistance.","https://www.catholiccharitiesusa.org/","financial housing support"],
+    ["National Low Income Housing Coalition","Housing policy and low-income housing resources.","https://nlihc.org/","housing"]
   ],
   "Housing & Homelessness Support": [
-    ["National Coalition for the Homeless","","https://nationalhomeless.org/"],
-    ["HUD Housing Assistance","","https://www.hud.gov/"],
-    ["Emergency Housing Vouchers","","https://www.hud.gov/program_offices/public_indian_housing/ehv"],
-    ["Covenant House","","https://www.covenanthouse.org/"]
+    ["National Coalition for the Homeless","Advocacy and resources addressing homelessness.","https://nationalhomeless.org/","housing"],
+    ["HUD Housing Assistance","Federal housing assistance resources.","https://www.hud.gov/","housing government"],
+    ["Emergency Housing Vouchers","HUD emergency housing voucher information.","https://www.hud.gov/program_offices/public_indian_housing/ehv","housing government"],
+    ["Covenant House","Youth homelessness support and services.","https://www.covenanthouse.org/","housing family"]
   ],
   "Employment & Career Support": [
-    ["U.S. Department of Labor","","https://www.dol.gov/"],
-    ["CareerOneStop","","https://www.careeronestop.org/"],
-    ["Goodwill Job Training Programs","","https://www.goodwill.org/"],
-    ["Indeed Career Guide","","https://www.indeed.com/career-advice"],
-    ["LinkedIn Workforce Resources","","https://www.linkedin.com/learning/"]
+    ["U.S. Department of Labor","Federal employment and workforce resources.","https://www.dol.gov/","employment government"],
+    ["CareerOneStop","Career exploration, training, and job search tools.","https://www.careeronestop.org/","employment government"],
+    ["Goodwill Job Training Programs","Job training and workforce development services.","https://www.goodwill.org/","employment"],
+    ["Indeed Career Guide","Career advice and job search education.","https://www.indeed.com/career-advice","employment"],
+    ["LinkedIn Workforce Resources","Online learning and career development tools.","https://www.linkedin.com/learning/","employment education"]
   ],
   "Legal & Advocacy": [
-    ["Legal Services Corporation","","https://www.lsc.gov/"],
-    ["American Civil Liberties Union","","https://www.aclu.org/"],
-    ["National Legal Aid & Defender Association","","https://www.nlada.org/"],
-    ["USA.gov Legal Help","","https://www.usa.gov/legal-aid"]
+    ["Legal Services Corporation","Civil legal aid access and resources.","https://www.lsc.gov/","legal"],
+    ["American Civil Liberties Union","Civil rights advocacy and education.","https://www.aclu.org/","legal advocacy"],
+    ["National Legal Aid & Defender Association","Legal aid and public defense resources.","https://www.nlada.org/","legal"],
+    ["USA.gov Legal Help","Federal guide to legal aid and assistance.","https://www.usa.gov/legal-aid","legal government"]
   ],
   "Family & Community Support": [
-    ["Child Welfare Information Gateway","","https://www.childwelfare.gov/"],
-    ["National Parent Helpline","","https://www.nationalparenthelpline.org/"],
-    ["Boys & Girls Clubs of America","","https://www.bgca.org/"],
-    ["YMCA","","https://www.ymca.org/"]
+    ["Child Welfare Information Gateway","Family and child welfare information.","https://www.childwelfare.gov/","family government"],
+    ["National Parent Helpline","Emotional support for parents and caregivers.","https://www.nationalparenthelpline.org/","family support"],
+    ["Boys & Girls Clubs of America","Youth development and community programs.","https://www.bgca.org/","family community"],
+    ["YMCA","Community programs, wellness, youth, and family support.","https://www.ymca.org/","family community"]
   ],
   "Specialized Support Groups": [
-    ["Trevor Project","","https://www.thetrevorproject.org/"],
-    ["National Eating Disorders Association","","https://www.nationaleatingdisorders.org/"],
-    ["Autism Society","","https://www.autism-society.org/"],
-    ["Alzheimer’s Association","","https://www.alz.org/"],
-    ["American Cancer Society","","https://www.cancer.org/"]
+    ["Trevor Project","Crisis and mental health support for LGBTQ+ youth.","https://www.thetrevorproject.org/","crisis mental health"],
+    ["National Eating Disorders Association","Eating disorder information and support.","https://www.nationaleatingdisorders.org/","mental health"],
+    ["Autism Society","Resources and advocacy for autistic individuals and families.","https://www.autism-society.org/","disability family"],
+    ["Alzheimer’s Association","Support for Alzheimer’s and dementia care.","https://www.alz.org/","healthcare family"],
+    ["American Cancer Society","Cancer information and patient support resources.","https://www.cancer.org/","healthcare"]
   ],
   "General Resource Directories": [
-    ["USA.gov","","https://www.usa.gov/"],
-    ["Benefits.gov","","https://www.benefits.gov/"],
-    ["FindHelp.org","","https://www.findhelp.org/"]
+    ["USA.gov","Federal government resource directory.","https://www.usa.gov/","government directory"],
+    ["Benefits.gov","Federal benefits eligibility and information.","https://www.benefits.gov/","government financial directory"],
+    ["FindHelp.org","Search local social services by ZIP code.","https://www.findhelp.org/","directory housing financial support"]
   ]
 };
+
+function badgeFor(tags){
+  const badges = [];
+
+  if(tags.includes("crisis") || tags.includes("24/7")) badges.push(`<span class="badge crisis">Crisis</span>`);
+  if(tags.includes("government")) badges.push(`<span class="badge gov">Government</span>`);
+  if(tags.includes("mental health") || tags.includes("therapy")) badges.push(`<span class="badge health">Mental Health</span>`);
+  if(tags.includes("housing")) badges.push(`<span class="badge support">Housing</span>`);
+  if(tags.includes("employment")) badges.push(`<span class="badge support">Employment</span>`);
+  if(tags.includes("legal")) badges.push(`<span class="badge support">Legal</span>`);
+
+  return badges.slice(0,3).join("");
+}
 
 function renderResources(data, target){
   const container = document.getElementById(target);
@@ -874,17 +1276,27 @@ function renderResources(data, target){
   Object.entries(data).forEach(([group, items]) => {
     const section = document.createElement("div");
     section.className = "resource-group";
+    section.dataset.group = group.toLowerCase();
     section.innerHTML = `<h3>${group}</h3><div class="resource-grid"></div>`;
     const grid = section.querySelector(".resource-grid");
 
-    items.forEach(([name, desc, url]) => {
+    items.forEach(([name, desc, url, tags]) => {
+      const searchable = `${name} ${desc} ${group} ${tags}`.toLowerCase();
+
       const card = document.createElement("div");
       card.className = "resource-card";
+      card.dataset.search = searchable;
+      card.dataset.tags = tags.toLowerCase();
+
       card.innerHTML = `
-        <h4>${name}</h4>
-        <p>${desc || "External resource for support, information, or services."}</p>
+        <div>
+          <div class="badge-row">${badgeFor(tags.toLowerCase())}</div>
+          <h4>${name}</h4>
+          <p>${desc || "External resource for support, information, or services."}</p>
+        </div>
         <a href="${url}" target="_blank" rel="noopener">Visit Resource →</a>
       `;
+
       grid.appendChild(card);
     });
 
@@ -895,6 +1307,56 @@ function renderResources(data, target){
 renderResources(veterans, "veterans-resources");
 renderResources(responders, "responders-resources");
 renderResources(community, "community-resources");
+
+const searchInput = document.getElementById("resourceSearch");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const noResults = document.getElementById("noResults");
+let activeFilter = "all";
+
+function applyFilters(){
+  const query = searchInput.value.toLowerCase().trim();
+  const cards = document.querySelectorAll(".resource-card");
+  let visibleCount = 0;
+
+  cards.forEach(card => {
+    const search = card.dataset.search || "";
+    const tags = card.dataset.tags || "";
+
+    const matchesQuery = !query || search.includes(query);
+    const matchesFilter = activeFilter === "all" || tags.includes(activeFilter);
+
+    if(matchesQuery && matchesFilter){
+      card.style.display = "flex";
+      visibleCount++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  document.querySelectorAll(".resource-group").forEach(group => {
+    const visibleCards = group.querySelectorAll(".resource-card[style*='flex'], .resource-card:not([style])");
+    let anyVisible = false;
+
+    group.querySelectorAll(".resource-card").forEach(card => {
+      if(card.style.display !== "none") anyVisible = true;
+    });
+
+    group.style.display = anyVisible ? "block" : "none";
+  });
+
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
+}
+
+searchInput.addEventListener("input", applyFilters);
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeFilter = btn.dataset.filter;
+    applyFilters();
+  });
+});
 </script>
 
 </body>
