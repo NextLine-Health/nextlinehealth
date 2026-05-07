@@ -1497,13 +1497,17 @@ body * {
 }
 
 .hero-stats {
-  gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  width: 100%;
   max-width: 100%;
   padding-top: 24px;
+  align-items: start;
 }
 
 .hero-stat {
-  min-width: 90px;
+  min-width: 0;
 }
 
 .hero-stat .num {
