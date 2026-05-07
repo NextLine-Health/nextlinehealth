@@ -244,16 +244,9 @@ img {
   z-index: 0;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(7, 17, 31, 0.68);
-  z-index: 1;
-}
-
 .hero-inner {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   max-width: 760px;
 }
 
