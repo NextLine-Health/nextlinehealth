@@ -1362,8 +1362,8 @@ body * {
 }
 
 .serve-image-card{
-  min-height:390px;
-  border-radius:26px;
+  min-height:300px;
+  border-radius:22px;
   overflow:hidden;
   background-size:cover;
   background-position:center;
@@ -1392,13 +1392,11 @@ body * {
   z-index:1;
 }
 
-.serve-tall{
-  min-height:560px;
-}
-
-.serve-wide{
-  grid-column:span 2;
-  min-height:350px;
+.serve-image-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:24px;
+  margin-top:42px;
 }
 
 .serve-image-content{
