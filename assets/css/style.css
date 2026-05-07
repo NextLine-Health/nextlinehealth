@@ -228,13 +228,35 @@ img {
 }
 
 .hero {
-  background: url("../images/flag.mp4") center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
   padding: 56px 48px 80px;
   border-bottom: 4px solid var(--red);
+  background: var(--navy-deep);
 }
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 17, 31, 0.68);
+  z-index: 1;
+}
+
 .hero-inner {
+  position: relative;
+  z-index: 2;
   max-width: 760px;
 }
+
 .hero-eyebrow {
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -243,6 +265,7 @@ img {
   margin-bottom: 20px;
   font-weight: 700;
 }
+
 .hero h1 {
   font-size: 54px;
   font-weight: 900;
