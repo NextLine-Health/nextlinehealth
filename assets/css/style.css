@@ -1820,79 +1820,19 @@ body * {
     width: 100%;
     text-align: center;
   }
-  @media (max-width: 900px) {
+}
+
+@media (max-width: 900px) {
   .nav {
     min-height: 92px;
     padding: 12px 18px;
   }
 
   .nav-logo img {
-    height: 82px;
-    width: auto;
-  }
-
-  .nav-links {
-    top: 92px;
-    padding: 22px 20px;
-    gap: 0;
-  }
-
-  .nav-dropdown {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .nav-dropbtn {
-    width: 100%;
-    text-align: left;
-    padding: 14px 0;
-    color: rgba(255,255,255,0.75);
-  }
-
-  .dropdown-menu {
-    position: static;
-    transform: none;
-    min-width: 100%;
-    width: 100%;
-    box-shadow: none;
-    border: none;
-    background: rgba(255,255,255,0.06);
-    padding: 0;
-    margin: 0 0 10px 0;
-    display: block;
-  }
-
-  .dropdown-menu a {
-    color: rgba(255,255,255,0.75) !important;
-    padding: 12px 0 12px 18px;
-    font-size: 12px;
-  }
-
-  .dropdown-menu a:hover {
-    color: var(--red) !important;
-    background: transparent;
-  }
-@media (max-width: 900px) {
-  /* Bigger mobile logo */
-  .nav-logo img {
     height: 110px;
     width: auto;
   }
 
-  .nav-logo {
-    gap: 12px;
-  }
-
-  .nav-logo-top {
-    font-size: 14px;
-  }
-
-  .nav-logo-bottom {
-    font-size: 30px;
-  }
-
-  /* Main mobile menu */
   .nav-links {
     top: 92px;
     padding: 22px 20px;
@@ -1905,7 +1845,6 @@ body * {
     display: flex;
   }
 
-  /* Dropdown container */
   .nav-dropdown {
     width: 100%;
     display: flex;
@@ -1921,11 +1860,9 @@ body * {
     color: rgba(255,255,255,0.75);
   }
 
-  /* Hide submenu by default */
   .dropdown-menu {
     display: none;
     position: static;
-    transform: none;
     width: 100%;
     min-width: 100%;
     background: rgba(255,255,255,0.06);
@@ -1935,7 +1872,6 @@ body * {
     padding: 8px 0;
   }
 
-  /* Show submenu only on active dropdown */
   .nav-dropdown.active .dropdown-menu {
     display: block;
   }
@@ -1951,5 +1887,29 @@ body * {
     color: var(--red) !important;
     background: transparent;
   }
-}
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 0.8fr 0.9fr 1.15fr;
+    gap: 14px;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 24px;
+    align-items: start;
+  }
+
+  .hero-stat {
+    min-width: 0;
+  }
+
+  .hero-stat .num {
+    font-size: 30px;
+    white-space: nowrap;
+  }
+
+  .hero-stat .lbl {
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.35;
+  }
 }
