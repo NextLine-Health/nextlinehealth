@@ -1196,17 +1196,18 @@ footer {
   -webkit-text-fill-color: #111;
   transition: background-color 9999s ease-in-out 0s;
 }
+
 .who-serve-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: start;
+  display: block;
 }
 
-.who-serve-left,
+.who-serve-left {
+  max-width: 980px;
+  margin-bottom: 60px;
+}
+
 .who-serve-right {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
 }
 
 .mission-block {
