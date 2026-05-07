@@ -228,7 +228,7 @@ img {
 }
 
 .hero {
-  background: url("../images/hero.png") center/cover no-repeat;
+  background: url("../images/flag.mp4") center/cover no-repeat;
   padding: 56px 48px 80px;
   border-bottom: 4px solid var(--red);
 }
