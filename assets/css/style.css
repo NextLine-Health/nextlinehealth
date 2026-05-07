@@ -1381,24 +1381,16 @@ body * {
   box-shadow:0 28px 65px rgba(0,0,0,.22);
 }
 
-.serve-image-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to top,
-    rgba(7,17,31,.9) 0%,
-    rgba(7,17,31,.45) 52%,
-    rgba(7,17,31,.1) 100%
-  );
-  z-index:1;
-}
-
 .serve-image-content{
   position:relative;
   z-index:2;
   padding:28px;
   color:#fff;
+  text-shadow:0 3px 12px rgba(0,0,0,.55);
+}
+
+.serve-image-content p{
+  display:none;
 }
 
 .serve-image-content span{
