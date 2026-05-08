@@ -13,7 +13,7 @@
       rgba(7, 17, 31, 0.25) 72%,
       rgba(7, 17, 31, 0.1) 100%
     ),
-    url("../images/veterans.jpg") center center / cover no-repeat;
+    url("../images/veterans-bg.jpg") center center / cover no-repeat;
   border-bottom: 4px solid var(--red);
 }
 
