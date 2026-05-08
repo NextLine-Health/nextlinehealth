@@ -60,7 +60,9 @@
 
       <div class="nav-links">
         <div class="nav-dropdown">
-          <button class="nav-dropbtn" type="button">Who We Serve</button>
+         <button class="nav-dropbtn" type="button" onclick="toggleDropdown(event)">
+  Who We Serve
+</button>
           <div class="dropdown-menu">
             <a href="veterans.html">Veterans</a>
             <a href="law-enforcement.html">Law Enforcement</a>
@@ -377,10 +379,18 @@
       </div>
     </footer>
 
-    <script>
-      function toggleMenu() {
-        document.querySelector(".nav-links").classList.toggle("active");
-      }
-    </script>
+   <script>
+  function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+  }
+
+  function toggleDropdown(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const dropdown = event.currentTarget.closest(".nav-dropdown");
+    dropdown.classList.toggle("active");
+  }
+</script>
   </body>
 </html>
