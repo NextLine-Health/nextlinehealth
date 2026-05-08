@@ -15,7 +15,7 @@
       rgba(7,17,31,.28) 72%,
       rgba(7,17,31,.12) 100%
     ),
-    url("../images/civilians.jpg") center center / cover no-repeat;
+    url("../images/civilians-bg.jpg") center center / cover no-repeat;
   border-bottom: 4px solid var(--red);
 }
 
