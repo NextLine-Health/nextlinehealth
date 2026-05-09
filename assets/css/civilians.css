@@ -100,16 +100,16 @@
 
 @media (max-width: 900px) {
   .civ-page-hero {
-    min-height: auto;
+    min-height: 520px;
     padding: 70px 20px;
     background:
       linear-gradient(
         to bottom,
-        rgba(7,17,31,.82) 0%,
-        rgba(7,17,31,.58) 55%,
+        rgba(7,17,31,.72) 0%,
+        rgba(7,17,31,.54) 55%,
         rgba(7,17,31,.42) 100%
       ),
-      url("../images/civilians-bg.jpg") center center / cover no-repeat;
+      url("../images/civilians-bg.jpg") center top / cover no-repeat;
   }
 
   .civ-hero-content h1 {
