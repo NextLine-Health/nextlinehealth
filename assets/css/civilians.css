@@ -109,7 +109,7 @@
         rgba(7,17,31,.58) 55%,
         rgba(7,17,31,.42) 100%
       ),
-      url("../images/civilians.jpg") center center / cover no-repeat;
+      url("../images/civilians-bg.jpg") center center / cover no-repeat;
   }
 
   .civ-hero-content h1 {
