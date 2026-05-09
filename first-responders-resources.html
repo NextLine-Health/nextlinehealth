@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXJHYKM3SJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-RXJHYKM3SJ");
+  </script>
+
+  <meta name="google-site-verification" content="PejJXgFPxCPPhZZsV98CMyaqrxGgqkMzJcb46YQjuBo" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>First Responder Resources | NextLine Health</title>
+
+  <meta
+    name="description"
+    content="Trusted first responder resources for law enforcement, fire, EMS, crisis support, behavioral health, peer support, family support, recovery, training, and resilience."
+  />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .resources-hero {
+      background:
+        linear-gradient(
+          to right,
+          rgba(7,17,31,0.98) 0%,
+          rgba(7,17,31,0.92) 42%,
+          rgba(7,17,31,0.58) 70%,
+          rgba(7,17,31,0.18) 100%
+        ),
+        url("assets/images/resources.png");
+      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
+      padding: 118px 48px 105px;
+      border-bottom: 4px solid var(--red);
+      color: #fff;
+    }
+
+    .resources-hero h1 {
+      font-size: 62px;
+      line-height: 1.02;
+      font-weight: 900;
+      max-width: 920px;
+      margin-bottom: 22px;
+    }
+
+    .resources-hero p {
+      font-size: 18px;
+      line-height: 1.75;
+      color: rgba(255,255,255,.76);
+      max-width: 780px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .crisis-strip {
+      background: var(--navy-deep);
+      padding: 26px 48px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .crisis-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr repeat(4,1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .crisis-title {
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .crisis-title span {
+      display: block;
+      font-size: 11px;
+      color: var(--red);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .crisis-title strong {
+      font-size: 24px;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .crisis-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      padding: 18px;
+      color: #fff;
+      border-radius: 16px;
+      transition: .2s ease;
+    }
+
+    .crisis-card:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,.09);
+      border-color: rgba(178,34,52,.55);
+    }
+
+    .crisis-card h3 {
+      font-size: 15px;
+      line-height: 1.25;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .crisis-card p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(255,255,255,.65);
+      margin-bottom: 10px;
+    }
+
+    .crisis-card a {
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .search-panel {
+      background: #fff;
+      padding: 42px 48px 30px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 800;
+    }
+
+    .search-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr auto;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .resource-search {
+      width: 100%;
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 20px;
+      font-size: 16px;
+      font-family: inherit;
+      outline: none;
+      background: #fafafa;
+    }
+
+    .resource-search:focus {
+      border-color: rgba(178,34,52,.55);
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(178,34,52,.08);
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--navy);
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-weight: 900;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    .jump-nav {
+      background: var(--off-white);
+      padding: 20px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .jump-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .jump-inner a {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 12px 18px;
+      border-radius: 999px;
+      color: var(--navy);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 900;
+      box-shadow: 0 6px 18px rgba(0,0,0,.04);
+    }
+
+    .jump-inner a:hover {
+      background: var(--red);
+      color: #fff;
+      border-color: var(--red);
+    }
+
+    .resources-section {
+      padding: 85px 48px;
+      background: var(--off-white);
+    }
+
+    .section-head {
+      max-width: 920px;
+      margin-bottom: 38px;
+    }
+
+    .section-head h2 {
+      font-size: 42px;
+      line-height: 1.1;
+      font-weight: 900;
+      color: var(--navy-deep);
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-muted);
+    }
+
+    .resource-group {
+      margin: 32px 0 48px;
+    }
+
+    .resource-group h3 {
+      font-size: 17px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 18px;
+      font-weight: 900;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 16px;
+    }
+
+    .resource-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 22px;
+      min-height: 170px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.05);
+      transition: .2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 34px rgba(0,0,0,.1);
+      border-color: rgba(178,34,52,.45);
+    }
+
+    .resource-card h4 {
+      font-size: 18px;
+      line-height: 1.25;
+      font-weight: 900;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+    }
+
+    .resource-card p {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: var(--off-white);
+      color: var(--navy);
+      font-size: 10px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+
+    .badge.crisis { background: rgba(178,34,52,.1); color: var(--red); }
+    .badge.gov { background: rgba(13,31,60,.1); color: var(--navy); }
+    .badge.health { background: rgba(50,90,130,.12); color: #173a59; }
+    .badge.support { background: rgba(90,90,90,.1); color: #333; }
+
+    .resource-card a {
+      display: inline-flex;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: var(--red);
+    }
+
+    .no-results {
+      display: none;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      color: var(--text-muted);
+      margin-top: 30px;
+    }
+
+    @media(max-width:1100px) {
+      .crisis-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .resource-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .search-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .filter-row {
+        justify-content: flex-start;
+      }
+    }
+
+    @media(max-width:900px) {
+      .resources-hero,
+      .crisis-strip,
+      .search-panel,
+      .jump-nav,
+      .resources-section {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .resources-hero {
+        padding-top: 80px;
+        padding-bottom: 78px;
+        background-position: center center;
+      }
+
+      .resources-hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn-red,
+      .btn-ghost {
+        width: 100%;
+        text-align: center;
+      }
+
+      .crisis-inner,
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-panel {
+        position: relative;
+        top: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<nav class="nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo.png" alt="NextLine Health Logo" />
+    </a>
+  </div>
+
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button class="nav-dropbtn" type="button" onclick="toggleDropdown(event)">
+        Who We Serve
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="veterans.html">Veterans</a>
+        <a href="law-enforcement.html">Law Enforcement</a>
+        <a href="first-responders.html">First Responders</a>
+        <a href="civilians.html">Civilians</a>
+        <a href="federal-government.html">Federal Government</a>
+        <a href="behavioral-health-providers.html">Behavioral Health Providers</a>
+      </div>
+    </div>
+
+    <a href="index.html#services">Services</a>
+    <a href="our-story.html">Our Story</a>
+    <a href="index.html#partner">Partner With Us</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="resources.html">Resources</a>
+  </div>
+
+  <div class="nav-right">
+    <a class="nav-cta" href="inquire.html">Inquire</a>
+
+    <button class="menu-toggle" type="button" onclick="toggleMenu()" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="resources-hero">
+  <div class="container">
+    <div class="rule"></div>
+    <div class="eyebrow">First Responder Resource Directory</div>
+    <h1>First responder support resources for those who protect and respond.</h1>
+    <p>Explore trusted crisis support, peer networks, behavioral health resources, family assistance, recovery programs, training, resilience, and advocacy resources for law enforcement, fire, EMS, and frontline professionals.</p>
+
+    <div class="hero-actions">
+      <a href="#immediate-help" class="btn-red">Immediate Help</a>
+      <a href="#resource-search-panel" class="btn-ghost">Search First Responder Resources</a>
+    </div>
+  </div>
+</section>
+
+<section class="crisis-strip" id="immediate-help">
+  <div class="crisis-inner">
+    <div class="crisis-title">
+      <span>Immediate Support</span>
+      <strong>If this is urgent, start here.</strong>
+    </div>
+
+    <div class="crisis-card">
+      <h3>988 Suicide & Crisis Lifeline</h3>
+      <p>24/7 crisis support for anyone in emotional distress.</p>
+      <a href="https://988lifeline.org/" target="_blank" rel="noopener">Visit 988 →</a>
+    </div>
+
+    <div class="crisis-card">
+      <h3>Safe Call Now</h3>
+      <p>24/7 confidential support for first responders.</p>
+      <a href="https://safecallnow.org/" target="_blank" rel="noopener">Visit Resource →</a>
+    </div>
+
+    <div class="crisis-card">
+      <h3>CopLine</h3>
+      <p>Law enforcement hotline staffed by retired officers.</p>
+      <a href="https://www.copline.org/" target="_blank" rel="noopener">Visit Resource →</a>
+    </div>
+
+    <div class="crisis-card">
+      <h3>Fire / EMS Helpline</h3>
+      <p>Support line for fire and EMS personnel.</p>
+      <a href="https://www.nvfc.org/programs/fire-ems-helpline/" target="_blank" rel="noopener">Visit Resource →</a>
+    </div>
+  </div>
+</section>
+
+<section class="search-panel" id="resource-search-panel">
+  <div class="search-grid">
+    <input id="resourceSearch" class="resource-search" type="text" placeholder="Search first responder resources by name, category, need, or keyword..." />
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="crisis">Crisis</button>
+      <button class="filter-btn" data-filter="mental health">Mental Health</button>
+      <button class="filter-btn" data-filter="peer support">Peer Support</button>
+      <button class="filter-btn" data-filter="family">Family</button>
+      <button class="filter-btn" data-filter="legal">Legal</button>
+    </div>
+  </div>
+</section>
+
+<section class="jump-nav">
+  <div class="jump-inner">
+    <a href="#first-responder-resources">First Responder Resources</a>
+    <a href="#immediate-help">Immediate Help</a>
+    <a href="resources.html">All Resources</a>
+    <a href="veteran-resources.html">Veterans</a>
+    <a href="community-resources.html">Community</a>
+  </div>
+</section>
+
+<section class="resources-section" id="first-responder-resources">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">First Responders</div>
+      <h2>First responder resources</h2>
+      <p>Crisis support, behavioral health, peer support, recovery, family assistance, legal advocacy, training, and resilience resources for law enforcement, fire, EMS, and frontline responder communities.</p>
+    </div>
+
+    <div id="responders-resources"></div>
+    <div class="no-results" id="noResults">No first responder resources matched your search. Try another keyword or clear the filter.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="NextLine Health Logo" />
+
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/nextline.health" target="_blank">
+            <img src="assets/images/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61574339036797" target="_blank">
+            <img src="assets/images/facebook.png" alt="Facebook" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-tagline">
+        Empower &nbsp;&middot;&nbsp; Support &nbsp;&middot;&nbsp; Succeed
+      </div>
+    </div>
+
+    <div class="footer-links-row">
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="index.html#who-we-serve">Our Mission</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="resources.html">Resources</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <a href="veteran-resources.html">Veteran Resources</a>
+        <a href="first-responder-resources.html">First Responder Resources</a>
+        <a href="community-resources.html">Community Resources</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="mailto:info@nextlinehealth.com">info@nextlinehealth.com</a>
+        <p style="color:rgba(255,255,255,.25);font-size:12px;margin-top:8px;">
+          Veteran-Owned Small Business
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; 2025 NextLine Health Group. All rights reserved.</span>
+    <span>Veteran-Owned &nbsp;&middot;&nbsp; Behavioral Health &nbsp;&middot;&nbsp; Community Support</span>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+
+function toggleDropdown(event) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  const dropdown = event.currentTarget.closest(".nav-dropdown");
+  dropdown.classList.toggle("active");
+}
+
+const responders = {
+  "Crisis & Immediate Support": [
+    ["988 Suicide & Crisis Lifeline","24/7 crisis support for anyone in emotional distress.","https://988lifeline.org/","crisis 24/7"],
+    ["Safe Call Now","24/7 confidential support for first responders.","https://safecallnow.org/","crisis 24/7 first responder"],
+    ["CopLine","Law enforcement hotline staffed by retired officers.","https://www.copline.org/","crisis law enforcement first responder"],
+    ["Fire/EMS Helpline","Support line for fire and EMS personnel.","https://www.nvfc.org/programs/fire-ems-helpline/","crisis fire ems first responder"],
+    ["Crisis Text Line","Text HOME to 741741 for immediate text support.","https://www.crisistextline.org/","crisis 24/7"]
+  ],
+  "Mental Health & Behavioral Health": [
+    ["First Responder Support Network","Behavioral health programs for first responders and families.","https://www.frsn.org/","mental health first responder"],
+    ["Badge of Life","Law enforcement mental health and suicide prevention resources.","https://badgeoflife.org/","mental health law enforcement"],
+    ["Blue H.E.L.P.","Law enforcement suicide awareness and family support.","https://bluehelp.org/","crisis mental health law enforcement"],
+    ["International Critical Incident Stress Foundation","Critical incident stress education and resources.","https://icisf.org/","mental health first responder"],
+    ["National Alliance on Mental Illness","Mental health education, advocacy, and support.","https://www.nami.org/","mental health"],
+    ["All Clear Foundation","Resilience, wellness, and mental health support for responders.","https://allclearfoundation.org/","mental health first responder"],
+    ["Frontline Responder Services","Mental health and wellness services for frontline responders.","https://www.frontlineresponderservices.org/","mental health first responder"]
+  ],
+  "Peer Support & Community": [
+    ["CopLine Peer Support","Confidential peer support for law enforcement.","https://www.copline.org/","peer support law enforcement"],
+    ["Firefighter Behavioral Health Alliance","Firefighter and EMS behavioral health advocacy.","https://www.ffbha.org/","mental health fire ems"],
+    ["Next Rung","Peer support network for firefighters and first responders.","https://www.nextrung.org/","peer support first responder"],
+    ["Responder Alliance","Resilience resources for responders and organizations.","https://responderalliance.com/","peer support first responder"],
+    ["Brotherhood for the Fallen","Support for families of fallen officers.","https://brotherhoodforthefallen.org/","family law enforcement"]
+  ],
+  "Family & Survivor Support": [
+    ["National Fallen Firefighters Foundation","Support for families of fallen firefighters.","https://www.firehero.org/","family fire"],
+    ["Concerns of Police Survivors","Support for survivors of fallen law enforcement officers.","https://www.concernsofpolicesurvivors.org/","family law enforcement"],
+    ["First Responders Children’s Foundation","Support for first responder families and children.","https://1strcf.org/","family first responder"],
+    ["Tunnel to Towers Foundation","Housing and support for military and first responder families.","https://t2t.org/","housing family first responder"]
+  ],
+  "Substance Abuse & Recovery": [
+    ["Shatterproof","Addiction support, advocacy, and education.","https://www.shatterproof.org/","substance recovery"],
+    ["SAMHSA Treatment Locator","Find substance use and mental health treatment.","https://findtreatment.gov/","substance recovery government"],
+    ["Recovery Centers of America First Responder Programs","Recovery programs serving first responders.","https://recoverycentersofamerica.com/","substance recovery first responder"],
+    ["National Institute on Drug Abuse","Federal addiction research and education.","https://nida.nih.gov/","substance recovery government"]
+  ],
+  "Training, Education & Resilience": [
+    ["National Volunteer Fire Council","Training, advocacy, and health resources for fire/EMS.","https://www.nvfc.org/","training fire ems"],
+    ["IAFF Behavioral Health","Behavioral health resources for firefighters.","https://www.iaff.org/behavioral-health/","mental health fire"],
+    ["International Association of Chiefs of Police","Law enforcement leadership and resource center.","https://www.theiacp.org/","training law enforcement"],
+    ["FBI Law Enforcement Bulletin","Law enforcement education and mental health articles.","https://leb.fbi.gov/","training law enforcement government"],
+    ["All Clear Foundation Training Programs","Responder wellness and training resources.","https://allclearfoundation.org/","training mental health first responder"]
+  ],
+  "Financial & Emergency Assistance": [
+    ["Code Green Campaign","Mental health awareness and support for responders.","https://codegreencampaign.org/","mental health crisis first responder"],
+    ["First Responders Foundation","Support services and programs for first responders.","https://firstrespondersfoundation.org/","financial support first responder"],
+    ["National Police Credit Union Resources","Financial resources for law enforcement communities.","https://www.nationalpolicecu.com/","financial law enforcement"],
+    ["Federal Employee Assistance Programs","Federal employee support and assistance resources.","https://www.opm.gov/","government support"]
+  ],
+  "Legal & Advocacy": [
+    ["National Police Foundation","Research and resources for policing and public safety.","https://www.policefoundation.org/","legal law enforcement"],
+    ["Police Executive Research Forum","Law enforcement policy and research organization.","https://www.policeforum.org/","legal law enforcement"],
+    ["Fraternal Order of Police","Law enforcement advocacy and member support.","https://www.fop.net/","legal law enforcement"],
+    ["National Sheriffs’ Association","Sheriff and law enforcement advocacy resources.","https://www.sheriffs.org/","legal law enforcement"]
+  ],
+  "General Resource Directories": [
+    ["National First Responder Resource Center","Resource hub for first responder wellness and support.","https://www.firstrespondercenter.org/","directory first responder"],
+    ["DHS First Responder Resources","Department of Homeland Security first responder resources.","https://www.dhs.gov/science-and-technology/first-responders","government first responder"],
+    ["SAMHSA First Responder Toolkit","Federal toolkit and behavioral health resources.","https://www.samhsa.gov/","government mental health first responder"]
+  ]
+};
+
+function badgeFor(tags) {
+  const badges = [];
+
+  if (tags.includes("crisis") || tags.includes("24/7")) badges.push(`<span class="badge crisis">Crisis</span>`);
+  if (tags.includes("government")) badges.push(`<span class="badge gov">Government</span>`);
+  if (tags.includes("mental health") || tags.includes("therapy")) badges.push(`<span class="badge health">Mental Health</span>`);
+  if (tags.includes("housing")) badges.push(`<span class="badge support">Housing</span>`);
+  if (tags.includes("employment")) badges.push(`<span class="badge support">Employment</span>`);
+  if (tags.includes("legal")) badges.push(`<span class="badge support">Legal</span>`);
+  if (tags.includes("peer support")) badges.push(`<span class="badge support">Peer Support</span>`);
+  if (tags.includes("family")) badges.push(`<span class="badge support">Family</span>`);
+
+  return badges.slice(0,3).join("");
+}
+
+function renderResources(data, target) {
+  const container = document.getElementById(target);
+
+  Object.entries(data).forEach(([group, items]) => {
+    const section = document.createElement("div");
+    section.className = "resource-group";
+    section.dataset.group = group.toLowerCase();
+    section.innerHTML = `<h3>${group}</h3><div class="resource-grid"></div>`;
+
+    const grid = section.querySelector(".resource-grid");
+
+    items.forEach(([name, desc, url, tags]) => {
+      const searchable = `${name} ${desc} ${group} ${tags}`.toLowerCase();
+
+      const card = document.createElement("div");
+      card.className = "resource-card";
+      card.dataset.search = searchable;
+      card.dataset.tags = tags.toLowerCase();
+
+      card.innerHTML = `
+        <div>
+          <div class="badge-row">${badgeFor(tags.toLowerCase())}</div>
+          <h4>${name}</h4>
+          <p>${desc || "External resource for support, information, or services."}</p>
+        </div>
+        <a href="${url}" target="_blank" rel="noopener">Visit Resource →</a>
+      `;
+
+      grid.appendChild(card);
+    });
+
+    container.appendChild(section);
+  });
+}
+
+renderResources(responders, "responders-resources");
+
+const searchInput = document.getElementById("resourceSearch");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const noResults = document.getElementById("noResults");
+let activeFilter = "all";
+
+function applyFilters() {
+  const query = searchInput.value.toLowerCase().trim();
+  const cards = document.querySelectorAll(".resource-card");
+  let visibleCount = 0;
+
+  cards.forEach(card => {
+    const search = card.dataset.search || "";
+    const tags = card.dataset.tags || "";
+
+    const matchesQuery = !query || search.includes(query);
+    const matchesFilter = activeFilter === "all" || tags.includes(activeFilter);
+
+    if (matchesQuery && matchesFilter) {
+      card.style.display = "flex";
+      visibleCount++;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  document.querySelectorAll(".resource-group").forEach(group => {
+    let anyVisible = false;
+
+    group.querySelectorAll(".resource-card").forEach(card => {
+      if (card.style.display !== "none") anyVisible = true;
+    });
+
+    group.style.display = anyVisible ? "block" : "none";
+  });
+
+  noResults.style.display = visibleCount === 0 ? "block" : "none";
+}
+
+searchInput.addEventListener("input", applyFilters);
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeFilter = btn.dataset.filter;
+    applyFilters();
+  });
+});
+</script>
+
+</body>
+</html>
