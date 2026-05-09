@@ -624,10 +624,16 @@ function toggleDropdown(event) {
   event.preventDefault();
   event.stopPropagation();
 
-  const dropdown = event.currentTarget.closest(".nav-dropdown");
-  dropdown.classList.toggle("active");
-}
+  const currentDropdown = event.currentTarget.closest(".nav-dropdown");
 
+  document.querySelectorAll(".nav-dropdown").forEach(dropdown => {
+    if (dropdown !== currentDropdown) {
+      dropdown.classList.remove("active");
+    }
+  });
+
+  currentDropdown.classList.toggle("active");
+}
 const responders = {
   "Crisis & Immediate Support": [
     ["988 Suicide & Crisis Lifeline","24/7 crisis support for anyone in emotional distress.","https://988lifeline.org/","crisis 24/7"],
