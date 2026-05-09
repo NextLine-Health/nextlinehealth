@@ -566,28 +566,80 @@ function toggleDropdown(event) {
 }
 
 const community = {
+  "Crisis & Immediate Support": [
+    ["988 Suicide & Crisis Lifeline","24/7 crisis support for anyone in emotional distress.","https://988lifeline.org/","crisis 24/7"],
+    ["Crisis Text Line","Text HOME to 741741 for immediate text support.","https://www.crisistextline.org/","crisis 24/7"],
+    ["SAMHSA National Helpline","Confidential treatment referral and information service.","https://www.samhsa.gov/find-help/national-helpline","crisis substance government"],
+    ["National Domestic Violence Hotline","Confidential domestic violence support and safety planning.","https://www.thehotline.org/","crisis family"],
+    ["National Sexual Assault Hotline RAINN","Support for survivors of sexual assault.","https://www.rainn.org/","crisis support"],
+    ["Trevor Project","Crisis support for LGBTQ+ young people.","https://www.thetrevorproject.org/","crisis mental health"]
+  ],
   "Mental Health & Behavioral Health": [
     ["National Alliance on Mental Illness","Mental health education, advocacy, and support.","https://www.nami.org/","mental health"],
-    ["Mental Health America","Mental health screening and support.","https://www.mhanational.org/","mental health"],
+    ["Mental Health America","Mental health screening, education, and resources.","https://www.mhanational.org/","mental health"],
+    ["National Institute of Mental Health","Federal mental health research and education.","https://www.nimh.nih.gov/","mental health government"],
+    ["Psychology Today Therapist Finder","Find therapists by location, specialty, and insurance.","https://www.psychologytoday.com/us/therapists","mental health therapy"],
+    ["American Psychological Association","Psychology information and professional resources.","https://www.apa.org/","mental health"],
     ["Open Path Psychotherapy Collective","Affordable therapy network.","https://openpathcollective.org/","mental health therapy"]
   ],
-
-  "Housing & Basic Needs": [
-    ["United Way 211","Housing, food, utilities, and local assistance.","https://www.211.org/","housing support"],
-    ["Feeding America","Food bank network and hunger relief.","https://www.feedingamerica.org/","food support"],
-    ["HUD Housing Assistance","Federal housing assistance resources.","https://www.hud.gov/","housing government"]
+  "Substance Abuse & Recovery": [
+    ["SAMHSA Treatment Locator","Find mental health and substance use treatment providers.","https://findtreatment.gov/","substance recovery government"],
+    ["Alcoholics Anonymous","Peer support for alcohol recovery.","https://www.aa.org/","substance recovery"],
+    ["Narcotics Anonymous","Peer support for drug recovery.","https://www.na.org/","substance recovery"],
+    ["SMART Recovery","Self-management recovery support.","https://www.smartrecovery.org/","substance recovery"],
+    ["National Institute on Drug Abuse","Federal addiction research and education.","https://nida.nih.gov/","substance recovery government"],
+    ["Partnership to End Addiction","Family resources and addiction support.","https://drugfree.org/","substance recovery family"]
   ],
-
+  "Healthcare & General Wellness": [
+    ["Healthcare.gov","Federal health insurance marketplace.","https://www.healthcare.gov/","government healthcare"],
+    ["Centers for Disease Control and Prevention","Public health information and guidance.","https://www.cdc.gov/","government healthcare"],
+    ["National Institutes of Health","Federal health research and education.","https://www.nih.gov/","government healthcare"],
+    ["Mayo Clinic","Health information and medical education.","https://www.mayoclinic.org/","healthcare"],
+    ["Cleveland Clinic","Health and wellness education resources.","https://my.clevelandclinic.org/","healthcare"]
+  ],
+  "Financial & Basic Needs Support": [
+    ["United Way 211","Local assistance for food, housing, utilities, and crisis support.","https://www.211.org/","financial housing support"],
+    ["Feeding America","Food bank and hunger relief network.","https://www.feedingamerica.org/","food support"],
+    ["Salvation Army","Emergency assistance and social services.","https://www.salvationarmyusa.org/","financial housing support"],
+    ["Catholic Charities USA","Community-based social services and assistance.","https://www.catholiccharitiesusa.org/","financial housing support"],
+    ["National Low Income Housing Coalition","Housing policy and low-income housing resources.","https://nlihc.org/","housing"]
+  ],
+  "Housing & Homelessness Support": [
+    ["National Coalition for the Homeless","Advocacy and resources addressing homelessness.","https://nationalhomeless.org/","housing"],
+    ["HUD Housing Assistance","Federal housing assistance resources.","https://www.hud.gov/","housing government"],
+    ["Emergency Housing Vouchers","HUD emergency housing voucher information.","https://www.hud.gov/program_offices/public_indian_housing/ehv","housing government"],
+    ["Covenant House","Youth homelessness support and services.","https://www.covenanthouse.org/","housing family"]
+  ],
   "Employment & Career Support": [
-    ["CareerOneStop","Career tools and job search support.","https://www.careeronestop.org/","employment government"],
-    ["Goodwill Job Training Programs","Workforce training and support.","https://www.goodwill.org/","employment"],
-    ["Indeed Career Guide","Career advice and job search education.","https://www.indeed.com/career-advice","employment"]
+    ["U.S. Department of Labor","Federal employment and workforce resources.","https://www.dol.gov/","employment government"],
+    ["CareerOneStop","Career exploration, training, and job search tools.","https://www.careeronestop.org/","employment government"],
+    ["Goodwill Job Training Programs","Job training and workforce development services.","https://www.goodwill.org/","employment"],
+    ["Indeed Career Guide","Career advice and job search education.","https://www.indeed.com/career-advice","employment"],
+    ["LinkedIn Workforce Resources","Online learning and career development tools.","https://www.linkedin.com/learning/","employment education"]
   ],
-
   "Legal & Advocacy": [
-    ["Legal Services Corporation","Civil legal aid resources.","https://www.lsc.gov/","legal"],
-    ["ACLU","Civil rights advocacy and education.","https://www.aclu.org/","legal advocacy"],
-    ["USA.gov Legal Help","Federal legal aid resources.","https://www.usa.gov/legal-aid","legal government"]
+    ["Legal Services Corporation","Civil legal aid access and resources.","https://www.lsc.gov/","legal"],
+    ["American Civil Liberties Union","Civil rights advocacy and education.","https://www.aclu.org/","legal advocacy"],
+    ["National Legal Aid & Defender Association","Legal aid and public defense resources.","https://www.nlada.org/","legal"],
+    ["USA.gov Legal Help","Federal guide to legal aid and assistance.","https://www.usa.gov/legal-aid","legal government"]
+  ],
+  "Family & Community Support": [
+    ["Child Welfare Information Gateway","Family and child welfare information.","https://www.childwelfare.gov/","family government"],
+    ["National Parent Helpline","Emotional support for parents and caregivers.","https://www.nationalparenthelpline.org/","family support"],
+    ["Boys & Girls Clubs of America","Youth development and community programs.","https://www.bgca.org/","family community"],
+    ["YMCA","Community programs, wellness, youth, and family support.","https://www.ymca.org/","family community"]
+  ],
+  "Specialized Support Groups": [
+    ["Trevor Project","Crisis and mental health support for LGBTQ+ youth.","https://www.thetrevorproject.org/","crisis mental health"],
+    ["National Eating Disorders Association","Eating disorder information and support.","https://www.nationaleatingdisorders.org/","mental health"],
+    ["Autism Society","Resources and advocacy for autistic individuals and families.","https://www.autism-society.org/","disability family"],
+    ["Alzheimer’s Association","Support for Alzheimer’s and dementia care.","https://www.alz.org/","healthcare family"],
+    ["American Cancer Society","Cancer information and patient support resources.","https://www.cancer.org/","healthcare"]
+  ],
+  "General Resource Directories": [
+    ["USA.gov","Federal government resource directory.","https://www.usa.gov/","government directory"],
+    ["Benefits.gov","Federal benefits eligibility and information.","https://www.benefits.gov/","government financial directory"],
+    ["FindHelp.org","Search local social services by ZIP code.","https://www.findhelp.org/","directory housing financial support"]
   ]
 };
 
