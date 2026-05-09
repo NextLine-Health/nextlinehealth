@@ -78,11 +78,12 @@
         <a href="index.html#partner">Partner With Us</a>
         <a href="inquire.html">Contact</a>
         <div class="nav-dropdown">
-  <a href="resources.html" class="nav-dropbtn">
+  <button class="nav-dropbtn" type="button" onclick="toggleDropdown(event)">
     Resources
-  </a>
+  </button>
 
   <div class="dropdown-menu">
+    <a href="resources.html">All Resources</a>
     <a href="veteran-resources.html">For Veterans</a>
     <a href="first-responders-resources.html">For First Responders</a>
     <a href="community-resources.html">For Community</a>
@@ -310,17 +311,24 @@
     </footer>
 
     <script>
-  function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("active");
-  }
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+}
 
-  function toggleDropdown(event) {
-    event.preventDefault();
-    event.stopPropagation();
+function toggleDropdown(event) {
+  event.preventDefault();
+  event.stopPropagation();
 
-    const dropdown = event.currentTarget.closest(".nav-dropdown");
-    dropdown.classList.toggle("active");
-  }
+  const currentDropdown = event.currentTarget.closest(".nav-dropdown");
+
+  document.querySelectorAll(".nav-dropdown").forEach(dropdown => {
+    if (dropdown !== currentDropdown) {
+      dropdown.classList.remove("active");
+    }
+  });
+
+  currentDropdown.classList.toggle("active");
+}
 </script>
   </body>
 </html>
