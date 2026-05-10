@@ -4054,6 +4054,7 @@ body * {
   }
 }
 
+/* ===== MOBILE HERO FULL BLUR OVERLAY FIX ===== */
 @media (max-width: 900px) {
   .hero {
     min-height: 620px;
@@ -4062,17 +4063,32 @@ body * {
   }
 
   .hero::after {
-    background: rgba(7, 17, 31, 0.42);
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 17, 31, 0.46);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
+    pointer-events: none;
   }
 
   .hero-inner {
+    position: relative;
+    z-index: 2;
     width: 100%;
     max-width: 100%;
     margin-top: 0;
-    background: transparent;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
-    backdrop-filter: none;
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .hero h1,
+  .hero-sub,
+  .hero-eyebrow {
+    text-shadow: 0 3px 14px rgba(0,0,0,0.65);
   }
 }
