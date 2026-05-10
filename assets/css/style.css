@@ -3515,11 +3515,11 @@ body * {
     flex: 1;
   }
 
-  .nav-logo img {
-    height: 88px;
-    width: auto;
-    flex-shrink: 0;
-  }
+ .nav-logo img {
+  height: 112px;
+  width: auto;
+  flex-shrink: 0;
+}
 
   .nav-cta {
     display: none;
