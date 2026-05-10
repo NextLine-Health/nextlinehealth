@@ -817,3 +817,7 @@
         text-align:center;
       }
 }
+/* ===== BEHAVIORAL HERO NAVY BACKGROUND ONLY ===== */
+.hero-behavioral{
+  background: var(--navy-deep) !important;
+}
