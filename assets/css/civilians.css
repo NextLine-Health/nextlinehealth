@@ -129,3 +129,52 @@
     padding: 28px 24px;
   }
 }
+/* ===== CIVILIANS MOBILE HERO BLUR OVERLAY FIX ===== */
+@media (max-width: 900px) {
+  .civ-page-hero {
+    min-height: 620px;
+    padding: 42px 20px 72px;
+    align-items: flex-start;
+    background:
+      url("../images/civilians-bg.jpg") center top / cover no-repeat !important;
+  }
+
+  .civ-page-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 17, 31, 0.46);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .civ-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .civ-hero-content h1 {
+    font-size: 38px;
+    line-height: 1.08;
+    text-shadow: 0 3px 14px rgba(0,0,0,0.65);
+  }
+
+  .civ-hero-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    text-shadow: 0 3px 14px rgba(0,0,0,0.65);
+  }
+
+  .civ-side-image,
+  .civ-side-image img {
+    min-height: 320px;
+  }
+
+  .civ-dark-card {
+    padding: 28px 24px;
+  }
+}
