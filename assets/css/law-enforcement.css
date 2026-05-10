@@ -112,3 +112,56 @@
     padding: 28px 24px;
   }
 }
+/* ===== LEO MOBILE HERO BLUR OVERLAY FIX ===== */
+@media (max-width: 900px) {
+  .leo-page-hero {
+    position: relative;
+    min-height: 620px;
+    padding: 42px 20px 72px;
+    align-items: flex-start;
+    background: url("../images/law-enforcement-bg.jpg") center center / cover no-repeat;
+  }
+
+  .leo-page-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 17, 31, 0.48);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .leo-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+  }
+
+  .leo-hero-content h1,
+  .leo-hero-content p {
+    text-shadow: 0 3px 14px rgba(0,0,0,0.7);
+  }
+
+  .leo-hero-content h1 {
+    font-size: 38px;
+    line-height: 1.06;
+    margin-bottom: 18px;
+  }
+
+  .leo-hero-content p {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 32px;
+  }
+
+  .leo-side-image,
+  .leo-side-image img {
+    min-height: 320px;
+  }
+
+  .leo-dark-card {
+    padding: 28px 24px;
+  }
+}
