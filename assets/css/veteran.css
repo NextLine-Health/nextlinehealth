@@ -870,3 +870,54 @@
 .veteran-page-hero + .vt-reality {
   margin-top: 0 !important;
 }
+/* ===== FIX HERO → TICKER GAP + NORMAL TICKER WIDTH ===== */
+
+.veteran-page-hero {
+  margin-bottom: 0 !important;
+}
+
+.vt-reality {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.vt-ticker-wrap {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 18px 0 !important;
+  border-top: 0 !important;
+  border-bottom: 3px solid var(--red) !important;
+  background: var(--navy-deep) !important;
+}
+
+.vt-ticker-track {
+  display: flex !important;
+  width: max-content !important;
+  gap: 48px !important;
+  padding-left: 48px !important;
+}
+
+/* tighten the white section after strip */
+.vt-reality-inner {
+  padding-top: 76px !important;
+}
+
+/* mobile */
+@media (max-width: 900px) {
+  .vt-ticker-wrap {
+    padding: 16px 0 !important;
+  }
+
+  .vt-ticker-track {
+    gap: 34px !important;
+    padding-left: 20px !important;
+  }
+
+  .vt-ticker-track span {
+    font-size: 12px !important;
+  }
+
+  .vt-reality-inner {
+    padding-top: 58px !important;
+  }
+}
