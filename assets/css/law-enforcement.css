@@ -1,5 +1,6 @@
 :root {
   --red: #b22234;
+  --red-dark: #8a1a27;
   --navy: #0d1f3c;
   --navy-deep: #07111f;
   --off-white: #f5f4f0;
@@ -11,18 +12,19 @@
 
 .leo-page-hero {
   position: relative;
-  min-height: 640px;
+  min-height: 620px;
   padding: 96px 48px;
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin-bottom: 0 !important;
   background:
     linear-gradient(
       to right,
       rgba(7, 17, 31, 0.92) 0%,
       rgba(7, 17, 31, 0.72) 42%,
       rgba(7, 17, 31, 0.28) 72%,
-      rgba(7, 17, 31, 0.1) 100%
+      rgba(7, 17, 31, 0.12) 100%
     ),
     url("../images/law-enforcement-bg.jpg") center center / cover no-repeat;
   border-bottom: 4px solid var(--red);
@@ -43,7 +45,7 @@
   margin-bottom: 22px;
 }
 
-.leo-page-hero h1 {
+.leo-hero-content h1 {
   font-size: 62px;
   font-weight: 900;
   color: #fff;
@@ -53,12 +55,13 @@
   text-shadow: 2px 3px 12px rgba(0,0,0,0.35);
 }
 
-.leo-page-hero p {
+.leo-hero-content p {
   font-size: 19px;
   color: rgba(255,255,255,0.92);
   line-height: 1.75;
-  max-width: 700px;
+  max-width: 720px;
   margin-bottom: 40px;
+  text-shadow: 1px 2px 8px rgba(0,0,0,0.35);
 }
 
 .hero-btns {
@@ -67,21 +70,78 @@
   flex-wrap: wrap;
 }
 
-/* ===== REALITY ===== */
+/* ===== BUTTONS ===== */
+
+.btn-red {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--red);
+  color: #fff;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 16px 34px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-red:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: var(--navy-deep);
+  font-weight: 900;
+  font-size: 14px;
+  padding: 14px 32px;
+  text-decoration: none;
+}
+
+.btn-outline-w {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255,255,255,0.48);
+  color: #fff;
+  font-weight: 900;
+  font-size: 14px;
+  padding: 12px 32px;
+  text-decoration: none;
+}
+
+/* ===== REALITY / TICKER ===== */
 
 .leo-reality {
   background: #fff;
   overflow: hidden;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.leo-page-hero + .leo-reality {
+  margin-top: 0 !important;
 }
 
 .leo-ticker-wrap {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 0 !important;
+  margin-left: calc(50% - 50vw) !important;
+  padding: 16px 0 !important;
   background: var(--navy-deep);
+  border-top: 0 !important;
   border-bottom: 3px solid var(--red);
-  padding: 16px 0;
   overflow: hidden;
   white-space: nowrap;
+  position: relative;
+  top: -1px;
 }
 
 .leo-ticker-track {
@@ -93,9 +153,9 @@
 
 .leo-ticker-track span {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 0.08em;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.72);
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -105,13 +165,11 @@
 }
 
 @keyframes leo-ticker {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
+
+/* ===== REALITY BODY ===== */
 
 .leo-reality-inner {
   max-width: 1220px;
@@ -119,7 +177,7 @@
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 80px;
-  padding: 90px 48px;
+  padding: 80px 48px 100px;
   align-items: start;
 }
 
@@ -138,18 +196,19 @@
 
 .leo-pull-quote > p {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 900;
   color: var(--navy-deep);
   line-height: 1.35;
   margin-bottom: 20px;
+  letter-spacing: -0.01em;
 }
 
 .leo-quote-attr {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text-muted);
   line-height: 1.65;
-  border-left: 3px solid var(--red);
-  padding-left: 14px;
+  border-left: 4px solid var(--red);
+  padding-left: 16px;
 }
 
 .leo-quote-image {
@@ -164,6 +223,7 @@
   width: 100%;
   height: 340px;
   object-fit: cover;
+  object-position: center center;
   display: block;
 }
 
@@ -192,11 +252,12 @@
 }
 
 .leo-reality-body h2 {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 900;
   color: var(--navy-deep);
   line-height: 1.12;
   margin-bottom: 24px;
+  letter-spacing: -0.02em;
 }
 
 .leo-reality-body p {
@@ -242,6 +303,7 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 40px;
+  align-items: start;
 }
 
 .leo-journey-steps {
@@ -252,37 +314,41 @@
 .leo-step {
   display: grid;
   grid-template-columns: 36px 1fr 24px;
-  gap: 12px;
   align-items: center;
+  gap: 12px;
+  width: 100%;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
   border-left: 3px solid transparent;
   border-radius: 8px;
   padding: 18px 16px;
   cursor: pointer;
-  transition: 0.2s;
+  text-align: left;
 }
 
 .leo-step:hover,
 .leo-step.active {
   background: rgba(255,255,255,0.07);
   border-left-color: rgba(255,255,255,0.35);
+  border-color: rgba(255,255,255,0.14);
 }
 
 .leo-step-num {
   font-size: 11px;
   font-weight: 900;
-  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.55);
 }
 
 .leo-step-label {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 900;
   color: rgba(255,255,255,0.82);
 }
 
 .leo-step-arrow {
-  color: rgba(255,255,255,0.4);
+  font-size: 18px;
+  color: rgba(255,255,255,0.42);
 }
 
 .leo-step-connector {
@@ -323,6 +389,7 @@
   font-size: 26px;
   font-weight: 900;
   color: #fff;
+  line-height: 1.2;
   margin-bottom: 14px;
 }
 
@@ -342,15 +409,20 @@
 
 .leo-panel-tag.solution {
   display: inline-block;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.78);
+  border: 1px solid rgba(255,255,255,0.12);
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.78);
-  margin-bottom: 12px;
+  padding: 4px 12px;
+  border-radius: 40px;
+  margin-bottom: 14px;
 }
 
 .leo-panel-nextline p {
+  font-size: 15px;
   color: rgba(255,255,255,0.72);
   line-height: 1.75;
 }
@@ -368,7 +440,7 @@
 }
 
 .leo-services-header {
-  max-width: 700px;
+  max-width: 720px;
   margin-bottom: 60px;
 }
 
@@ -376,6 +448,7 @@
   font-size: 42px;
   font-weight: 900;
   color: var(--navy-deep);
+  line-height: 1.1;
   margin-bottom: 16px;
 }
 
@@ -388,7 +461,7 @@
 .leo-services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  gap: 20px;
 }
 
 .leo-card {
@@ -396,12 +469,15 @@
   border: 1px solid var(--border);
   border-top: 4px solid var(--red);
   border-radius: 14px;
-  padding: 34px 26px;
+  padding: 32px 26px;
+  min-height: 250px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 }
 
 .leo-card-num {
   font-size: 11px;
   font-weight: 900;
+  letter-spacing: 0.14em;
   color: var(--red);
   margin-bottom: 18px;
 }
@@ -411,12 +487,13 @@
   font-weight: 900;
   color: var(--navy-deep);
   margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .leo-card p {
   font-size: 14px;
   color: var(--text-muted);
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 /* ===== VALUE ===== */
@@ -434,17 +511,9 @@
   gap: 80px;
 }
 
-.leo-value-left h2 {
-  font-size: 38px;
-  font-weight: 900;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.leo-value-left p {
-  font-size: 16px;
-  color: rgba(255,255,255,0.62);
-  line-height: 1.85;
+.leo-value-right {
+  display: flex;
+  flex-direction: column;
 }
 
 .leo-value-item {
@@ -457,16 +526,16 @@
 }
 
 .leo-value-item h4 {
+  color: #fff;
   font-size: 17px;
   font-weight: 900;
-  color: #fff;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .leo-value-item p {
-  font-size: 14px;
   color: rgba(255,255,255,0.58);
-  line-height: 1.75;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 /* ===== CTA ===== */
@@ -488,7 +557,7 @@
   font-size: 17px;
   color: rgba(255,255,255,0.82);
   line-height: 1.75;
-  max-width: 650px;
+  max-width: 640px;
   margin: 0 auto 36px;
 }
 
@@ -507,14 +576,47 @@
   }
 
   .leo-value-inner,
-  .leo-journey,
-  .leo-reality-inner {
+  .leo-journey {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 900px) {
-  .leo-page-hero,
+  .leo-page-hero {
+    min-height: 620px;
+    padding: 82px 20px 72px;
+    align-items: flex-start;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(7,17,31,0.8),
+        rgba(7,17,31,0.5)
+      ),
+      url("../images/law-enforcement-bg.jpg") center center / cover no-repeat;
+  }
+
+  .leo-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .leo-hero-content p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .leo-ticker-wrap {
+    padding: 15px 0 !important;
+  }
+
+  .leo-ticker-track {
+    gap: 34px;
+  }
+
+  .leo-ticker-track span {
+    font-size: 12px;
+  }
+
+  .leo-reality-inner,
   .leo-gap-section,
   .leo-services-section,
   .leo-value-section,
@@ -523,32 +625,35 @@
     padding-right: 20px;
   }
 
-  .leo-page-hero {
-    min-height: 620px;
-    padding-top: 48px;
-    padding-bottom: 72px;
-    align-items: flex-start;
-  }
-
-  .leo-page-hero h1 {
-    font-size: 40px;
-  }
-
-  .leo-page-hero p {
-    font-size: 16px;
-  }
-
   .leo-reality-inner {
+    grid-template-columns: 1fr;
     gap: 48px;
-    padding: 72px 20px;
+    padding-top: 60px;
+    padding-bottom: 72px;
   }
 
   .leo-pull-quote {
     position: static;
   }
 
-  .leo-services-grid {
-    grid-template-columns: 1fr 1fr;
+  .leo-pull-quote > p {
+    font-size: 22px;
+  }
+
+  .leo-quote-image img {
+    height: 260px;
+  }
+
+  .leo-gap-section,
+  .leo-services-section,
+  .leo-value-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .leo-h2-light,
+  .leo-services-header h2 {
+    font-size: 32px;
   }
 
   .leo-journey-steps {
@@ -561,16 +666,40 @@
   .leo-step {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 14px 10px;
   }
 
   .leo-step-arrow,
   .leo-step-connector {
     display: none;
   }
+
+  .leo-panel {
+    padding: 28px 22px;
+  }
+
+  .leo-panel h3 {
+    font-size: 21px;
+  }
+
+  .leo-services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta-section h2 {
+    font-size: 30px;
+  }
+
+  .btn-red,
+  .btn-white,
+  .btn-outline-w {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 560px) {
-  .leo-page-hero h1 {
+  .leo-hero-content h1 {
     font-size: 32px;
   }
 
@@ -579,62 +708,15 @@
     grid-template-columns: 1fr;
   }
 
-  .leo-services-header h2,
-  .leo-h2-light,
-  .cta-section h2 {
-    font-size: 30px;
+  .leo-quote-mark {
+    font-size: 72px;
+  }
+
+  .leo-pull-quote > p {
+    font-size: 20px;
   }
 
   .leo-quote-image img {
     height: 220px;
-  }
-}
-/* ===== FINAL FIX: HERO TO TICKER GAP ===== */
-
-.leo-page-hero {
-  margin-bottom: 0 !important;
-  border-bottom: 4px solid var(--red) !important;
-}
-
-.leo-reality {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.leo-page-hero + .leo-reality {
-  margin-top: 0 !important;
-}
-
-.leo-ticker-wrap {
-  width: 100vw !important;
-  max-width: none !important;
-  margin: 0 !important;
-  margin-left: calc(50% - 50vw) !important;
-  padding: 16px 0 !important;
-  background: var(--navy-deep) !important;
-  border-top: 0 !important;
-  border-bottom: 3px solid var(--red) !important;
-  overflow: hidden !important;
-  position: relative !important;
-  top: 0 !important;
-}
-
-/* removes the white space before the ticker */
-.leo-reality > .leo-ticker-wrap {
-  transform: translateY(-1px);
-}
-
-/* controls white space after ticker */
-.leo-reality-inner {
-  padding-top: 80px !important;
-}
-
-@media (max-width: 900px) {
-  .leo-ticker-wrap {
-    padding: 15px 0 !important;
-  }
-
-  .leo-reality-inner {
-    padding-top: 60px !important;
   }
 }
