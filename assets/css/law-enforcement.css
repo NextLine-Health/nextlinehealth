@@ -589,3 +589,52 @@
     height: 220px;
   }
 }
+/* ===== FINAL FIX: HERO TO TICKER GAP ===== */
+
+.leo-page-hero {
+  margin-bottom: 0 !important;
+  border-bottom: 4px solid var(--red) !important;
+}
+
+.leo-reality {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.leo-page-hero + .leo-reality {
+  margin-top: 0 !important;
+}
+
+.leo-ticker-wrap {
+  width: 100vw !important;
+  max-width: none !important;
+  margin: 0 !important;
+  margin-left: calc(50% - 50vw) !important;
+  padding: 16px 0 !important;
+  background: var(--navy-deep) !important;
+  border-top: 0 !important;
+  border-bottom: 3px solid var(--red) !important;
+  overflow: hidden !important;
+  position: relative !important;
+  top: 0 !important;
+}
+
+/* removes the white space before the ticker */
+.leo-reality > .leo-ticker-wrap {
+  transform: translateY(-1px);
+}
+
+/* controls white space after ticker */
+.leo-reality-inner {
+  padding-top: 80px !important;
+}
+
+@media (max-width: 900px) {
+  .leo-ticker-wrap {
+    padding: 15px 0 !important;
+  }
+
+  .leo-reality-inner {
+    padding-top: 60px !important;
+  }
+}
